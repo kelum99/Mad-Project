@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProGym</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="fitness_center">FITNESS CENTER</string>
+    <string name="progym">PROGYM</string>
+    <string name="loginimage">loginImage</string>
+</resources>
