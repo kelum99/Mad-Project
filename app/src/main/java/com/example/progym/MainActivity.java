@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText eUsername;
     private EditText ePassword ;
-    private Button lognBtn;
     boolean isValid = false;
     String  testUsername = "Kelum";
     String  testPassword = "12345";
@@ -23,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lognBtn = findViewById(R.id.loginBtn);
-        eUsername = (EditText) findViewById(R.id.eUsername);
-        ePassword = (EditText) findViewById(R.id.ePassword);
+        Button loginBtn = findViewById(R.id.loginBtn);
+        eUsername = findViewById(R.id.eUsername);
+        ePassword = findViewById(R.id.ePassword);
 
-        lognBtn.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -63,9 +62,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean Validate(String name , String password) {
-        if(name.equals(testUsername) && password.equals(testPassword)){
-            return  true;
-        }
-       return false;
+        return name.equals(testUsername) && password.equals(testPassword);
     }
 }
