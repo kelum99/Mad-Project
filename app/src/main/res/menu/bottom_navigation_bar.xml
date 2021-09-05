@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/home_btn"
+            android:icon="@drawable/home_btn_img"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/exerice_btn"
+            android:icon="@drawable/exercise_btn_img"
+            android:title="Exercises"/>
+
+        <item
+            android:id="@+id/store_btn"
+            android:icon="@drawable/store_btn_img"
+            android:title="Store"/>
+
+        <item
+            android:id="@+id/profile_btn"
+            android:icon="@drawable/profile_btn_img"
+            android:title="Profile"/>
+</menu>

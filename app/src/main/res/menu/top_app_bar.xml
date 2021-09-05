@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu"
+            android:icon="@drawable/exercise_btn_img"
+            android:title="@string/schedule" />
+        <item
+            android:id="@+id/menu1"
+            android:icon="@drawable/home_btn_img"
+            android:title="@string/diet_plans"
+            />
+        <item
+            android:id="@+id/menu2"
+            android:icon="@drawable/home_btn_img"
+            android:title="@string/payment"
+            />
+        <item
+            android:id="@+id/menu3"
+            android:icon="@drawable/home_btn_img"
+            android:title="@string/contact_us"
+            />
+
+    </group>
+
+</menu>
