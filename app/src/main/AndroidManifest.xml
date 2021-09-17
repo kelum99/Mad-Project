@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".admin.AddSchedule"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AddExercise"
+            android:exported="true" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="true" />
+        <activity
             android:name=".Home"
             android:exported="true" />
         <activity
