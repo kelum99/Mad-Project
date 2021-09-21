@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.AddExercise">
+    tools:context=".admin.exercises.AddExercise">
 
     <TextView
         android:id="@+id/textView4"
@@ -140,7 +140,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="33dp"
         android:contentDescription="@string/exercise_image"
-        app:layout_constraintEnd_toStartOf="@+id/uploadBTn1"
+        app:layout_constraintEnd_toStartOf="@+id/uploadBtn1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/exerciseDesTxt"
@@ -148,7 +148,7 @@
         app:srcCompat="@drawable/ic_baseline_image_24"  />
 
     <Button
-        android:id="@+id/uploadBTn1"
+        android:id="@+id/uploadBtn1"
         android:layout_width="107dp"
         android:layout_height="36dp"
         android:layout_marginTop="108dp"
