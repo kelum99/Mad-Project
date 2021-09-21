@@ -25,4 +25,5 @@
     <string name="add">Add</string>
     <string name="upload">Upload</string>
     <string name="exercise_image">exercise image</string>
+    <string name="add_schedule">Add Schedule</string>
 </resources>

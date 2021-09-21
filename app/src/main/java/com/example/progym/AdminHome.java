@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-import com.example.progym.admin.AddExercise;
-import com.example.progym.admin.AddSchedule;
+import com.example.progym.admin.exercises.AddExercise;
+import com.example.progym.admin.schedules.AddSchedule;
 
 public class AdminHome extends AppCompatActivity {
 
