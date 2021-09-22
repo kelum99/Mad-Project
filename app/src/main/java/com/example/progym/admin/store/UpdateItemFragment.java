@@ -1,4 +1,4 @@
-package com.example.progym.admin;
+package com.example.progym.admin.store;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

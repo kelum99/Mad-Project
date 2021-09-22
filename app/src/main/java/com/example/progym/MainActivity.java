@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText eUsername;
-    private EditText ePassword ;
+    private EditText ePassword;
     boolean isValid = false;
     String  testUsername = "Kelum";
     String  testPassword = "12345";
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button loginBtn = findViewById(R.id.loginBtn);
+        Button adminlgn = findViewById(R.id.adminBtn);
         eUsername = findViewById(R.id.eUsername);
         ePassword = findViewById(R.id.ePassword);
 
@@ -56,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+            }
+        });
+
+        adminlgn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AdminHome.class);
+                startActivity(intent);
             }
         });
 

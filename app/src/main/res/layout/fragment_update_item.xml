@@ -44,9 +44,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="@+id/divider5"
-        app:layout_constraintTop_toTopOf="@+id/divider5" />
+        app:layout_constraintTop_toTopOf="@+id/divider5"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/add_item_title"
@@ -106,9 +106,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_item_code_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/add_item_code_txt"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/add_item_price_txt"
@@ -120,9 +120,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_item_description_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/add_item_description_txt"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/add_item_description_txt"
@@ -133,9 +133,9 @@
         android:background="@drawable/borderstyle"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_item_title_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/add_item_title_txt"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/add_item_image_upload"
