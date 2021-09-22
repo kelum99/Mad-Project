@@ -1,4 +1,4 @@
-package com.example.progym.admin;
+package com.example.progym.admin.member;
 
 import androidx.appcompat.app.AppCompatActivity;
 

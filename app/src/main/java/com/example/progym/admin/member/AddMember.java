@@ -1,8 +1,7 @@
-package com.example.progym.admin;
+package com.example.progym.admin.member;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;

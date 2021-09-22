@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.schedules.AddSchedule">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/scheduleDesTxt"
+                android:layout_width="310dp"
+                android:layout_height="130dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="277dp"
+                android:background="@drawable/textfields2"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/enter_description"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:padding="7dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="124dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/add_schedule"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/scheduleTitleTxt"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/textfields2"
+                android:ems="10"
+                android:hint="@string/enter_title"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:textColor="#040404"
+                android:textSize="16sp"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/scheduleSTitleTxt"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="190dp"
+                android:background="@drawable/textfields2"
+                android:ems="10"
+                android:hint="@string/enter_sub_title"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:textColor="#040404"
+                android:textSize="16sp"
+                tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="78dp"
+                android:text="@string/title"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="160dp"
+                android:text="@string/sub_title"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="249dp"
+                android:text="@string/description"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="162dp"
+                android:layout_marginTop="426dp"
+                android:text="@string/schedule"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:background="#BEC9DA"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="460dp"
+                android:divider="@android:drawable/divider_horizontal_textfield"
+                android:showDividers="middle"
+                android:stretchColumns="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/editTextTextPersonName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tuesday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/editTextTextPersonName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wednesday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/editTextTextPersonName5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thursday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/editTextTextPersonName7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:textSize="16sp"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Friday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/editTextTextPersonName9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textSize="16sp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saturday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/editTextTextPersonName11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:textSize="16sp"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sunday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/editTextTextPersonName13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:textSize="16sp"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/addSchedule"
+                android:layout_width="221dp"
+                android:layout_height="40dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="760dp"
+                android:background="@drawable/style"
+                android:text="Add" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

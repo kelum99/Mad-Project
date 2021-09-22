@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.progym">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".user.EditPayment"
+
+            android:name=".user.payment.EditPayment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".user.MyPayment"
+            android:name=".user.payment.MyPayment"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".user.ProfileResults"
+            android:name=".user.profile.ProfileResults"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".admin.UpdateMember"
+            android:name=".admin.member.UpdateMember"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".admin.AddMember"
+            android:name=".admin.member.AddMember"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,6 +59,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".admin.exercises.ExerciseManagment"
+            android:exported="true" />
+        <activity
+            android:name=".admin.exercises.UpdateExercise"
+            android:exported="true" />
+        <activity
+            android:name=".admin.schedules.AddSchedule"
+            android:exported="true" />
+        <activity
+            android:name=".admin.exercises.AddExercise"
+            android:exported="true" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="true" />
+
         <activity
             android:name=".Home"
             android:exported="true" />

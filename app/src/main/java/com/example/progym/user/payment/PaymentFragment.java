@@ -1,4 +1,4 @@
-package com.example.progym.user;
+package com.example.progym.user.payment;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.progym.user;
+package com.example.progym.user.profile;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,7 +17,6 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.progym.Home;
 import com.example.progym.R;
 
 public class ProfileFragment extends Fragment {

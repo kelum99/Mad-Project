@@ -1,4 +1,4 @@
-package com.example.progym.user;
+package com.example.progym.user.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
