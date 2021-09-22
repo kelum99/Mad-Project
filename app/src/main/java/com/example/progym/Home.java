@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.progym.user.ExerciseFragment;
+import com.example.progym.user.PaymentFragment;
+import com.example.progym.user.ProfileFragment;
 import com.example.progym.user.StoreFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -64,6 +66,9 @@ public class Home extends AppCompatActivity {
                             break;
                         case R.id.store_btn:
                             selectedFragment = new StoreFragment();
+                            break;
+                        case R.id.profile_btn:
+                            selectedFragment = new ProfileFragment();
                             break;
 
                     }
