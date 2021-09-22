@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-<<<<<<< HEAD
+
             android:name=".admin.CreateDiet"
             android:exported="true" />
         <activity
@@ -23,18 +23,6 @@
         <activity
             android:name=".admin.AddEvent"
             android:exported="true" />
-        <activity
-            android:name=".admin.AddSchedule"
-=======
-
-            android:name=".user.EditPayment"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".user.MyPayment"
             android:exported="true">
@@ -71,9 +59,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+<activity
             android:name=".admin.exercises.ExerciseManagment"
->>>>>>> 547ef6a7bfc228f6efad1da02ddad35f7a308082
             android:exported="true" />
         <activity
             android:name=".admin.exercises.UpdateExercise"
