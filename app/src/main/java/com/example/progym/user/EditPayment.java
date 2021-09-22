@@ -1,4 +1,4 @@
-package com.example.progym.admin;
+package com.example.progym.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.progym.R;
 
-public class AddSchedule extends AppCompatActivity {
+public class EditPayment extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_schedule);
+        setContentView(R.layout.activity_edit_payment);
     }
 }
