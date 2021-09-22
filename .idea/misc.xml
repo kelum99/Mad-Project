@@ -28,30 +28,32 @@
         <entry key="..\:/MadProject/app/src/main/res/layout/top_navigation_header.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/menu/bottom_navigation_bar.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/menu/top_app_bar.xml" value="0.33" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/drawable/borderstyle2.xml" value="0.2703125" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_add_member.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_edit_payment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_member.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_my_payment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_profile_results.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_update_member.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/add_member_fragment.xml" value="0.25" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/exercise_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/member_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/mypayment_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/payment_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/profile_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/profileresult_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/top_navigation_header.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/menu/bottom_navigation_bar.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/menu/top_app_bar.xml" value="0.1375" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/drawable-v24/borderstyle.xml" value="0.1675925925925926" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_cart.xml" value="0.264" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_checkout.xml" value="0.264" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/cart_fragment.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_fragment.xml" value="0.2125" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/fragment_add_item.xml" value="0.264" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/fragment_update_item.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/profile_fragment.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/store_fragment.xml" value="0.264" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/top_navigation_header.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/menu/top_app_bar.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
