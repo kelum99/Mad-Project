@@ -27,11 +27,6 @@
     <string name="add_schedule">Add Schedule</string>
 
 
-    <string name="main_topic_item">Add Items</string>
-    <string name="item_price_txt">Price</string>
-    <string name="item_topic_txt">Item Name</string>
-    <string name="item_description_txt">Description</string>
-
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
     <string name="rdbtn_male">Male</string>
@@ -83,12 +78,16 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btn_continue">Continue with Existing Card</string>
     <string name="btn_edit">Edit</string>
+
+
     <string name="exercise_managment">Exercise Managment</string>
+
     <string-array name="Membership">
         <item>Permanent</item>
         <item>Open</item>
         <item>Term</item>
     </string-array>
+
     <string name="add_to_cart">Add</string>
     <string name="buy_now">buy</string>
     <string name="go_to_cart">View Cart</string>
@@ -107,6 +106,7 @@
     <string name="add_item_image">Image</string>
     <string name="add_item">Add Item</string>
     <string name="update_item">Update Item</string>
+
     <string name="main_topic_item">Add Items</string>
     <string name="item_price_txt">Price</string>
     <string name="item_topic_txt">Item Name</string>
