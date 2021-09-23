@@ -1,8 +1,4 @@
-package com.example.progym.admin.exercises;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.progym.admin.store;
 
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
@@ -15,7 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.progym.R;
+import com.example.progym.admin.exercises.Exercise;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -23,45 +24,47 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
-public class AddExercise extends AppCompatActivity {
+public class AddItem extends AppCompatActivity {
 
-    private EditText exerciseTitle;
-    private EditText exerciseSubTitle;
-    private EditText exerciseDescription;
+    private EditText itemTitle;
+    private EditText itemPrice;
+    private EditText itemDescription;
+
     // ImageView preview;
     String imgUrl;
-    Button addExercise;
+    Button addItem;
     Button uploadBtn;
-    Exercise exercise;
+    Store store;
     DatabaseReference proGym;
-    StorageReference exerciseImgRef;
+    StorageReference itemImgRef;
     public Uri imgUri;
     private static final int IMAGE_REQUEST = 2;
 
-    public AddExercise() {
+    public AddItem() {
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_exercise);
+        setContentView(R.layout.activity_add_item);
 
-        exerciseTitle = findViewById(R.id.updateItem_topic);
-        exerciseSubTitle = findViewById(R.id.updateItem_price);
-        exerciseDescription = findViewById(R.id.updateItem_description);
-        addExercise = findViewById(R.id.add_item_btn);
+
+        itemTitle = findViewById(R.id.addItem_topic);
+        itemPrice = findViewById(R.id.addItem_price);
+        itemDescription = findViewById(R.id.addItem_description);
+        addItem = findViewById(R.id.add_item_btn);
         uploadBtn = findViewById(R.id.additem_image_btn);
-       // preview = findViewById(R.id.exerciseImgUp);
+        // preview = findViewById(R.id.exerciseImgUp);
 
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
 
-        addExercise.setOnClickListener(new View.OnClickListener() {
+        addItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertExercise();
+                insertItem();
                 clearFields();
             }
         });
@@ -72,26 +75,25 @@ public class AddExercise extends AppCompatActivity {
                 chooseImage();
             }
         });
-
-
-
     }
-    private void insertExercise() {
-        exercise = new Exercise();
 
-        exercise.setTitle(exerciseTitle.getText().toString().trim());
-        exercise.setSubTitle(exerciseSubTitle.getText().toString().trim());
-        exercise.setDescription(exerciseDescription.getText().toString());
-        exercise.setImageURL(imgUrl);
+    private void insertItem() {
+        store = new Store();
 
-        proGym.push().setValue(exercise);
-        Toast.makeText(this, "Exercise Added!", Toast.LENGTH_SHORT).show();
+        store.setItem_title(itemTitle.getText().toString().trim());
+        store.setItem_price(itemPrice.getText().toString().trim());
+        store.setItem_description(itemDescription.getText().toString());
+        store.setImageURL(imgUrl);
+
+        proGym.push().setValue(store);
+        Toast.makeText(this, "Item Added!", Toast.LENGTH_SHORT).show();
     }
     private void clearFields() {
-        exerciseTitle.setText("");
-        exerciseSubTitle.setText("");
-        exerciseDescription.setText("");
+        itemTitle.setText("");
+        itemPrice.setText("");
+        itemDescription.setText("");
     }
+
     private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/");
@@ -113,18 +115,19 @@ public class AddExercise extends AppCompatActivity {
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
+
     private void uploadImg() {
         ProgressDialog uploadProg = new ProgressDialog(this);
         uploadProg.setMessage("Uploading");
         uploadProg.show();
 
         if(imgUri != null){
-            exerciseImgRef = FirebaseStorage.getInstance().getReference().child("ExerciseImages").child(System.currentTimeMillis()+"."+getFileExtension(imgUri));
+            itemImgRef = FirebaseStorage.getInstance().getReference().child("ItemImages").child(System.currentTimeMillis()+"."+getFileExtension(imgUri));
 
-            exerciseImgRef.putFile(imgUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+            itemImgRef.putFile(imgUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                    exerciseImgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    itemImgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
                             imgUrl = uri.toString();

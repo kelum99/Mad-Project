@@ -26,6 +26,7 @@
     <string name="exercise_image">exercise image</string>
     <string name="add_schedule">Add Schedule</string>
 
+
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
     <string name="rdbtn_male">Male</string>
@@ -77,6 +78,10 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btn_continue">Continue with Existing Card</string>
     <string name="btn_edit">Edit</string>
+
+
+    <string name="exercise_managment">Exercise Managment</string>
+
     <string-array name="Membership">
         <item>Permanent</item>
         <item>Open</item>
@@ -106,6 +111,7 @@
     <string name="item_price_txt">Price</string>
     <string name="item_topic_txt">Item Name</string>
     <string name="item_description_txt">Descrioption</string>
+
     <string name="item_image_btn">Upload</string>
     <string name="add_item_btn">Add Item</string>
     <string name="item_img">item image</string>
@@ -113,6 +119,9 @@
     <string name="updateitem_image_btn">Upload</string>
     <string name="update_item_btn">Update Item</string>
     <string name="main_topic_item_add">Add Item</string>
+
+    <string name="add_item_price_txt">Item Price</string>
+    <string name="update_item_price_txt">Price</string>
 
 
 </resources>
