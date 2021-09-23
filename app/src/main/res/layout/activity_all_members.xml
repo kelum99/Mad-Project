@@ -107,13 +107,6 @@
                 android:textSize="12sp" />
 
             <ImageButton
-                android:id="@+id/row1img_edit"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:background="@color/design_default_color_surface"
-                app:srcCompat="@drawable/edit2"/>
-
-            <ImageButton
                 android:id="@+id/row1img_dlt"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"

@@ -14,51 +14,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-
-            android:name=".user.payment.EditPayment"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".admin.member.AllMembers"
+            android:exported="true" />
+        <activity
+            android:name=".admin.CreateDiet"
+            android:exported="true" />
+        <activity
+            android:name=".admin.CreateEvent"
+            android:exported="true" />
+        <activity
+            android:name=".admin.AddEvent"
+            android:exported="true" />
         <activity
             android:name=".user.payment.MyPayment"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".user.profile.ProfileResults"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".admin.member.UpdateMember"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".admin.member.AddMember"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />
@@ -74,7 +49,6 @@
         <activity
             android:name=".AdminHome"
             android:exported="true" />
-
         <activity
             android:name=".Home"
             android:exported="true" />

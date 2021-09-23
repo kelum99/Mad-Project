@@ -1,12 +1,21 @@
 package com.example.progym.user.payment;
 
 public class Payment {
+    private String paymentMethod;
     private String cardHolderName;
     private String cardNumber;
     private String expDate;
     private  String cvv;
 
     public Payment() {
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     public void setCardHolderName(String cardHolderName) {

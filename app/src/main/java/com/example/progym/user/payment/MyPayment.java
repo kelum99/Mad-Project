@@ -12,6 +12,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.progym.R;
+import com.google.firebase.database.DatabaseReference;
+
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MyPayment extends AppCompatActivity {
 
@@ -19,11 +24,16 @@ public class MyPayment extends AppCompatActivity {
     EditText et_amount;
     RecyclerView rv_cards, rv_transactions;
     boolean verify;
+    Transactions transactions;
+    DatabaseReference proGymFinance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_payment);
+
+        Date current = Calendar.getInstance().getTime();
+        String formatDate = DateFormat.getDateInstance(DateFormat.FULL).format(current);
 
         btn_viewcards = findViewById(R.id.btn_viewcards);
         btn_paynow = findViewById(R.id.btn_paynow);
@@ -69,6 +79,10 @@ public class MyPayment extends AppCompatActivity {
                         public void onClick(DialogInterface dialogInterface, int i) {
                             dialogInterface.dismiss();
                             Toast.makeText(MyPayment.this, "Your Payment is being Processed", Toast.LENGTH_LONG).show();
+
+                            saveTransactions();
+                            clearFields();
+
                             AlertDialog.Builder alert = new AlertDialog.Builder(MyPayment.this);
                             alert.setMessage("Your Payment is Successful ! ");
                             alert.setNeutralButton("OK",new DialogInterface.OnClickListener(){
@@ -93,6 +107,13 @@ public class MyPayment extends AppCompatActivity {
 
             }
         });
+    }
+    private void saveTransactions() {
+
+    }
+    private void clearFields() {
+
+
     }
 
     private boolean validations(){
