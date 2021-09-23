@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import com.example.progym.user.ExerciseFragment;
 import com.example.progym.user.PaymentFragment;
 import com.example.progym.user.ProfileFragment;
-import com.example.progym.user.StoreFragment;
+import com.example.progym.user.store.StoreFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
