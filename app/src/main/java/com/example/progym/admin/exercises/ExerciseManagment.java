@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.progym.R;
 import com.google.firebase.database.ChildEventListener;
@@ -19,6 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ExerciseManagment extends AppCompatActivity {
 
@@ -26,6 +29,7 @@ public class ExerciseManagment extends AppCompatActivity {
     ListView exerciseList;
     DatabaseReference proGym;
     ArrayList<String> exerciseListItems;
+    String key;
 
 
     @Override
@@ -38,7 +42,6 @@ public class ExerciseManagment extends AppCompatActivity {
         exerciseListItems = new ArrayList<String>();
         addExerciseBtn = findViewById(R.id.add_exercise);
 
-
         addExerciseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +50,21 @@ public class ExerciseManagment extends AppCompatActivity {
             }
         });
         initializeListView();
+
+        exerciseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent updateDelete = new Intent(getApplicationContext(),UpdateDeleteExercise.class);
+                Exercise ex = (Exercise) parent.getItemAtPosition(position);
+                updateDelete.putExtra("Title",ex.getTitle());
+                updateDelete.putExtra("SubTitle",ex.getSubTitle());
+                updateDelete.putExtra("Description",ex.getDescription());
+                updateDelete.putExtra("Key",key);
+
+                startActivity(updateDelete);
+
+            }
+        });
 
     }
 
@@ -58,9 +76,10 @@ public class ExerciseManagment extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
-                String value =  snapshot.getValue(Exercise.class).toString();
+                String value =  Objects.requireNonNull(snapshot.getValue(Exercise.class)).toString();
                 exerciseListItems.add(value);
                 adapter.notifyDataSetChanged();
+                key = snapshot.getKey();
             }
 
             @Override
@@ -89,4 +108,5 @@ public class ExerciseManagment extends AppCompatActivity {
 
         exerciseList.setAdapter(adapter);
     }
+
 }

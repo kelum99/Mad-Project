@@ -111,5 +111,7 @@
     <string name="updateitem_image_btn">Upload</string>
     <string name="update_item_btn">Update Item</string>
     <string name="main_topic_item_add">Add Item</string>
+    <string name="delete">Delete</string>
+    <string name="update_or_delete_exercise">Update or Delete Exercise</string>
 
 </resources>

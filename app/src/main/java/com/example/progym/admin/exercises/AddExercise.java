@@ -88,18 +88,18 @@ public class AddExercise extends AppCompatActivity {
 
         proGym.push().setValue(exercise);
         Toast.makeText(this, "Exercise Added!", Toast.LENGTH_SHORT).show();
-    }
+    };
     private void clearFields() {
         exerciseTitle.setText("");
         exerciseSubTitle.setText("");
         exerciseDescription.setText("");
-    }
+    };
     private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent,IMAGE_REQUEST);
-    }
+    };
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -108,13 +108,13 @@ public class AddExercise extends AppCompatActivity {
             imgUri = data.getData();
             uploadImg();
         }
-    }
+    };
 
     private String getFileExtension (Uri uri){
         ContentResolver contentResolver = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
-    }
+    };
     private void uploadImg() {
         ProgressDialog uploadProg = new ProgressDialog(this);
         uploadProg.setMessage("Uploading");
