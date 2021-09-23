@@ -6,8 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+
+import com.example.progym.admin.AddEvent;
+import com.example.progym.admin.CreateDiet;
+import com.example.progym.admin.EventInsert;
+
 import com.example.progym.admin.exercises.AddExercise;
 import com.example.progym.admin.schedules.AddSchedule;
+
 
 public class AdminHome extends AppCompatActivity {
 
@@ -37,13 +43,13 @@ public class AdminHome extends AppCompatActivity {
                 intent = new Intent(getApplicationContext(), AddSchedule.class);
                 startActivity(intent);
                 break;
-            case R.id.dietMngBtn:
-//                intent = new Intent(getApplicationContext(),AdminHome.class);
-//                startActivity(intent);
+          case R.id.dietMngBtn:
+               intent = new Intent(getApplicationContext(), CreateDiet.class);
+               startActivity(intent);
                 break;
             case R.id.eventMngBtn:
-//                intent = new Intent(getApplicationContext(),AdminHome.class);
-//                startActivity(intent);
+                 intent = new Intent(getApplicationContext(), AddEvent.class);
+                 startActivity(intent);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + v.getId());
