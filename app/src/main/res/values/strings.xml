@@ -47,5 +47,20 @@
     <string name="upload">Upload</string>
     <string name="exercise_image">exercise image</string>
     <string name="add_schedule">Add Schedule</string>
+    <string name="main_topic_item">Add Items</string>
+    <string name="item_price_txt">Price</string>
+    <string name="item_topic_txt">Item Name</string>
+    <string name="item_description_txt">Description</string>
+    <string name="item_image_btn">Upload</string>
+    <string name="add_item_btn">Add Item</string>
+    <string name="item_img">item image</string>
+    <string name="main_topic_item_update">Update Item</string>
+    <string name="updateitem_image_btn">Upload</string>
+    <string name="update_item_btn">Update Item</string>
+    <string name="main_topic_item_add">Add Item</string>
+    <string name="add_item_price_txt">Item Price</string>
+    <string name="update_item_price_txt">Price</string>
+
+
 
 </resources>

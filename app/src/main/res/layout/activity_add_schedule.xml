@@ -41,7 +41,7 @@
                 tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/main_topic_item_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
