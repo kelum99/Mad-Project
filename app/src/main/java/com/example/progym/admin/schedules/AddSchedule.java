@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.progym.R;
-import com.example.progym.admin.exercises.Exercise;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,6 +27,7 @@ public class AddSchedule extends AppCompatActivity {
         title = findViewById(R.id.scheduleTitleTxt);
         scheduleID = findViewById(R.id.scheduleID);
         description = findViewById(R.id.scheduleDesTxt);
+        addSchedule = findViewById(R.id.addSchedule);
         mon = findViewById(R.id.monday);
         tue = findViewById(R.id.tuesday);
         wed = findViewById(R.id.wednesday);
@@ -41,13 +41,13 @@ public class AddSchedule extends AppCompatActivity {
         addSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertExercise();
+                insertSchedule();
                 clearFields();
             }
         });
 
     }
-    private void insertExercise() {
+    private void insertSchedule() {
         schedule = new Schedule();
 
         schedule.setScTitle(title.getText().toString().trim());
@@ -63,7 +63,7 @@ public class AddSchedule extends AppCompatActivity {
 
 
         proGym.child(scheduleID.getText().toString().trim()).setValue(schedule);
-        Toast.makeText(this, "Exercise Added!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Schedule Added!", Toast.LENGTH_SHORT).show();
     };
     private void clearFields() {
         title.setText("");
