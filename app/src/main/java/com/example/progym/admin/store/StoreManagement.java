@@ -14,9 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.progym.R;
-import com.example.progym.admin.exercises.AddExercise;
-import com.example.progym.admin.exercises.Exercise;
-import com.example.progym.admin.exercises.UpdateDeleteExercise;
+
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.firebase.ui.database.FirebaseListOptions;
 import com.google.firebase.database.ChildEventListener;
@@ -34,7 +32,6 @@ public class StoreManagement extends AppCompatActivity {
     ListView itemList;
     DatabaseReference proGym;
     ArrayList<String> ItemListItem;
-    String key;
     FirebaseListAdapter adapter;
 
 
@@ -45,7 +42,7 @@ public class StoreManagement extends AppCompatActivity {
 
         Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
         itemList = findViewById(R.id.store_management_itemLV);
-        ItemListItem = new ArrayList<String>();
+        ItemListItem = new ArrayList<>();
         addItemBtn = findViewById(R.id.store_management_add_item_btn);
 
         FirebaseListOptions<Store> options = new FirebaseListOptions.Builder<Store>()
@@ -56,15 +53,16 @@ public class StoreManagement extends AppCompatActivity {
 
             @Override
             protected void populateView(@NonNull View v, @NonNull Object model, int position) {
-                TextView title = v.findViewById(R.id.itemName_LV);
+                TextView itemName = v.findViewById(R.id.itemName_LV);
                 TextView itemPrice = v.findViewById(R.id.itemPrice_LV);
                 Store store = (Store) model;
-                title.setText(store.getItem_title());
+                itemName.setText(store.getItem_title());
                 itemPrice.setText(store.getItem_price());
-                key = this.getRef(position).getKey();
+
             }
         };
         itemList.setAdapter(adapter);
+
 
         addItemBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,18 +76,20 @@ public class StoreManagement extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent updateDelete = new Intent(getApplicationContext(), UpdateDeleteItem.class);
+                Intent UpdateDelete = new Intent(getApplicationContext(), UpdateDeleteItem.class);
                 Store st = (Store) parent.getItemAtPosition(position);
-                updateDelete.putExtra("Item_Title", st.getItem_title());
-                updateDelete.putExtra("Item_Price", st.getItem_price());
-                updateDelete.putExtra("Item_Description", st.getItem_description());
-                updateDelete.putExtra("Key", key);
 
-                startActivity(updateDelete);
+                UpdateDelete.putExtra("ItemTitle",st.getItem_title());
+                UpdateDelete.putExtra("ItemPrice",st.getItem_price());
+                UpdateDelete.putExtra("ItemDesc",st.getItem_description());
+
+
+                startActivity(UpdateDelete);
             }
         });
-    }
 
+
+    }
     @Override
     protected void onStart() {
         super.onStart();
@@ -102,5 +102,5 @@ public class StoreManagement extends AppCompatActivity {
         adapter.stopListening();
     }
 
-}
 
+}

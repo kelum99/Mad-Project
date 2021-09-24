@@ -6,7 +6,7 @@ public class Exercise {
     private String subTitle;
     private String description;
     private String imageURL;
-
+    private String key;
 
     public Exercise() { }
 
@@ -42,6 +42,11 @@ public class Exercise {
         this.description = description;
     }
 
+    public String getKey() {
+        return key;
+    }
 
-
+    public void setKey(String key) {
+        this.key = key;
+    }
 }

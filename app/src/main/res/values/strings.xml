@@ -121,7 +121,6 @@
     <string name="item_topic_txt">Item Name</string>
     <string name="item_description_txt">Description</string>
 
-
     <string name="item_image_btn">Upload</string>
     <string name="add_item_btn">Add Item</string>
     <string name="item_img">item image</string>
@@ -132,7 +131,6 @@
     <string name="delete">Delete</string>
     <string name="update_or_delete_exercise">Update or Delete Exercise</string>
 
-
     <string name="update">Update</string>
     <string name="monday">Monday</string>
     <string name="saturday">Saturday</string>
@@ -142,21 +140,20 @@
     <string name="thursday">Thursday</string>
     <string name="sunday">Sunday</string>
 
-
-
     <string name="tv_addCard">Add New Card</string>
 
     <string name="add_item_price_txt">Item Price</string>
     <string name="update_item_price_txt">Price</string>
 
-    <string name="delete_item_btn">Add Item</string>
-    <string name="topic_delete">Store Management</string>
-
-
     <string name="tv_allMembers">All Members</string>
     <string name="btn_cal">Fitness Analysis</string>
+    <string name="exercise_id">Exercise ID</string>
+    <string name="enter_exercise_id">Enter Exercise ID</string>
+    <string name="delete_item_btn">Add Item</string>
+    <string name="topic_delete">Store Management</string>
     <string name="item_update_delete_main_topic">Item Update and Delete</string>
     <string name="item_update_delete_title_txt">Enter Price</string>
+
 
 
 </resources>

@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class UpdateDeleteExercise extends AppCompatActivity {
-        EditText title, subTitle, description;
+        EditText title, exerciseID, description;
         Button updateBtn;
         Button deleteBtn;
         DatabaseReference proGym;
@@ -30,14 +30,18 @@ public class UpdateDeleteExercise extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_delete_exercise);
 
-        String key = getIntent().getStringExtra("Key").toString();
+        String key = getIntent().getStringExtra("Key");
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises").child(key);
-        title = findViewById(R.id.item_update_delete_title_txt);
-        subTitle = findViewById(R.id.item_update_delete_title_txt);
-        description = findViewById(R.id.item_update_delete_description_txt);
+
+
+
+        title = findViewById(R.id.updateExerciseTitleTxt);
+        exerciseID = findViewById(R.id.UpdateExerciseSitleTxt);
+        description = findViewById(R.id.UpdateExerciseDesTxt);
+
 
         title.setText(getIntent().getStringExtra("Title"));
-        subTitle.setText(getIntent().getStringExtra("SubTitle"));
+        exerciseID.setText(getIntent().getStringExtra("Key"));
         description.setText(getIntent().getStringExtra("Description"));
 
     }
@@ -47,7 +51,7 @@ public class UpdateDeleteExercise extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 snapshot.getRef().child("title").setValue(title.getText().toString());
-                snapshot.getRef().child("subTitle").setValue(subTitle.getText().toString());
+                snapshot.getRef().child("key").setValue(exerciseID.getText().toString());
                 snapshot.getRef().child("description").setValue(description.getText().toString());
                 Toast.makeText(getApplicationContext(), "Update Exercise Successfully!", Toast.LENGTH_SHORT).show();
                 UpdateDeleteExercise.this.finish();

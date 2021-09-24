@@ -29,7 +29,6 @@ public class ExerciseManagment extends AppCompatActivity {
     ListView exerciseList;
     DatabaseReference proGym;
     ArrayList<String> exerciseListItems;
-    String key;
     FirebaseListAdapter adapter;
 
 
@@ -53,11 +52,11 @@ public class ExerciseManagment extends AppCompatActivity {
             @Override
             protected void populateView(@NonNull View v, @NonNull Object model, int position) {
                 TextView title = v.findViewById(R.id.exNameTV);
-                TextView subTitle = v.findViewById(R.id.exSNameTV);
+                TextView key = v.findViewById(R.id.exSNameTV);
                 Exercise exercise = (Exercise) model;
                 title.setText(exercise.getTitle());
-                subTitle.setText(exercise.getSubTitle());
-                key = this.getRef(position).getKey();
+                key.setText(exercise.getKey());
+
             }
         };
         exerciseList.setAdapter(adapter);
@@ -78,9 +77,8 @@ public class ExerciseManagment extends AppCompatActivity {
                 Intent updateDelete = new Intent(getApplicationContext(), UpdateDeleteExercise.class);
                 Exercise ex = (Exercise) parent.getItemAtPosition(position);
                 updateDelete.putExtra("Title", ex.getTitle());
-                updateDelete.putExtra("SubTitle", ex.getSubTitle());
+                updateDelete.putExtra("Key", ex.getKey());
                 updateDelete.putExtra("Description", ex.getDescription());
-                updateDelete.putExtra("Key", key);
 
                 startActivity(updateDelete);
             }
