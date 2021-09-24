@@ -1,11 +1,12 @@
-package com.example.progym.user;
+package com.example.progym.user.profile;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
@@ -13,14 +14,9 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-
-import com.example.progym.Home;
 import com.example.progym.R;
 
-public class ProfileFragment extends Fragment {
+public class FitnessCalculation extends AppCompatActivity {
 
     TextView height_txt, age_text, weight_text;
     RadioButton rdbtn_little,rdbtn_light,rdbtn_mod,rdbtn_active,rdbtn_extra;
@@ -31,31 +27,32 @@ public class ProfileFragment extends Fragment {
     boolean isMale, isFemale;
     boolean male_click = true, female_click = true, malecheck = true, femalecheck = true;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fitness_calculation);
 
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.profile_fragment, container, false);
-        height_txt = (TextView) view.findViewById(R.id.height_txt);
 
-        CardView cd_female = view.findViewById(R.id.cv_female);
-        CardView cd_male = view.findViewById(R.id.cv_male);
 
-        TextView male_text = view.findViewById(R.id.male);
-        TextView female_text = view.findViewById(R.id.female);
+        height_txt = (TextView)findViewById(R.id.height_txt);
 
-        weight_plus = view.findViewById(R.id.weight_plus);
-        weight_minus = view.findViewById(R.id.weight_minus);
-        age_plus = view.findViewById(R.id.age_plus);
-        age_minus = view.findViewById(R.id.age_minus);
+        CardView cd_female = findViewById(R.id.cv_female);
+        CardView cd_male = findViewById(R.id.cv_male);
 
-        rdbtn_little = view.findViewById(R.id.rdbtn_little);
-        rdbtn_light = view.findViewById(R.id.rdbtn_light);
-        rdbtn_mod = view.findViewById(R.id.rdbtn_mod);
-        rdbtn_active = view.findViewById(R.id.rdbtn_active);
-        rdbtn_extra = view.findViewById(R.id.rdbtn_extra);
+        TextView male_text = findViewById(R.id.male);
+        TextView female_text = findViewById(R.id.female);
+
+        weight_plus = findViewById(R.id.weight_plus);
+        weight_minus = findViewById(R.id.weight_minus);
+        age_plus = findViewById(R.id.age_plus);
+        age_minus = findViewById(R.id.age_minus);
+
+        rdbtn_little = findViewById(R.id.rdbtn_little);
+        rdbtn_light = findViewById(R.id.rdbtn_light);
+        rdbtn_mod = findViewById(R.id.rdbtn_mod);
+        rdbtn_active = findViewById(R.id.rdbtn_active);
+        rdbtn_extra = findViewById(R.id.rdbtn_extra);
+
 
 
 
@@ -110,11 +107,11 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        ChangeSeekbar(view);
-        ChangeWeight(view);
-        ChangeAge(view);
+        ChangeSeekbar();
+        ChangeWeight();
+        ChangeAge();
 
-        Button saveandview = view.findViewById(R.id.btn_profile);
+        Button saveandview = findViewById(R.id.btn_profile);
         saveandview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,14 +119,11 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        return view;
-
-
     }
 
-    private void ChangeSeekbar( View view) {
+    private void ChangeSeekbar( ) {
 
-        SeekBar Seekbar = view.findViewById(R.id.Seekbar);
+        SeekBar Seekbar = findViewById(R.id.Seekbar);
         Seekbar.setMax(30);
         Seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -152,9 +146,9 @@ public class ProfileFragment extends Fragment {
         });
     }
 
-    private void ChangeAge(View view) {
+    private void ChangeAge() {
 
-        age_text = view.findViewById(R.id.age_text);
+        age_text = findViewById(R.id.age_text);
 
         age_plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -175,9 +169,9 @@ public class ProfileFragment extends Fragment {
         age = Integer.parseInt(age_text.getText().toString());
     }
 
-    private void ChangeWeight(View view) {
+    private void ChangeWeight() {
 
-        weight_text = view.findViewById(R.id.weight_text);
+        weight_text = findViewById(R.id.weight_text);
 
         weight_plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,7 +206,7 @@ public class ProfileFragment extends Fragment {
             BMR = (float) (447.593 + (9.247 * weight)+(3.098 * (height*100)) - (4.330 * age));
         }
         else{
-            Toast.makeText(getActivity(),"Please Select Gender", Toast.LENGTH_SHORT).show();
+            Toast.makeText(FitnessCalculation.this,"Please Select Gender", Toast.LENGTH_SHORT).show();
             BMR = 0;
         }
 
@@ -232,13 +226,13 @@ public class ProfileFragment extends Fragment {
             points = (float) 1.9;
         }
         else{
-            Toast.makeText(getActivity(), "Please Select Workout Time", Toast.LENGTH_SHORT).show();
+            Toast.makeText(FitnessCalculation.this, "Please Select Workout Time", Toast.LENGTH_SHORT).show();
             points = 0;
         }
 
         calBurned = BMR * points;
 
-        Intent intent = new Intent(getActivity(), ProfileResults.class);
+        Intent intent = new Intent(getApplicationContext(), FitnessResults.class);
         intent.putExtra("BMI",BMI);
         intent.putExtra("BMR",new Float(BMR).toString());
         intent.putExtra("Cal",new Float(calBurned).toString());
@@ -246,7 +240,4 @@ public class ProfileFragment extends Fragment {
 
 
     }
-
-
-
 }
