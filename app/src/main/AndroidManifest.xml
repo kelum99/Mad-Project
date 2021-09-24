@@ -28,25 +28,14 @@
             android:exported="true" />
 
 
+        <activity
             android:name=".admin.member.AllMembers"
             android:exported="true" />
 
         <activity
-            android:name=".user.store.Checkout"
-            android:exported="true" />
 
-        <activity
-            android:name=".admin.store.AddItem"
-            android:exported="true" />
-     
-    
-      <activity
             android:name=".admin.exercises.UpdateDeleteExercise"
             android:exported="true" />
-        <activity
-            android:name=".admin.store.UpdateItem"
-            android:exported="true"
-            />
 
         <activity
             android:name=".admin.AddEvent"
@@ -55,11 +44,10 @@
 
             android:name=".user.payment.MyPayment"
             android:exported="true" />
-      
+
         <activity
             android:name=".user.store.Cart"
             android:exported="true" />
-      
 
         <activity
             android:name=".user.profile.FitnessResults"
@@ -69,10 +57,6 @@
         <activity
             android:name=".user.profile.FitnessCalculation"
             android:exported="true" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".admin.Diet.AddDiet"
