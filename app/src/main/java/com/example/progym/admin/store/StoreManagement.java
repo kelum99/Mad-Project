@@ -3,9 +3,11 @@ package com.example.progym.admin.store;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,11 +16,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.progym.R;
 import com.example.progym.admin.exercises.AddExercise;
 import com.example.progym.admin.exercises.Exercise;
+import com.example.progym.admin.exercises.UpdateDeleteExercise;
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.firebase.ui.database.FirebaseListOptions;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 import java.util.ArrayList;
 
@@ -28,6 +34,8 @@ public class StoreManagement extends AppCompatActivity {
     ListView itemList;
     DatabaseReference proGym;
     ArrayList<String> ItemListItem;
+    String key;
+    FirebaseListAdapter adapter;
 
 
     @Override
@@ -35,11 +43,28 @@ public class StoreManagement extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_management);
 
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
+        Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
         itemList = findViewById(R.id.store_management_itemLV);
         ItemListItem = new ArrayList<String>();
         addItemBtn = findViewById(R.id.store_management_add_item_btn);
 
+        FirebaseListOptions<Store> options = new FirebaseListOptions.Builder<Store>()
+                .setLayout(R.layout.item_list_view)
+                .setQuery(proGym, Store.class)
+                .build();
+        adapter = new FirebaseListAdapter(options) {
+
+            @Override
+            protected void populateView(@NonNull View v, @NonNull Object model, int position) {
+                TextView title = v.findViewById(R.id.itemName_LV);
+                TextView itemPrice = v.findViewById(R.id.itemPrice_LV);
+                Store store = (Store) model;
+                title.setText(store.getItem_title());
+                itemPrice.setText(store.getItem_price());
+                key = this.getRef(position).getKey();
+            }
+        };
+        itemList.setAdapter(adapter);
 
         addItemBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,47 +73,34 @@ public class StoreManagement extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        initializeListView();
 
-    }
-
-    private void initializeListView() {
-
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, ItemListItem);
-
-        proGym.addChildEventListener(new ChildEventListener() {
+        itemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String value =  snapshot.getValue(Store.class).toString();
-                ItemListItem.add(value);
-                adapter.notifyDataSetChanged();
-            }
+                Intent updateDelete = new Intent(getApplicationContext(), UpdateDeleteItem.class);
+                Store st = (Store) parent.getItemAtPosition(position);
+                updateDelete.putExtra("Item_Title", st.getItem_title());
+                updateDelete.putExtra("Item_Price", st.getItem_price());
+                updateDelete.putExtra("Item_Description", st.getItem_description());
+                updateDelete.putExtra("Key", key);
 
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-                ItemListItem.remove(snapshot.getValue(String.class));
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+                startActivity(updateDelete);
             }
         });
-
-        itemList.setAdapter(adapter);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
+
 }
+

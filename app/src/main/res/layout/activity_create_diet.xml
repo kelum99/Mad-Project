@@ -6,76 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".admin.CreateDiet">
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="104dp"
-        android:layout_height="30dp"
+    <EditText
+        android:id="@+id/dietTitle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="291dp"
-        android:text="Lunch"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/textfields2"
+        android:hint="enter_title"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintHorizontal_bias="0.0"
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="104dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="291dp"
-        android:text="Dinner"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="104dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="291dp"
-        android:text="Snacks"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="269dp"
         android:text="Description"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/dietSubTitle" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="269dp"
         android:text="Sub Title"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/dietTitle" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="190dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:text="Add Diet Plan"
         android:textSize="24sp"
@@ -89,7 +76,7 @@
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="269dp"
         android:text="Title"
         android:textSize="16sp"
@@ -98,16 +85,201 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="104dp"
-        android:layout_height="30dp"
+    <EditText
+        android:id="@+id/dietSubTitle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="291dp"
-        android:text="Breakfast"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/textfields2"
+        android:hint="enter_sub_title"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/dietDes"
+        android:layout_width="310dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="61dp"
+        android:background="@drawable/textfields2"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/enter_description"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="7dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:ignore="TextContrastCheck" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:background="#BEC9DA"
+        android:divider="@android:drawable/divider_horizontal_textfield"
+        android:showDividers="middle"
+        android:stretchColumns="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/dietDes">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="7dp"
+                android:text="Breakfast"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/breakfask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/divider_horizontal_bright"
+                android:backgroundTint="#BEC9DA"
+                android:ems="10"
+                android:hint="@string/enter_description"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="7dp"
+                android:text="Lunch"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/divider_horizontal_bright"
+                android:backgroundTint="#BEC9DA"
+                android:ems="10"
+                android:hint="@string/enter_description"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="7dp"
+                android:text="Dinner"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/divider_horizontal_bright"
+                android:backgroundTint="#BEC9DA"
+                android:ems="10"
+                android:hint="@string/enter_description"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="7dp"
+                android:text="Snack"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/snack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@android:drawable/divider_horizontal_bright"
+                android:backgroundTint="#BEC9DA"
+                android:ems="10"
+                android:hint="@string/enter_description"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="16sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/addDiet"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/style"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

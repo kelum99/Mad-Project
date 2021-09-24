@@ -3,76 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="radioButtonClick">
 
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/rdbtn_visa"
-            android:layout_width="85dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center|center_horizontal"
-            android:paddingRight="10dp" />
-
-        <RadioButton
-            android:id="@+id/rdbtn_discover"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center|center_horizontal" />
-
-        <RadioButton
-            android:id="@+id/rdbtn_master"
-            android:layout_width="99dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center|center_horizontal" />
-
-        <RadioButton
-            android:id="@+id/rdbtn_amex"
-            android:layout_width="82dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center|center_horizontal" />
-
-        <RadioButton
-            android:id="@+id/rdbtn_paypal"
-            android:layout_width="52dp"
-            android:layout_height="match_parent"
-            android:gravity="center|center_horizontal" />
-    </RadioGroup>
-
-
-    <TextView
-        android:id="@+id/tv_paymethod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/tv_paymethod"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="410dp"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:background="@drawable/borderstyle2"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -98,15 +40,8 @@
             app:srcCompat="@drawable/master" />
 
         <ImageView
-            android:id="@+id/img_amex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/amex" />
-
-        <ImageView
             android:id="@+id/img_paypal"
-            android:layout_width="wrap_content"
+            android:layout_width="113dp"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/paypal" />
 
@@ -130,12 +65,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="35dp"
         android:text="@string/tv_cname"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_paymethod" />
 
     <TextView
         android:id="@+id/tv_expdate"
@@ -165,15 +100,15 @@
         android:id="@+id/et_cname"
         android:layout_width="194dp"
         android:layout_height="38dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/borderstyle2"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:hint="@string/name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/et_payMethod"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -190,16 +125,17 @@
         app:layout_constraintTop_toBottomOf="@+id/et_cvv" />
 
     <Button
-        android:id="@+id/btn_edit"
+        android:id="@+id/btn_save"
         android:layout_width="138dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@color/mad1"
         android:text="@string/btn_proceed"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_secure"
         tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
@@ -208,8 +144,8 @@
         android:id="@+id/et_cno"
         android:layout_width="194dp"
         android:layout_height="38dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/borderstyle2"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
@@ -220,11 +156,11 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/et_expdate"
+        android:id="@+id/et_expDate"
         android:layout_width="194dp"
         android:layout_height="38dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/borderstyle2"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
@@ -246,15 +182,15 @@
         android:hint="@string/et_cvv"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_expdate"
+        app:layout_constraintTop_toBottomOf="@+id/et_expDate"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/img_lock"
         android:layout_width="28dp"
         android:layout_height="0dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="82dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_expdate"
         app:srcCompat="@android:drawable/ic_lock_lock" />
@@ -263,14 +199,55 @@
         android:id="@+id/btn_continue"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="28dp"
         android:background="@color/mad1"
         android:text="@string/btn_continue"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_edit" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_save"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/et_payMethod"
+        android:layout_width="194dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/borderstyle2"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/tv_paymethod"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/tv_paymethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/tv_paymethod"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/tv_addCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/tv_addCard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

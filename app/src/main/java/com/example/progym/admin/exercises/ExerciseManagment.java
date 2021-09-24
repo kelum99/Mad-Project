@@ -1,24 +1,27 @@
 package com.example.progym.admin.exercises;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.progym.R;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.firebase.ui.database.FirebaseListOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 import java.util.ArrayList;
+
 
 public class ExerciseManagment extends AppCompatActivity {
 
@@ -26,6 +29,9 @@ public class ExerciseManagment extends AppCompatActivity {
     ListView exerciseList;
     DatabaseReference proGym;
     ArrayList<String> exerciseListItems;
+    String key;
+    FirebaseListAdapter adapter;
+
 
 
     @Override
@@ -33,60 +39,64 @@ public class ExerciseManagment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercise_managment);
 
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
+        Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
         exerciseList = findViewById(R.id.exerciseLV);
-        exerciseListItems = new ArrayList<String>();
+        exerciseListItems = new ArrayList<>();
         addExerciseBtn = findViewById(R.id.add_exercise);
+
+        FirebaseListOptions<Exercise> options = new FirebaseListOptions.Builder<Exercise>()
+                .setLayout(R.layout.exercise_list_view)
+                .setQuery(proGym, Exercise.class)
+                .build();
+        adapter = new FirebaseListAdapter(options) {
+
+            @Override
+            protected void populateView(@NonNull View v, @NonNull Object model, int position) {
+                TextView title = v.findViewById(R.id.exNameTV);
+                TextView subTitle = v.findViewById(R.id.exSNameTV);
+                Exercise exercise = (Exercise) model;
+                title.setText(exercise.getTitle());
+                subTitle.setText(exercise.getSubTitle());
+                key = this.getRef(position).getKey();
+            }
+        };
+        exerciseList.setAdapter(adapter);
 
 
         addExerciseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AddExercise.class);
+                Intent intent = new Intent(getApplicationContext(), AddExercise.class);
                 startActivity(intent);
             }
         });
-        initializeListView();
 
-    }
-
-    private void initializeListView() {
-
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, exerciseListItems);
-
-        proGym.addChildEventListener(new ChildEventListener() {
+        exerciseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String value =  snapshot.getValue(Exercise.class).toString();
-                exerciseListItems.add(value);
-                adapter.notifyDataSetChanged();
-            }
+                Intent updateDelete = new Intent(getApplicationContext(), UpdateDeleteExercise.class);
+                Exercise ex = (Exercise) parent.getItemAtPosition(position);
+                updateDelete.putExtra("Title", ex.getTitle());
+                updateDelete.putExtra("SubTitle", ex.getSubTitle());
+                updateDelete.putExtra("Description", ex.getDescription());
+                updateDelete.putExtra("Key", key);
 
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-                exerciseListItems.remove(snapshot.getValue(String.class));
-                adapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+                startActivity(updateDelete);
             }
         });
-
-        exerciseList.setAdapter(adapter);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
+
 }

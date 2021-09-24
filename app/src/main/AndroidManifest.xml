@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+
             android:name=".user.store.Checkout"
             android:exported="true" />
         <activity
@@ -25,60 +26,56 @@
         <activity
             android:name=".admin.store.StoreManagement"
             android:exported="true" />
+
         <activity
-            android:name=".admin.CreateDiet"
+            android:name=".admin.member.AllMembers"
             android:exported="true" />
+
         <activity
-            android:name=".admin.CreateEvent"
+            android:name=".admin.exercises.UpdateDeleteExercise"
             android:exported="true" />
+
+
         <activity
             android:name=".admin.AddEvent"
             android:exported="true" />
         <activity
-            android:name=".user.MyPayment"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".user.payment.MyPayment"
+            android:exported="true"/>
+
+
+
         <activity
+
             android:name=".user.store.Cart"
+
             android:exported="true" />
-        <activity
-            android:name=".user.ProfileResults"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".admin.UpdateMember"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".admin.AddMember"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity
+            android:name=".user.profile.FitnessResults"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".user.profile.FitnessCalculation"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".admin.Diet.AddDiet"
+            android:exported="true" />
+
+        <activity
+            android:name=".admin.member.AddMember"
+
+            android:exported="true" />
         <activity
             android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />
-        <activity
-            android:name=".admin.exercises.UpdateExercise"
-            android:exported="true" />
+
         <activity
             android:name=".admin.schedules.AddSchedule"
             android:exported="true" />

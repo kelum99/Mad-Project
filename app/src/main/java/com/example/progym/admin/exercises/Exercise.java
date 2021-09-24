@@ -7,6 +7,7 @@ public class Exercise {
     private String description;
     private String imageURL;
 
+
     public Exercise() { }
 
     public String getImageURL() {
@@ -41,7 +42,6 @@ public class Exercise {
         this.description = description;
     }
 
-    public String toString(){
-        return this.getTitle()+" - "+getSubTitle();
-    }
+
+
 }

@@ -30,9 +30,7 @@ public class Store {
         return item_description;
     }
 
-    public void setItem_description(String item_description) {
-        this.item_description = item_description;
-    }
+    public void setItem_description(String item_description) { this.item_description = item_description; }
 
     public String getImageURL() {
         return imageURL;
@@ -42,8 +40,6 @@ public class Store {
         this.imageURL = imageURL;
     }
 
-    public String toString(){
-        return this.getItem_title()+"  -  "+getItem_price();
-    }
+
 }
 
