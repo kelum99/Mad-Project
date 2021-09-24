@@ -28,7 +28,7 @@ import com.google.firebase.storage.UploadTask;
 public class AddExercise extends AppCompatActivity {
 
     private EditText exerciseTitle;
-    private EditText exerciseSubTitle;
+    private EditText exerciseID;
     private EditText exerciseDescription;
     // ImageView preview;
     String imgUrl;
@@ -49,7 +49,7 @@ public class AddExercise extends AppCompatActivity {
         setContentView(R.layout.activity_add_exercise);
 
         exerciseTitle = findViewById(R.id.exerciseTitleTxt);
-        exerciseSubTitle = findViewById(R.id.exerciseSitleTxt);
+        exerciseID = findViewById(R.id.exerciseID);
         exerciseDescription = findViewById(R.id.exerciseDesTxt);
         addExercise = findViewById(R.id.addExercise);
         uploadBtn = findViewById(R.id.uploadBtn1);
@@ -79,16 +79,16 @@ public class AddExercise extends AppCompatActivity {
         exercise = new Exercise();
 
         exercise.setTitle(exerciseTitle.getText().toString().trim());
-        exercise.setSubTitle(exerciseSubTitle.getText().toString().trim());
-        exercise.setDescription(exerciseDescription.getText().toString());
+        exercise.setKey(exerciseID.getText().toString().trim());
+        exercise.setDescription(exerciseDescription.getText().toString().trim());
         exercise.setImageURL(imgUrl);
 
-        proGym.push().setValue(exercise);
+        proGym.child(exerciseID.getText().toString().trim()).setValue(exercise);
         Toast.makeText(this, "Exercise Added!", Toast.LENGTH_SHORT).show();
     };
     private void clearFields() {
         exerciseTitle.setText("");
-        exerciseSubTitle.setText("");
+        exerciseID.setText("");
         exerciseDescription.setText("");
     };
     private void chooseImage() {

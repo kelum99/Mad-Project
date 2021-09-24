@@ -19,9 +19,11 @@
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_cart.xml" value="0.33559782608695654" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_create_diet.xml" value="0.31929347826086957" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_exercise_managment.xml" value="0.36096014492753625" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_fitness_calculation.xml" value="0.3129528985507246" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_fitness_results.xml" value="0.3129528985507246" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_update_delete_exercise.xml" value="0.31929347826086957" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_update_delete_exercise.xml" value="0.28076923076923077" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_update_exercise.xml" value="0.36096014492753625" />
         <entry key="..\:/MadProject/app/src/main/res/layout/exercise_fragment.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/layout/exercise_list_view.xml" value="0.31929347826086957" />

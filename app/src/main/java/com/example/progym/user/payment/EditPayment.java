@@ -1,4 +1,4 @@
-package com.example.progym.user;
+package com.example.progym.user.payment;
 
 import androidx.appcompat.app.AppCompatActivity;
 

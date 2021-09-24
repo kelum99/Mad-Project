@@ -10,7 +10,15 @@ import android.view.View;
 import com.example.progym.admin.AddEvent;
 
 import com.example.progym.admin.Diet.AddDiet;
+
+import com.example.progym.admin.exercises.AddExercise;
+
+import com.example.progym.admin.member.AddMember;
+import com.example.progym.admin.member.AllMembers;
+
+
 import com.example.progym.admin.exercises.ExerciseManagment;
+
 import com.example.progym.admin.schedules.AddSchedule;
 
 
@@ -31,7 +39,7 @@ public class AdminHome extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.memberMngBtn:
-                intent = new Intent(getApplicationContext(), Home.class);
+                intent = new Intent(getApplicationContext(), AllMembers.class);
                 startActivity(intent);
                 break;
             case R.id.storeMngBtn:
