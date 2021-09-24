@@ -27,11 +27,6 @@
     <string name="add_schedule">Add Schedule</string>
 
 
-    <string name="main_topic_item">Add Items</string>
-    <string name="item_price_txt">Price</string>
-    <string name="item_topic_txt">Item Name</string>
-    <string name="item_description_txt">Description</string>
-
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
     <string name="rdbtn_male">Male</string>
@@ -110,7 +105,7 @@
     <string name="main_topic_item">Add Items</string>
     <string name="item_price_txt">Price</string>
     <string name="item_topic_txt">Item Name</string>
-    <string name="item_description_txt">Descrioption</string>
+    <string name="item_description_txt">Description</string>
 
     <string name="item_image_btn">Upload</string>
     <string name="add_item_btn">Add Item</string>
@@ -122,6 +117,8 @@
 
     <string name="add_item_price_txt">Item Price</string>
     <string name="update_item_price_txt">Price</string>
+    <string name="delete_item_btn">Add Item</string>
+    <string name="topic_delete">Store Management</string>
 
 
 </resources>

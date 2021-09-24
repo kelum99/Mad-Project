@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,22 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
         <activity
-
             android:name=".user.store.Checkout"
-            android:exported="true"/>
-
-            <activity
-                android:name=".admin.store.AddItem"
-                android:exported="true"
-                />
+            android:exported="true" />
+        <activity
+            android:name=".admin.store.AddItem"
+            android:exported="true" />
         <activity
             android:name=".admin.store.UpdateItem"
-            android:exported="true"
-            >
-
+            android:exported="true" />
+        <activity
+            android:name=".admin.store.StoreManagement"
+            android:exported="true" />
         <activity
             android:name=".admin.CreateDiet"
             android:exported="true" />
@@ -40,7 +37,6 @@
         <activity
             android:name=".user.MyPayment"
             android:exported="true">
-          
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,8 +45,8 @@
         </activity>
         <activity
             android:name=".user.store.Cart"
-              android:exported="true">
-          <activity
+            android:exported="true" />
+        <activity
             android:name=".user.ProfileResults"
             android:exported="true">
             <intent-filter>
@@ -77,7 +73,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<activity
+        <activity
             android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />
         <activity
@@ -92,7 +88,6 @@
         <activity
             android:name=".AdminHome"
             android:exported="true" />
-
         <activity
             android:name=".Home"
             android:exported="true" />
