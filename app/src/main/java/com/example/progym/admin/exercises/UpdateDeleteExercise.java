@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -30,9 +29,13 @@ public class UpdateDeleteExercise extends AppCompatActivity {
 
         String key = getIntent().getStringExtra("Key");
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises").child(key);
+
+
+
         title = findViewById(R.id.updateExerciseTitleTxt);
         subTitle = findViewById(R.id.UpdateExerciseSitleTxt);
         description = findViewById(R.id.UpdateExerciseDesTxt);
+
         title.setText(getIntent().getStringExtra("Title"));
         subTitle.setText(getIntent().getStringExtra("subTitle"));
         description.setText(getIntent().getStringExtra("Description"));

@@ -32,6 +32,7 @@ public class ExerciseManagment extends AppCompatActivity {
     FirebaseListAdapter adapter;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
