@@ -14,11 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-
-            android:name=".admin.CreateDiet"
+            android:name=".UpdateBooking"
             android:exported="true" />
         <activity
-            android:name=".admin.CreateEvent"
+            android:name=".OnlineBooking"
+            android:exported="true" />
+        <activity
+            android:name=".admin.CreateDiet"
             android:exported="true" />
         <activity
             android:name=".admin.AddEvent"
@@ -59,7 +61,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<activity
+        <activity
             android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />
         <activity
@@ -74,7 +76,6 @@
         <activity
             android:name=".AdminHome"
             android:exported="true" />
-
         <activity
             android:name=".Home"
             android:exported="true" />
@@ -87,6 +88,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".admin.Event.CreateEvent"
+            android:exported="true" />
+
 
         <meta-data
             android:name="preloaded_fonts"

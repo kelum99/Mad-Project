@@ -1,16 +1,14 @@
-package com.example.progym.admin;
+package com.example.progym;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.progym.R;
-
-public class CreateEvent extends AppCompatActivity {
+public class OnlineBooking extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_event);
+        setContentView(R.layout.activity_online_booking);
     }
 }
