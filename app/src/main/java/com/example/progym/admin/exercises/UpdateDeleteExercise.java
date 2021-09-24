@@ -30,9 +30,13 @@ public class UpdateDeleteExercise extends AppCompatActivity {
 
         String key = getIntent().getStringExtra("Key");
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises").child(key);
+
+
+
         title = findViewById(R.id.updateExerciseTitleTxt);
         exerciseID = findViewById(R.id.UpdateExerciseSitleTxt);
         description = findViewById(R.id.UpdateExerciseDesTxt);
+
 
         title.setText(getIntent().getStringExtra("Title"));
         exerciseID.setText(getIntent().getStringExtra("Key"));

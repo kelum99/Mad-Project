@@ -26,6 +26,7 @@
             android:name=".OnlineBooking"
             android:exported="true" />
         <activity
+
             android:name=".user.store.Checkout"
             android:exported="true" />
         <activity
@@ -37,30 +38,51 @@
         <activity
             android:name=".admin.store.StoreManagement"
             android:exported="true" />
+
+
         <activity
             android:name=".admin.member.AllMembers"
             android:exported="true" />
+
         <activity
             android:name=".admin.exercises.UpdateDeleteExercise"
             android:exported="true" />
+
+        <activity
+            android:name=".admin.store.UpdateDeleteItem"
+            android:exported="true" />
+
+
         <activity
             android:name=".admin.AddEvent"
             android:exported="true" />
         <activity
+
             android:name=".user.payment.MyPayment"
-            android:exported="true" />
+            android:exported="true"/>
+
+
+
         <activity
             android:name=".user.store.Cart"
             android:exported="true" />
+
+
         <activity
             android:name=".user.profile.FitnessResults"
             android:exported="true" />
         <activity
             android:name=".user.profile.FitnessCalculation"
             android:exported="true" />
+
+
+
+
         <activity
             android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />
+
+
         <activity
             android:name=".admin.Diet.AddDiet"
             android:exported="true" />
