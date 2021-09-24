@@ -8,19 +8,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.progym.Home;
 import com.example.progym.MainActivity;
 import com.example.progym.R;
+import com.example.progym.admin.exercises.UpdateDeleteExercise;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MyProfileFragment extends Fragment {
 
     EditText name, age, address, phone, email, nic, memberType, username, password;
     TextView tv_userName;
     Button btn_updateProfile, btn_cal;
+    DatabaseReference proGymMembers;
 
     @Nullable
     @Override
@@ -28,6 +37,9 @@ public class MyProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.myprofile_fragment, container, false);
+
+        String Username = getActivity().getIntent().getStringExtra("username").toString();
+        proGymMembers = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Members").child(Username);
 
         name = view.findViewById(R.id.name);
         age = view.findViewById(R.id.age);
@@ -63,7 +75,40 @@ public class MyProfileFragment extends Fragment {
             }
         });
 
+        btn_updateProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                proGymMembers.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+
+                        snapshot.getRef().child("name").setValue(name.getText().toString());
+                        snapshot.getRef().child("age").setValue(age.getText().toString());
+                        snapshot.getRef().child("address").setValue(address.getText().toString());
+                        snapshot.getRef().child("phone").setValue(phone.getText().toString());
+                        snapshot.getRef().child("email").setValue(email.getText().toString());
+                        snapshot.getRef().child("nic").setValue(nic.getText().toString());
+                        snapshot.getRef().child("memberType").setValue(memberType.getText().toString());
+                        snapshot.getRef().child("username").setValue(username.getText().toString());
+                        snapshot.getRef().child("password").setValue(password.getText().toString());
+
+                        Toast.makeText(getActivity(), "Update Exercise Successfully!", Toast.LENGTH_SHORT).show();
+
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
 
         return  view;
     }
+
+
 }

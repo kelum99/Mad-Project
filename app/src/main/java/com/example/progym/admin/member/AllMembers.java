@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.example.progym.R;
 import com.example.progym.admin.exercises.Exercise;
+import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,6 +28,8 @@ public class AllMembers extends AppCompatActivity {
     ListView memberList;
     DatabaseReference proGymMembers;
     ArrayList<String> memberListItems;
+    String key;
+    FirebaseListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
