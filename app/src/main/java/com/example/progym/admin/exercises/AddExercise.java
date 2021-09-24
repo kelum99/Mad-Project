@@ -23,7 +23,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
 public class AddExercise extends AppCompatActivity {
@@ -49,11 +48,11 @@ public class AddExercise extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_exercise);
 
-        exerciseTitle = findViewById(R.id.updateItem_topic);
-        exerciseSubTitle = findViewById(R.id.updateItem_price);
-        exerciseDescription = findViewById(R.id.updateItem_description);
-        addExercise = findViewById(R.id.add_item_btn);
-        uploadBtn = findViewById(R.id.additem_image_btn);
+        exerciseTitle = findViewById(R.id.exerciseTitleTxt);
+        exerciseSubTitle = findViewById(R.id.exerciseSitleTxt);
+        exerciseDescription = findViewById(R.id.exerciseDesTxt);
+        addExercise = findViewById(R.id.addExercise);
+        uploadBtn = findViewById(R.id.uploadBtn1);
        // preview = findViewById(R.id.exerciseImgUp);
 
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
@@ -86,33 +85,34 @@ public class AddExercise extends AppCompatActivity {
 
         proGym.push().setValue(exercise);
         Toast.makeText(this, "Exercise Added!", Toast.LENGTH_SHORT).show();
-    }
+    };
     private void clearFields() {
         exerciseTitle.setText("");
         exerciseSubTitle.setText("");
         exerciseDescription.setText("");
-    }
+    };
     private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent,IMAGE_REQUEST);
-    }
+    };
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == IMAGE_REQUEST && resultCode == RESULT_OK){
+            assert data != null;
             imgUri = data.getData();
             uploadImg();
         }
-    }
+    };
 
     private String getFileExtension (Uri uri){
         ContentResolver contentResolver = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
-    }
+    };
     private void uploadImg() {
         ProgressDialog uploadProg = new ProgressDialog(this);
         uploadProg.setMessage("Uploading");

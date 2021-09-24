@@ -93,24 +93,6 @@
     <string name="rdtbn_amex">Amex</string>
     <string name="rdbtn_paypal">Paypal</string>
 
-    <!-- rusiru strings -->
-
-
-    <string name="main_topic_item">Add Items</string>
-    <string name="item_price_txt">Price</string>
-    <string name="item_topic_txt">Item Name</string>
-
-    <string name="item_description_txt">Descrioption</string>
-    <string name="item_image_btn">Upload</string>
-    <string name="add_item_btn">Add Item</string>
-    <string name="item_img">item image</string>
-    <string name="main_topic_item_update">Update Item</string>
-    <string name="updateitem_image_btn">Upload</string>
-    <string name="update_item_btn">Update Item</string>
-    <string name="main_topic_item_add">Add Item</string>
-
-    <string name="exercise_managment">Exercise Managment</string>
-
     <string name="add_to_cart">Add</string>
     <string name="buy_now">buy</string>
     <string name="go_to_cart">View Cart</string>
@@ -135,10 +117,34 @@
     <string name="item_topic_txt">Item Name</string>
     <string name="item_description_txt">Descrioption</string>
 
+
+    <string name="item_image_btn">Upload</string>
+    <string name="add_item_btn">Add Item</string>
+    <string name="item_img">item image</string>
+    <string name="main_topic_item_update">Update Item</string>
+    <string name="updateitem_image_btn">Upload</string>
+    <string name="update_item_btn">Update Item</string>
+    <string name="main_topic_item_add">Add Item</string>
+    <string name="delete">Delete</string>
+    <string name="update_or_delete_exercise">Update or Delete Exercise</string>
+
+
+    <string name="update">Update</string>
+    <string name="monday">Monday</string>
+    <string name="saturday">Saturday</string>
+    <string name="friday">Friday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="sunday">Sunday</string>
+
+
+
     <string name="tv_addCard">Add New Card</string>
 
     <string name="add_item_price_txt">Item Price</string>
     <string name="update_item_price_txt">Price</string>
     <string name="tv_allMembers">All Members</string>
     <string name="btn_cal">Fitness Analysis</string>
+
 </resources>

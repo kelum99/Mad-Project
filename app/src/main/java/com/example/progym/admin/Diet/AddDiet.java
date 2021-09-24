@@ -28,7 +28,7 @@ public class AddDiet extends AppCompatActivity {
     private EditText snack;
     Button addDiet;
     Diet diet;
-    DatabaseReference proGym;
+    DatabaseReference dietRef;
 
 
 
@@ -50,7 +50,7 @@ public class AddDiet extends AppCompatActivity {
         addDiet = findViewById(R.id.addDiet);
 
 
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Diet");
+        dietRef = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Diet");
 
         addDiet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,9 +59,6 @@ public class AddDiet extends AppCompatActivity {
                 clearFields();
             }
         });
-
-
-
 
     }
 
@@ -77,7 +74,7 @@ public class AddDiet extends AppCompatActivity {
         diet.setSnack(snack.getText().toString());
 
 
-        proGym.push().setValue(diet);
+        dietRef.push().setValue(diet);
         Toast.makeText(this, "Diet Added!", Toast.LENGTH_SHORT).show();
     }
 

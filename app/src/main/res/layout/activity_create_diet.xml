@@ -34,7 +34,7 @@
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="269dp"
         android:text="Description"
         android:textSize="16sp"
@@ -48,7 +48,7 @@
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="269dp"
         android:text="Sub Title"
         android:textSize="16sp"
@@ -76,7 +76,7 @@
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="269dp"
         android:text="Title"
         android:textSize="16sp"
@@ -278,7 +278,8 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
