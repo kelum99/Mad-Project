@@ -14,9 +14,6 @@
     <string name="payment">Payment</string>
     <string name="contact_us">Contact Us</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-
-
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
     <string name="rdbtn_male">Male</string>
@@ -68,6 +65,9 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btn_continue">Continue with Existing Card</string>
     <string name="btn_edit">Edit</string>
+
+    <string name="exercise_managment">Exercise Managment</string>
+
     <string-array name="Membership">
         <item>Permanent</item>
         <item>Open</item>
@@ -109,9 +109,7 @@
     <string name="update_item_btn">Update Item</string>
     <string name="main_topic_item_add">Add Item</string>
 
-
     <string name="exercise_managment">Exercise Managment</string>
-
 
     <string name="add_to_cart">Add</string>
     <string name="buy_now">buy</string>
@@ -132,13 +130,15 @@
     <string name="add_item">Add Item</string>
     <string name="update_item">Update Item</string>
 
-    <string name="tv_addCard">Add New Card</string>
+    <string name="main_topic_item">Add Items</string>
+    <string name="item_price_txt">Price</string>
+    <string name="item_topic_txt">Item Name</string>
+    <string name="item_description_txt">Descrioption</string>
 
+    <string name="tv_addCard">Add New Card</string>
 
     <string name="add_item_price_txt">Item Price</string>
     <string name="update_item_price_txt">Price</string>
     <string name="tv_allMembers">All Members</string>
     <string name="btn_cal">Fitness Analysis</string>
-
-
 </resources>

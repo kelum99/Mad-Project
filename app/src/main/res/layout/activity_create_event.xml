@@ -6,12 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".admin.CreateEvent">
 
+    <EditText
+        android:id="@+id/scheduleDesTxt2"
+        android:layout_width="285dp"
+        android:layout_height="93dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="292dp"
+        android:layout_marginEnd="101dp"
+        android:background="@drawable/textfields2"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/enter_description"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="7dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="189dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="192dp"
+        android:text="Event Description"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/exerciseSitleTxt3"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/textfields2"
+        android:hint="Enter Type"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="189dp"
         android:layout_height="38dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="288dp"
         android:layout_marginEnd="192dp"
         android:text="Date"
         android:textSize="20sp"
@@ -25,7 +85,7 @@
         android:layout_width="189dp"
         android:layout_height="38dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="400dp"
         android:layout_marginEnd="192dp"
         android:text="Time"
         android:textSize="20sp"
@@ -39,11 +99,12 @@
         android:layout_width="189dp"
         android:layout_height="38dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="192dp"
         android:text="Event Type"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -52,39 +113,25 @@
         android:layout_width="120dp"
         android:layout_height="66dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="173dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Event Description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="172dp"
         android:ems="10"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -93,11 +140,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="175dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -106,6 +154,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Event"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="576dp" />
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="640dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
