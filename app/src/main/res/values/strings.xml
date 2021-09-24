@@ -88,6 +88,12 @@
         <item>Term</item>
     </string-array>
 
+    <string-array name="exercise_type">
+        <item>Weight Lose</item>
+        <item>Bodybuilding</item>
+        <item>Body Shaping</item>
+    </string-array>
+
 
     <string name="rdbtn_visa">Visa</string>
     <string name="rdbtn_discover">Discover</string>
@@ -149,6 +155,7 @@
 
     <string name="delete_item_btn">Add Item</string>
     <string name="topic_delete">Store Management</string>
+    <string name="textview">TextView</string>
 
 
 </resources>

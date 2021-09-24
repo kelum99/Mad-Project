@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.progym.user.ExerciseFragment;
+import com.example.progym.user.exercises.ExerciseFragment;
 
 import com.example.progym.user.profile.MyProfileFragment;
 
