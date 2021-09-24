@@ -1,4 +1,4 @@
-package com.example.progym.user;
+package com.example.progym.user.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.example.progym.Home;
 import com.example.progym.R;
 
-public class ProfileResults extends AppCompatActivity {
+public class FitnessResults extends AppCompatActivity {
 
     TextView tv_BMI, tv_bmr, tv_cals;
     TextView tv_h;
@@ -20,7 +20,7 @@ public class ProfileResults extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_results);
+        setContentView(R.layout.activity_fitness_results);
 
 
         tv_BMI = findViewById(R.id.tv_BMI);
@@ -48,7 +48,7 @@ public class ProfileResults extends AppCompatActivity {
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(ProfileResults.this, Home.class);
+                Intent intent1 = new Intent(FitnessResults.this, Home.class);
                 startActivity(intent1);
             }
         });
