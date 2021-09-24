@@ -156,6 +156,9 @@
     <string name="delete_item_btn">Add Item</string>
     <string name="topic_delete">Store Management</string>
     <string name="textview">TextView</string>
+    <string name="events">Events</string>
+    <string name="home">Home</string>
+    <string name="upload_image">Upload Image</string>
 
 
 </resources>
