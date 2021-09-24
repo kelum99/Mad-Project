@@ -1,5 +1,6 @@
 package com.example.progym;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.progym.user.profile.MyProfileFragment;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText eUsername;
@@ -16,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
     boolean isValid = false;
     String  testUsername = "Kelum";
     String  testPassword = "12345";
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        reference = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Members");
 
         Button loginBtn = findViewById(R.id.loginBtn);
         Button adminlgn = findViewById(R.id.adminBtn);
@@ -40,20 +51,59 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
 
-                   isValid =  Validate(Username,Password);
+                    reference.orderByChild("username").equalTo(Username).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()){
 
-                   if(!isValid){
+                                eUsername.setError(null);
+                                String pass = snapshot.child(Username).child("password").getValue(String.class);
 
-                       String errorMessage2 = "Incorrect Credentials, Please Try Again!";
-                       Toast.makeText(MainActivity.this, errorMessage2, Toast.LENGTH_SHORT).show();
-                   }
-                   else {
+                                if (pass.equals(Password)){
 
-                       String successMessage = "Login Successful!";
-                       Toast.makeText(MainActivity.this, successMessage, Toast.LENGTH_SHORT).show();
-                       Intent intent = new Intent(getApplicationContext(),Home.class);
-                       startActivity(intent);
-                   }
+                                    ePassword.setError(null);
+
+                                    String name = snapshot.child(Username).child("name").getValue(String.class);
+                                    String age = snapshot.child(Username).child("age").getValue(String.class);
+                                    String address = snapshot.child(Username).child("address").getValue(String.class);
+                                    String phone = snapshot.child(Username).child("phone").getValue(String.class);
+                                    String email = snapshot.child(Username).child("email").getValue(String.class);
+                                    String nic = snapshot.child(Username).child("nic").getValue(String.class);
+                                    String memberType = snapshot.child(Username).child("memberType").getValue(String.class);
+                                    String username = snapshot.child(Username).child("username").getValue(String.class);
+
+
+                                    Intent intent = new Intent(MainActivity.this, Home.class);
+
+                                    intent.putExtra("name",name);
+                                    intent.putExtra("age",age);
+                                    intent.putExtra("address",address);
+                                    intent.putExtra("phone",phone);
+                                    intent.putExtra("email",email);
+                                    intent.putExtra("nic",nic);
+                                    intent.putExtra("memberType",memberType);
+                                    intent.putExtra("username",username);
+                                    intent.putExtra("password",pass);
+
+                                    startActivity(intent);
+                                    Toast.makeText(MainActivity.this,"Login Successful ! ",Toast.LENGTH_SHORT).show();
+                                }else {
+                                    ePassword.setError("Invalid Password");
+                                    ePassword.requestFocus();
+                                    Toast.makeText(MainActivity.this,"Invalid Password",Toast.LENGTH_SHORT).show();
+                                }
+                            }else {
+                                eUsername.setError("Invalid User");
+                                eUsername.requestFocus();
+                                Toast.makeText(MainActivity.this,"No such user exists ",Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
                 }
 
@@ -70,7 +120,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public boolean Validate(String name , String password) {
-        return name.equals(testUsername) && password.equals(testPassword);
-    }
+
 }

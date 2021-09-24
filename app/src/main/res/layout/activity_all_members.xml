@@ -5,16 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <SearchView
-        android:id="@+id/search_member"
-        android:layout_width="190dp"
-        android:layout_height="42dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="209dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/borderstyle2" />
-
     <ImageView
         android:id="@+id/img_member"
         android:layout_width="wrap_content"
@@ -24,98 +14,6 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="78dp"
         app:srcCompat="@drawable/membergym" />
-
-    <TableLayout
-        android:layout_width="356dp"
-        android:layout_height="160dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="336dp">
-
-        <TableRow android:id="@+id/row1">
-
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="4"
-                android:background="@color/mad1"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="Username"
-                android:textColor="@android:color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/pwd"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="4"
-                android:background="@color/mad1"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="Password"
-                android:textColor="@android:color/white"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/action"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="4"
-                android:background="@color/mad1"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="Action"
-                android:textColor="@android:color/white"
-                android:textSize="14sp" />
-
-        </TableRow>
-
-        <TableRow android:id="@+id/row2">
-
-            <TextView
-                android:id="@+id/row1name"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="username"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/row1pwd"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="1dp"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_weight="4"
-                android:gravity="center_horizontal"
-                android:padding="10sp"
-                android:text="password"
-                android:textSize="12sp" />
-
-            <ImageButton
-                android:id="@+id/row1img_dlt"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                app:srcCompat="@drawable/trash2"/>
-
-
-        </TableRow>
-    </TableLayout>
 
     <Button
         android:id="@+id/btn_addnewmem"
@@ -129,6 +27,27 @@
         android:text="@string/btn_addnewmem"
         android:textColor="@color/white"
         android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/allMembers"
+        android:layout_width="381dp"
+        android:layout_height="274dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="336dp" />
+
+    <TextView
+        android:id="@+id/tv_allMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/tv_allMembers"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

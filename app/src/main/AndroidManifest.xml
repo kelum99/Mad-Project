@@ -13,9 +13,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
         <activity
+
             android:name=".admin.member.AllMembers"
             android:exported="true" />
+
+        <activity
+            android:name=".user.store.Checkout"
+            android:exported="true" />
+
+        <activity
+            android:name=".admin.store.AddItem"
+            android:exported="true" />
+        <activity
+            android:name=".admin.store.UpdateItem"
+            android:exported="true" />
+
+
         <activity
             android:name=".admin.CreateDiet"
             android:exported="true" />
@@ -26,14 +42,26 @@
             android:name=".admin.AddEvent"
             android:exported="true" />
         <activity
+
             android:name=".user.payment.MyPayment"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
-            android:name=".user.profile.ProfileResults"
-            android:exported="true"></activity>
+            android:name=".user.profile.FitnessResults"
+            android:exported="true" />
+
+        <activity
+            android:name=".user.profile.FitnessCalculation"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".user.store.Cart"
+            android:exported="true" />
+
+
         <activity
             android:name=".admin.member.AddMember"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />

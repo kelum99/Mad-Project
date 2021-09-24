@@ -86,6 +86,7 @@
     <string name="upload">Upload</string>
     <string name="exercise_image">exercise image</string>
     <string name="add_schedule">Add Schedule</string>
+
     <string name="rdbtn_visa">Visa</string>
     <string name="rdbtn_discover">Discover</string>
     <string name="rdbtn_master">Master</string>
@@ -94,9 +95,11 @@
 
     <!-- rusiru strings -->
 
+
     <string name="main_topic_item">Add Items</string>
     <string name="item_price_txt">Price</string>
     <string name="item_topic_txt">Item Name</string>
+
     <string name="item_description_txt">Descrioption</string>
     <string name="item_image_btn">Upload</string>
     <string name="add_item_btn">Add Item</string>
@@ -105,6 +108,11 @@
     <string name="updateitem_image_btn">Upload</string>
     <string name="update_item_btn">Update Item</string>
     <string name="main_topic_item_add">Add Item</string>
+
+
+    <string name="exercise_managment">Exercise Managment</string>
+
+
     <string name="add_to_cart">Add</string>
     <string name="buy_now">buy</string>
     <string name="go_to_cart">View Cart</string>
@@ -123,6 +131,14 @@
     <string name="add_item_image">Image</string>
     <string name="add_item">Add Item</string>
     <string name="update_item">Update Item</string>
+
     <string name="tv_addCard">Add New Card</string>
+
+
+    <string name="add_item_price_txt">Item Price</string>
+    <string name="update_item_price_txt">Price</string>
+    <string name="tv_allMembers">All Members</string>
+    <string name="btn_cal">Fitness Analysis</string>
+
 
 </resources>

@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class Transactions {
     private String amount;
-    private String date;
-    private String time;
+    private String dateTime;
+
 
     public Transactions() {
     }
@@ -19,19 +19,15 @@ public class Transactions {
         this.amount = amount;
     }
 
-    public String getDate() {
-        return date;
+    public String getDateTime() {
+        return dateTime;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+    public String toString(){
+        return getAmount()+"-"+getDateTime();
     }
 }

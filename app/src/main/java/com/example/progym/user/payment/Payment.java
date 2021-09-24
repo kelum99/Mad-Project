@@ -49,4 +49,8 @@ public class Payment {
     public String getCvv() {
         return cvv;
     }
+
+    public String toString(){
+        return getCardNumber();
+    }
 }

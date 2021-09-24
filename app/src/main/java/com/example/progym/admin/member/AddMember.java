@@ -107,7 +107,8 @@ public class AddMember extends AppCompatActivity implements AdapterView.OnItemSe
         newMember.setUsername(et_username.getText().toString().trim());
         newMember.setPassword(et_password.getText().toString().trim());
 
-        proGym.push().setValue(newMember);
+        //proGym.push().setValue(newMember);
+        proGym.child(et_username.getText().toString().trim()).setValue(newMember);
         Toast.makeText(this, "Member is Added!", Toast.LENGTH_SHORT).show();
     }
     private void clearFields() {
