@@ -21,8 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UpdateDeleteExercise extends AppCompatActivity {
         EditText title, exerciseID, description;
-        Button updateBtn;
-        Button deleteBtn;
         DatabaseReference proGym;
 
     @Override
