@@ -25,6 +25,8 @@
     <string name="upload">Upload</string>
     <string name="exercise_image">exercise image</string>
     <string name="add_schedule">Add Schedule</string>
+
+
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
     <string name="rdbtn_male">Male</string>
@@ -76,12 +78,16 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btn_continue">Continue with Existing Card</string>
     <string name="btn_edit">Edit</string>
+
+
     <string name="exercise_managment">Exercise Managment</string>
+
     <string-array name="Membership">
         <item>Permanent</item>
         <item>Open</item>
         <item>Term</item>
     </string-array>
+
     <string name="add_to_cart">Add</string>
     <string name="buy_now">buy</string>
     <string name="go_to_cart">View Cart</string>
@@ -100,10 +106,12 @@
     <string name="add_item_image">Image</string>
     <string name="add_item">Add Item</string>
     <string name="update_item">Update Item</string>
+
     <string name="main_topic_item">Add Items</string>
     <string name="item_price_txt">Price</string>
     <string name="item_topic_txt">Item Name</string>
     <string name="item_description_txt">Descrioption</string>
+
     <string name="item_image_btn">Upload</string>
     <string name="add_item_btn">Add Item</string>
     <string name="item_img">item image</string>
@@ -113,5 +121,17 @@
     <string name="main_topic_item_add">Add Item</string>
     <string name="delete">Delete</string>
     <string name="update_or_delete_exercise">Update or Delete Exercise</string>
+
+    <string name="add_item_price_txt">Item Price</string>
+    <string name="update_item_price_txt">Price</string>
+    <string name="update">Update</string>
+    <string name="monday">Monday</string>
+    <string name="saturday">Saturday</string>
+    <string name="friday">Friday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="sunday">Sunday</string>
+
 
 </resources>

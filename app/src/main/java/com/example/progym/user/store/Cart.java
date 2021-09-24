@@ -1,4 +1,4 @@
-package com.example.progym.admin.exercises;
+package com.example.progym.user.store;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.progym.R;
 
-public class UpdateExercise extends AppCompatActivity {
+public class Cart extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_exercise);
+        setContentView(R.layout.activity_cart);
     }
 }
