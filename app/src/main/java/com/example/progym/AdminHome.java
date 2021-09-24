@@ -7,12 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 
 
-import com.example.progym.admin.AddEvent;
-import com.example.progym.admin.CreateDiet;
+
+
+
 import com.example.progym.admin.Event.CreateEvent;
-import com.example.progym.admin.EventInsert;
+
+
+
+import com.example.progym.admin.Diet.AddDiet;
+
 
 import com.example.progym.admin.exercises.AddExercise;
+
+import com.example.progym.admin.member.AddMember;
+import com.example.progym.admin.member.AllMembers;
+
+
+import com.example.progym.admin.exercises.ExerciseManagment;
+
 import com.example.progym.admin.schedules.AddSchedule;
 
 
@@ -29,11 +41,11 @@ public class AdminHome extends AppCompatActivity {
         Intent intent = null;
         switch (v.getId()) {
             case R.id.exerciseMngBtn:
-                intent = new Intent(getApplicationContext(), AddExercise.class);
+                intent = new Intent(getApplicationContext(), ExerciseManagment.class);
                 startActivity(intent);
                 break;
             case R.id.memberMngBtn:
-                intent = new Intent(getApplicationContext(), Home.class);
+                intent = new Intent(getApplicationContext(), AllMembers.class);
                 startActivity(intent);
                 break;
             case R.id.storeMngBtn:
@@ -45,7 +57,7 @@ public class AdminHome extends AppCompatActivity {
                 startActivity(intent);
                 break;
           case R.id.dietMngBtn:
-               intent = new Intent(getApplicationContext(), CreateDiet.class);
+               intent = new Intent(getApplicationContext(), AddDiet.class);
                startActivity(intent);
                 break;
             case R.id.eventMngBtn:

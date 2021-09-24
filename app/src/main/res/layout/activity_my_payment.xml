@@ -17,7 +17,11 @@
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginTop="30dp"
+            android:background="@color/mad1"
             android:text="@string/btn_viewcard"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,32 +42,30 @@
             android:layout_width="200dp"
             android:layout_height="48dp"
             android:layout_marginTop="30dp"
+            android:background="@color/mad1"
             android:text="@string/btn_paynow"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_cards" />
+            app:layout_constraintTop_toBottomOf="@+id/savedCards" />
 
         <Button
             android:id="@+id/btn_history"
             android:layout_width="200dp"
             android:layout_height="48dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="28dp"
+            android:background="@color/mad1"
             android:text="@string/btn_history"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_confirm" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_cards"
-            android:layout_width="389dp"
-            android:layout_height="134dp"
-            android:layout_marginTop="30dp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_viewcards" />
 
         <Button
             android:id="@+id/btn_confirm"
@@ -75,16 +77,6 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_paynow" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_transactions"
-            android:layout_width="391dp"
-            android:layout_height="114dp"
-            android:layout_marginTop="30dp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_history" />
 
         <EditText
             android:id="@+id/et_amount"
@@ -99,6 +91,29 @@
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_paynow" />
+
+        <ListView
+            android:id="@+id/savedCards"
+            android:layout_width="410dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_viewcards" />
+
+        <ListView
+            android:id="@+id/transactions"
+            android:layout_width="410dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_history" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

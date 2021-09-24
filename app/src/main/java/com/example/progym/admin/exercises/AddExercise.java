@@ -1,6 +1,5 @@
 package com.example.progym.admin.exercises;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +13,6 @@ import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.progym.R;
@@ -25,13 +23,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
 public class AddExercise extends AppCompatActivity {
 
     private EditText exerciseTitle;
-    private EditText exerciseSubTitle;
+    private EditText exerciseID;
     private EditText exerciseDescription;
     // ImageView preview;
     String imgUrl;
@@ -52,7 +49,7 @@ public class AddExercise extends AppCompatActivity {
         setContentView(R.layout.activity_add_exercise);
 
         exerciseTitle = findViewById(R.id.exerciseTitleTxt);
-        exerciseSubTitle = findViewById(R.id.exerciseSitleTxt);
+        exerciseID = findViewById(R.id.exerciseID);
         exerciseDescription = findViewById(R.id.exerciseDesTxt);
         addExercise = findViewById(R.id.addExercise);
         uploadBtn = findViewById(R.id.uploadBtn1);
@@ -82,39 +79,40 @@ public class AddExercise extends AppCompatActivity {
         exercise = new Exercise();
 
         exercise.setTitle(exerciseTitle.getText().toString().trim());
-        exercise.setSubTitle(exerciseSubTitle.getText().toString().trim());
-        exercise.setDescription(exerciseDescription.getText().toString());
+        exercise.setKey(exerciseID.getText().toString().trim());
+        exercise.setDescription(exerciseDescription.getText().toString().trim());
         exercise.setImageURL(imgUrl);
 
-        proGym.push().setValue(exercise);
+        proGym.child(exerciseID.getText().toString().trim()).setValue(exercise);
         Toast.makeText(this, "Exercise Added!", Toast.LENGTH_SHORT).show();
-    }
+    };
     private void clearFields() {
         exerciseTitle.setText("");
-        exerciseSubTitle.setText("");
+        exerciseID.setText("");
         exerciseDescription.setText("");
-    }
+    };
     private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent,IMAGE_REQUEST);
-    }
+    };
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == IMAGE_REQUEST && resultCode == RESULT_OK){
+            assert data != null;
             imgUri = data.getData();
             uploadImg();
         }
-    }
+    };
 
     private String getFileExtension (Uri uri){
         ContentResolver contentResolver = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
-    }
+    };
     private void uploadImg() {
         ProgressDialog uploadProg = new ProgressDialog(this);
         uploadProg.setMessage("Uploading");

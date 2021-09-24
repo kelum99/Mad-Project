@@ -45,14 +45,14 @@
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/exerciseSitleTxt"
+        android:id="@+id/exerciseID"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="61dp"
         android:background="@drawable/textfields2"
-        android:hint="@string/enter_sub_title"
+        android:hint="@string/enter_exercise_id"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -109,7 +109,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="299dp"
-        android:text="@string/sub_title"
+        android:text="@string/exercise_id"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -130,7 +130,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseSitleTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/exerciseID" />
 
     <ImageView
         android:id="@+id/exerciseImgUp"

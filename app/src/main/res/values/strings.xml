@@ -13,6 +13,7 @@
     <string name="diet_plans">Diet plans</string>
     <string name="payment">Payment</string>
     <string name="contact_us">Contact Us</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_exercise">Add Exercise</string>
     <string name="enter_title">Enter Title</string>
@@ -25,6 +26,7 @@
     <string name="upload">Upload</string>
     <string name="exercise_image">exercise image</string>
     <string name="add_schedule">Add Schedule</string>
+
 
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
@@ -77,11 +79,21 @@
     <string name="btn_confirm">Confirm</string>
     <string name="btn_continue">Continue with Existing Card</string>
     <string name="btn_edit">Edit</string>
+
+    <string name="exercise_managment">Exercise Managment</string>
+
     <string-array name="Membership">
         <item>Permanent</item>
         <item>Open</item>
         <item>Term</item>
     </string-array>
+
+
+    <string name="rdbtn_visa">Visa</string>
+    <string name="rdbtn_discover">Discover</string>
+    <string name="rdbtn_master">Master</string>
+    <string name="rdtbn_amex">Amex</string>
+    <string name="rdbtn_paypal">Paypal</string>
 
     <string name="add_to_cart">Add</string>
     <string name="buy_now">buy</string>
@@ -105,7 +117,8 @@
     <string name="main_topic_item">Add Items</string>
     <string name="item_price_txt">Price</string>
     <string name="item_topic_txt">Item Name</string>
-    <string name="item_description_txt">Descrioption</string>
+    <string name="item_description_txt">Description</string>
+
     <string name="item_image_btn">Upload</string>
     <string name="add_item_btn">Add Item</string>
     <string name="item_img">item image</string>
@@ -113,6 +126,29 @@
     <string name="updateitem_image_btn">Upload</string>
     <string name="update_item_btn">Update Item</string>
     <string name="main_topic_item_add">Add Item</string>
+    <string name="delete">Delete</string>
+    <string name="update_or_delete_exercise">Update or Delete Exercise</string>
+
+    <string name="update">Update</string>
+    <string name="monday">Monday</string>
+    <string name="saturday">Saturday</string>
+    <string name="friday">Friday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="sunday">Sunday</string>
+
+    <string name="tv_addCard">Add New Card</string>
+
+    <string name="add_item_price_txt">Item Price</string>
+    <string name="update_item_price_txt">Price</string>
+    <string name="tv_allMembers">All Members</string>
+    <string name="btn_cal">Fitness Analysis</string>
+    <string name="exercise_id">Exercise ID</string>
+    <string name="enter_exercise_id">Enter Exercise ID</string>
+
+    <string name="delete_item_btn">Add Item</string>
+    <string name="topic_delete">Store Management</string>
 
 
 </resources>

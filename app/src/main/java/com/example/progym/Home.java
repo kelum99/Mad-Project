@@ -12,9 +12,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.progym.user.ExerciseFragment;
-import com.example.progym.user.PaymentFragment;
-import com.example.progym.user.ProfileFragment;
-import com.example.progym.user.StoreFragment;
+
+import com.example.progym.user.profile.MyProfileFragment;
+
+
+import com.example.progym.user.store.StoreFragment;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -68,7 +71,7 @@ public class Home extends AppCompatActivity {
                             selectedFragment = new StoreFragment();
                             break;
                         case R.id.profile_btn:
-                            selectedFragment = new ProfileFragment();
+                            selectedFragment = new MyProfileFragment();
                             break;
 
                     }

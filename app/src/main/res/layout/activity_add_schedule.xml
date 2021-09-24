@@ -41,7 +41,7 @@
                 tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/main_topic_item_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -75,7 +75,7 @@
                 tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
             <EditText
-                android:id="@+id/scheduleSTitleTxt"
+                android:id="@+id/scheduleID"
                 android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -84,7 +84,7 @@
                 android:layout_marginTop="190dp"
                 android:background="@drawable/textfields2"
                 android:ems="10"
-                android:hint="@string/enter_sub_title"
+                android:hint="Enter Schedule ID"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
@@ -115,7 +115,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="160dp"
-                android:text="@string/sub_title"
+                android:text="Schedule ID"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -169,14 +169,14 @@
                         android:paddingEnd="7dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Monday"
+                        android:text="@string/monday"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <EditText
                         android:backgroundTint="#BEC9DA"
-                        android:id="@+id/editTextTextPersonName1"
+                        android:id="@+id/monday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
@@ -197,43 +197,14 @@
                         android:paddingEnd="7dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Tuesday"
+                        android:text="@string/tuesday"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <EditText
                         android:backgroundTint="#BEC9DA"
-                        android:id="@+id/editTextTextPersonName3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:background="@android:drawable/divider_horizontal_bright"
-                        android:ems="10"
-                        android:hint="@string/enter_description"
-                        android:inputType="textPersonName"
-                        android:padding="5dp"
-                        android:textSize="16sp"
-                        tools:ignore="TouchTargetSizeCheck" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:paddingStart="5dp"
-                        android:paddingEnd="7dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Wednesday"
-                        android:textColor="#000000"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:backgroundTint="#BEC9DA"
-                        android:id="@+id/editTextTextPersonName5"
+                        android:id="@+id/tuesday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
@@ -255,14 +226,43 @@
                         android:paddingEnd="7dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Thursday"
+                        android:text="@string/wednesday"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <EditText
                         android:backgroundTint="#BEC9DA"
-                        android:id="@+id/editTextTextPersonName7"
+                        android:id="@+id/wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@android:drawable/divider_horizontal_bright"
+                        android:ems="10"
+                        android:hint="@string/enter_description"
+                        android:inputType="textPersonName"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:paddingStart="5dp"
+                        android:paddingEnd="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thursday"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:backgroundTint="#BEC9DA"
+                        android:id="@+id/thursday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
@@ -284,14 +284,14 @@
                         android:paddingEnd="7dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Friday"
+                        android:text="@string/friday"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <EditText
                         android:backgroundTint="#BEC9DA"
-                        android:id="@+id/editTextTextPersonName9"
+                        android:id="@+id/friday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
@@ -313,14 +313,14 @@
                         android:paddingEnd="7dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Saturday"
+                        android:text="@string/saturday"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <EditText
                         android:backgroundTint="#BEC9DA"
-                        android:id="@+id/editTextTextPersonName11"
+                        android:id="@+id/saturday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
@@ -342,14 +342,14 @@
                         android:paddingEnd="7dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sunday"
+                        android:text="@string/sunday"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <EditText
                         android:backgroundTint="#BEC9DA"
-                        android:id="@+id/editTextTextPersonName13"
+                        android:id="@+id/sunday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
@@ -368,13 +368,13 @@
                 android:id="@+id/addSchedule"
                 android:layout_width="221dp"
                 android:layout_height="40dp"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="760dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/style"
-                android:text="Add" />
+                android:text="@string/add"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
         </RelativeLayout>
     </ScrollView>
