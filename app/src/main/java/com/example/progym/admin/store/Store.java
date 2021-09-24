@@ -41,4 +41,9 @@ public class Store {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
+
+    public String toString(){
+        return this.getItem_title()+"  -  "+getItem_price();
+    }
 }
+

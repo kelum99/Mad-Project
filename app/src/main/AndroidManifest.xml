@@ -13,9 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
         <activity
+
+            android:name=".user.store.Checkout"
+            android:exported="true" />
+        <activity
+            android:name=".admin.store.AddItem"
+            android:exported="true" />
+        <activity
+            android:name=".admin.store.UpdateItem"
+            android:exported="true" />
+        <activity
+            android:name=".admin.store.StoreManagement"
+            android:exported="true" />
+
 
             android:name=".admin.member.AllMembers"
             android:exported="true" />
@@ -44,10 +55,10 @@
 
             android:name=".user.payment.MyPayment"
             android:exported="true" />
+      
         <activity
-
             android:name=".user.store.Cart"
-              android:exported="true"/>
+            android:exported="true" />
       
 
         <activity
@@ -59,7 +70,9 @@
             android:name=".user.profile.FitnessCalculation"
             android:exported="true" />
 
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".admin.Diet.AddDiet"
