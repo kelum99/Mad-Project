@@ -2,7 +2,7 @@ package com.example.progym.admin.Diet;
 
 public class Diet {
     private String title;
-    private String subTitle;
+    private String dietID;
     private String description;
     private String breakfast;
     private String lunch;
@@ -11,13 +11,16 @@ public class Diet {
 
     public Diet() { }
 
+    public String getDietID() {
+        return dietID;
+    }
+
+    public void setDietID(String dietID) {
+        this.dietID = dietID;
+    }
 
     public String getTitle() {
         return title;
-    }
-
-    public String getSubTitle() {
-        return subTitle;
     }
 
     public String getDescription() {
@@ -36,9 +39,7 @@ public class Diet {
         this.title = title;
     }
 
-    public void setSubTitle(String subTitle) {
-        this.subTitle = subTitle;
-    }
+
 
     public void setDescription(String description) {
         this.description = description;
