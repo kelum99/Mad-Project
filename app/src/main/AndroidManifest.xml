@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".user.exercises.ExerciseUserView"
+                  android:exported="true"/>
+        <activity
             android:name=".eventList"
             android:exported="true" />
         <activity

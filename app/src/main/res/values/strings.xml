@@ -89,6 +89,12 @@
         <item>Term</item>
     </string-array>
 
+    <string-array name="exercise_type">
+        <item>Weight Lose</item>
+        <item>Bodybuilding</item>
+        <item>Body Shaping</item>
+    </string-array>
+
 
 
     <string name="rdbtn_visa">Visa</string>
@@ -151,9 +157,10 @@
     <string name="enter_exercise_id">Enter Exercise ID</string>
     <string name="delete_item_btn">Add Item</string>
     <string name="topic_delete">Store Management</string>
+
     <string name="item_update_delete_main_topic">Item Update and Delete</string>
     <string name="item_update_delete_title_txt">Enter Price</string>
 
-
+    <string name="textview">TextView</string>
 
 </resources>
