@@ -14,10 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".user.store.UpdateDeleteItem"
+            android:name=".admin.store.UpdateDeleteItem"
             android:exported="true" />
         <activity
             android:name=".admin.member.DeleteMember"
+            android:exported="true" />
+        <activity
+            android:name=".user.exercises.ExerciseUserView"
+                  android:exported="true"/>
+        <activity
+            android:name=".eventList"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateBooking"
+            android:exported="true" />
+        <activity
+            android:name=".OnlineBooking"
             android:exported="true" />
         <activity
             android:name=".user.store.Checkout"
@@ -37,6 +49,7 @@
         <activity
             android:name=".admin.exercises.UpdateDeleteExercise"
             android:exported="true" />
+
         <activity
             android:name=".admin.AddEvent"
             android:exported="true" />
@@ -46,20 +59,24 @@
         <activity
             android:name=".user.store.Cart"
             android:exported="true" />
+
+
         <activity
             android:name=".user.profile.FitnessResults"
             android:exported="true" />
         <activity
             android:name=".user.profile.FitnessCalculation"
             android:exported="true" />
+
+        <activity
+            android:name=".admin.exercises.ExerciseManagment"
+            android:exported="true" />
+
         <activity
             android:name=".admin.Diet.AddDiet"
             android:exported="true" />
         <activity
             android:name=".admin.member.AddMember"
-            android:exported="true" />
-        <activity
-            android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />
         <activity
             android:name=".admin.schedules.AddSchedule"
@@ -82,6 +99,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".admin.Event.CreateEvent"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
