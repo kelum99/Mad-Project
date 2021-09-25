@@ -11,16 +11,21 @@
         <entry key="..\:/MAD/app/src/main/res/layout/activity_create_diet.xml" value="0.2609375" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_create_event.xml" value="0.3020833333333333" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_event_list.xml" value="0.31145833333333334" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_event_managment.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_exercise_managment.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_home.xml" value="0.3015625" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_main.xml" value="0.3015625" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_my_payment.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_online_booking.xml" value="0.34782608695652173" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_profile_results.xml" value="0.35144927536231885" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_update_and_delete.xml" value="0.3260416666666667" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_update_booking.xml" value="0.3625" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_update_delete_diet.xml" value="0.3260416666666667" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_update_delete_exercise.xml" value="0.31145833333333334" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_update_exercise.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_update_member.xml" value="0.32083333333333336" />
+        <entry key="..\:/MAD/app/src/main/res/layout/eventlist.xml" value="0.3260416666666667" />
+        <entry key="..\:/MAD/app/src/main/res/layout/eventmanagement.xml" value="0.3296875" />
         <entry key="..\:/MAD/app/src/main/res/layout/exercise_fragment.xml" value="0.35144927536231885" />
         <entry key="..\:/MAD/app/src/main/res/layout/exercise_list_view.xml" value="0.31145833333333334" />
         <entry key="..\:/MAD/app/src/main/res/layout/fragment_add_item.xml" value="0.32083333333333336" />

@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".eventList"
+            android:name=".admin.Event.EventManagment"
+            android:exported="true" />
+        <activity
+            android:name=".admin.Event.UpdateAndDelete"
             android:exported="true" />
         <activity
             android:name=".UpdateBooking"
