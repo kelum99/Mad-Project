@@ -2,7 +2,7 @@ package com.example.progym.admin.schedules;
 
 public class Schedule {
     private String scTitle;
-    private String scSubTitle;
+    private String scKey;
     private String scDescription;
     private String monday;
     private String tuesday;
@@ -23,12 +23,12 @@ public class Schedule {
         this.scTitle = scTitle;
     }
 
-    public String getScSubTitle() {
-        return scSubTitle;
+    public String getScKey() {
+        return scKey;
     }
 
-    public void setScSubTitle(String scSubTitle) {
-        this.scSubTitle = scSubTitle;
+    public void setScKey(String scKey) {
+        this.scKey = scKey;
     }
 
     public String getScDescription() {

@@ -85,7 +85,7 @@ public class AddItem extends AppCompatActivity {
         store.setItem_description(itemDescription.getText().toString());
         store.setImageURL(imgUrl);
 
-        proGym.push().setValue(store);
+        proGym.child(itemTitle.getText().toString().trim()).setValue(store);
         Toast.makeText(this, "Item Added!", Toast.LENGTH_SHORT).show();
     }
     private void clearFields() {

@@ -75,7 +75,7 @@
                 tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
             <EditText
-                android:id="@+id/scheduleSTitleTxt"
+                android:id="@+id/scheduleID"
                 android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -84,7 +84,7 @@
                 android:layout_marginTop="190dp"
                 android:background="@drawable/textfields2"
                 android:ems="10"
-                android:hint="@string/enter_sub_title"
+                android:hint="Enter Schedule ID"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
@@ -115,7 +115,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="160dp"
-                android:text="@string/sub_title"
+                android:text="Schedule ID"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
