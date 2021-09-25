@@ -64,8 +64,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="50dp"
-            android:padding="10dp"
             android:background="@drawable/card_view_text"
+            android:padding="10dp"
             android:text="@string/description" />
     </RelativeLayout>
 

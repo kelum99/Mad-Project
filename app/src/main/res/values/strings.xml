@@ -28,7 +28,6 @@
     <string name="add_schedule">Add Schedule</string>
 
 
-
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
     <string name="rdbtn_male">Male</string>
@@ -94,7 +93,6 @@
         <item>Bodybuilding</item>
         <item>Body Shaping</item>
     </string-array>
-
 
 
     <string name="rdbtn_visa">Visa</string>
@@ -165,7 +163,6 @@
 
     <string name="item_update_delete_main_topic">Item Update and Delete</string>
     <string name="item_update_delete_title_txt">Enter Price</string>
-
 
 
 </resources>
