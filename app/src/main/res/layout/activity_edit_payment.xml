@@ -11,48 +11,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="26dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/tv_cno"
-        android:textSize="20sp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cname" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_cno"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_cname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/tv_cname"
-        android:textSize="20sp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_method" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_cname"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_expdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/tv_expdate"
-        android:textSize="20sp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cno" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_expDate"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_cvv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/tv_cvv"
-        android:textSize="20sp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_expdate" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_cvv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/et_cname"
@@ -60,7 +64,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="12dp"
-        android:background="@drawable/borderstyle2"
+        android:background="@drawable/textfields2"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:inputType="textPersonName"
@@ -69,12 +73,12 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/btn_edit"
         android:layout_width="138dp"
         android:layout_height="40dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="58dp"
-        android:background="@color/mad1"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/style"
         android:text="@string/btn_edit"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -89,7 +93,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="12dp"
-        android:background="@drawable/borderstyle2"
+        android:background="@drawable/textfields2"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:inputType="textPersonName"
@@ -103,7 +107,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="12dp"
-        android:background="@drawable/borderstyle2"
+        android:background="@drawable/textfields2"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:inputType="date"
@@ -117,7 +121,7 @@
         android:layout_height="38dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="12dp"
-        android:background="@drawable/borderstyle2"
+        android:background="@drawable/textfields2"
         android:ems="10"
         android:gravity="center_horizontal|center_vertical"
         android:inputType="number"
@@ -130,12 +134,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/tv_paymethod"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_editpay" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_method"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/et_method"
@@ -143,8 +148,9 @@
         android:layout_height="38dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="12dp"
-        android:background="@drawable/borderstyle2"
+        android:background="@drawable/textfields2"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_editpay" />
@@ -153,19 +159,19 @@
         android:id="@+id/btn_dlt"
         android:layout_width="138dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="30dp"
-        android:background="@color/mad1"
-        android:text="@string/btn_cancel"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/style"
+        android:text="@string/delete"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_save"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_edit"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/img_editpay"
-        android:layout_width="410dp"
-        android:layout_height="294dp"
+        android:layout_width="407dp"
+        android:layout_height="274dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

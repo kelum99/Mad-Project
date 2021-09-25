@@ -28,7 +28,6 @@
     <string name="add_schedule">Add Schedule</string>
 
 
-
     <string name="tv_name">Name With Initials</string>
     <string name="tv_gender">Gender</string>
     <string name="rdbtn_male">Male</string>
@@ -96,7 +95,6 @@
     </string-array>
 
 
-
     <string name="rdbtn_visa">Visa</string>
     <string name="rdbtn_discover">Discover</string>
     <string name="rdbtn_master">Master</string>
@@ -159,11 +157,12 @@
     <string name="topic_delete">Store Management</string>
     <string name="btn_delete">Delete</string>
 
+    <string name="textview">TextView</string>
+    <string name="events">Events</string>
+    <string name="home">Home</string>
+    <string name="upload_image">Upload Image</string>
+
     <string name="item_update_delete_main_topic">Item Update and Delete</string>
     <string name="item_update_delete_title_txt">Enter Price</string>
-
-
-    <string name="textview">TextView</string>
-
 
 </resources>

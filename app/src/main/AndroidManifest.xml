@@ -17,11 +17,13 @@
             android:name=".admin.store.UpdateDeleteItem"
             android:exported="true" />
         <activity
-            android:name=".admin.member.DeleteMember"
+            android:name=".admin.member.DeleteMember"/>
+        <activity
+            android:name=".user.schedule.ScheduleUserView"
             android:exported="true" />
         <activity
             android:name=".user.exercises.ExerciseUserView"
-                  android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".eventList"
             android:exported="true" />
@@ -49,7 +51,6 @@
         <activity
             android:name=".admin.exercises.UpdateDeleteExercise"
             android:exported="true" />
-
         <activity
             android:name=".admin.AddEvent"
             android:exported="true" />
@@ -57,21 +58,20 @@
             android:name=".user.payment.MyPayment"
             android:exported="true" />
         <activity
+            android:name=".user.payment.EditPayment"
+            android:exported="true" />
+        <activity
             android:name=".user.store.Cart"
             android:exported="true" />
-
-
         <activity
             android:name=".user.profile.FitnessResults"
             android:exported="true" />
         <activity
             android:name=".user.profile.FitnessCalculation"
             android:exported="true" />
-
         <activity
             android:name=".admin.exercises.ExerciseManagment"
             android:exported="true" />
-
         <activity
             android:name=".admin.Diet.AddDiet"
             android:exported="true" />

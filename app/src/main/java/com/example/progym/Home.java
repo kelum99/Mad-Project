@@ -11,16 +11,20 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.progym.user.EventFragment;
 import com.example.progym.user.exercises.ExerciseFragment;
 
+import com.example.progym.user.payment.PaymentFragment;
 import com.example.progym.user.profile.MyProfileFragment;
 
 
+import com.example.progym.user.schedule.ScheduleFragment;
 import com.example.progym.user.store.StoreFragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
-public class Home extends AppCompatActivity {
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
 
     @Override
@@ -40,8 +44,40 @@ public class Home extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
+        NavigationView navigationView = findViewById(R.id.navView);
+        navigationView.setNavigationItemSelectedListener(this);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                 new HomeFragment()).commit();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                new HomeFragment()).commit();
+        navigationView.setCheckedItem(R.id.home);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new HomeFragment()).commit();
+                break;
+            case R.id.events:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new EventFragment()).commit();
+                break;
+            case R.id.schedule:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new ScheduleFragment()).commit();
+                break;
+            case R.id.payment:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new PaymentFragment()).commit();
+                break;
+
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     @Override
