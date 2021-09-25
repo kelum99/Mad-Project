@@ -16,7 +16,7 @@ import org.w3c.dom.Text;
 
 public class ExerciseUserView extends AppCompatActivity {
 
-    TextView title, description, exerciseID;
+    TextView title, description, subTitle;
     ImageView img;
 
     DatabaseReference proGym;
@@ -29,11 +29,11 @@ public class ExerciseUserView extends AppCompatActivity {
         String key = getIntent().getStringExtra("Key");
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises").child(key);
         title = findViewById(R.id.userViewExTitle);
-        exerciseID = findViewById(R.id.userViewExSTitle);
+        subTitle = findViewById(R.id.userViewExSTitle);
         description = findViewById(R.id.UserViewExDes);
         img = findViewById(R.id.userViewExImg);
         title.setText(getIntent().getStringExtra("Title"));
-        exerciseID.setText(getIntent().getStringExtra("Key"));
+        subTitle.setText(getIntent().getStringExtra("SubTitle"));
         description.setText(getIntent().getStringExtra("Description"));
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(getIntent().getStringExtra("ImgUrl")).into(img);

@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -48,9 +47,7 @@ public class ExerciseFragment extends Fragment {
         exerciseType.setAdapter(exerciseAdapter);
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
 
-
-
-    return  view;
+        return view;
     }
 
     @Override
@@ -58,16 +55,16 @@ public class ExerciseFragment extends Fragment {
         super.onStart();
         FirebaseRecyclerOptions<Exercise> options =
                 new FirebaseRecyclerOptions.Builder<Exercise>()
-                .setQuery(proGym,Exercise.class)
-                .build();
+                        .setQuery(proGym, Exercise.class)
+                        .build();
 
-        FirebaseRecyclerAdapter<Exercise,RequestViewHolder> adapter = new FirebaseRecyclerAdapter<Exercise, RequestViewHolder>(options) {
+        FirebaseRecyclerAdapter<Exercise, RequestViewHolder> adapter = new FirebaseRecyclerAdapter<Exercise, RequestViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull RequestViewHolder holder, int position, @NonNull Exercise model) {
-               // String key = model.getKey();
+
                 Picasso.get().setLoggingEnabled(true);
                 holder.title.setText(model.getTitle());
-                holder.subTitle.setText(model.getKey());
+                holder.subTitle.setText(model.getSubTitle());
                 Picasso.get().load(model.getImageURL()).into(holder.img);
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -78,8 +75,8 @@ public class ExerciseFragment extends Fragment {
                         intent.putExtra("Title", model.getTitle());
                         intent.putExtra("Description", model.getDescription());
                         intent.putExtra("ImgUrl", model.getImageURL());
+                        intent.putExtra("SubTitle",model.getSubTitle());
                         startActivity(intent);
-
                     }
                 });
             }
@@ -89,7 +86,7 @@ public class ExerciseFragment extends Fragment {
             public RequestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.exercise_user_view_card, parent, false);
                 RequestViewHolder holder = new RequestViewHolder(v);
-                return  holder;
+                return holder;
             }
         };
         LinearLayoutManager llm = new LinearLayoutManager(view.getContext());
@@ -102,6 +99,7 @@ public class ExerciseFragment extends Fragment {
     public static class RequestViewHolder extends RecyclerView.ViewHolder {
         TextView title, subTitle;
         ImageView img;
+
         public RequestViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.exerciseTitleTV);
@@ -115,6 +113,5 @@ public class ExerciseFragment extends Fragment {
     }
 
     public void onNothingSelected(AdapterView<?> adapterView) {
-
     }
 }
