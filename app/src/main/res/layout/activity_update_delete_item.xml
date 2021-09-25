@@ -4,25 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.exercises.AddExercise">
+    tools:context=".admin.exercises.UpdateDeleteExercise">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/add_exercise"
-        android:textColor="#000000"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/exerciseTitleTxt"
+        android:id="@+id/item_update_delete_title_txt"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -45,14 +31,14 @@
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/exerciseID"
+        android:id="@+id/item_update_delete_price_txt"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="61dp"
         android:background="@drawable/textfields2"
-        android:hint="@string/enter_exercise_id"
+        android:hint="@string/item_update_delete_title_txt"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -63,11 +49,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_price"
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/exerciseDesTxt"
+        android:id="@+id/item_update_delete_description_txt"
         android:layout_width="310dp"
         android:layout_height="130dp"
         android:layout_marginStart="40dp"
@@ -84,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_description"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -92,115 +78,97 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="330dp"
         android:text="@string/title"
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="290dp"
-        android:text="@string/exercise_id"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseTitleTxt" />
-
-    <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/item_update_delete_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="299dp"
+        android:text="Price"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_title_txt" />
+
+    <TextView
+        android:id="@+id/item_update_delete_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="280dp"
         android:text="@string/description"
         android:textColor="#040404"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseSubTitleTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_price_txt" />
+
 
     <Button
-        android:id="@+id/uploadBtn1"
-        android:layout_width="160dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="210dp"
-        android:background="@color/teal_700"
-        android:text="@string/upload_image"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseDesTxt"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/addExercise"
-        android:layout_width="221dp"
+        android:id="@+id/item_update_delete_btn_update"
+        android:layout_width="180dp"
         android:layout_height="40dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/style"
-        android:text="@string/add"
+        android:onClick="btnUpdate"
+        android:text="@string/update"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_description_txt"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/item_update_delete_btn_delete"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/style"
+        android:onClick="btnDelete"
+        android:text="@string/delete"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uploadBtn1"
+        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_description_txt"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/item_update_delete_main_topic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="300dp"
-        android:text="@string/sub_title"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/item_update_delete_main_topic"
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseID" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/exerciseSubTitleTxt"
-        android:layout_width="310dp"
+    <TextView
+        android:id="@+id/exKey"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="61dp"
-        android:background="@drawable/textfields2"
-        android:ems="10"
-        android:hint="@string/enter_sub_title"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="7dp"
-        android:paddingEnd="7dp"
-        android:textColor="#040404"
-        android:textSize="16sp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="33dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19"
-        tools:ignore="TextContrastCheck" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
