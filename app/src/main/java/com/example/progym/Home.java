@@ -11,7 +11,8 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.progym.user.EventFragment;
+import com.example.progym.user.Diet.DietFragment;
+import com.example.progym.user.Event.EventFragment;
 import com.example.progym.user.exercises.ExerciseFragment;
 
 import com.example.progym.user.payment.PaymentFragment;
@@ -70,10 +71,18 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new ScheduleFragment()).commit();
                 break;
+<<<<<<< HEAD
+            case R.id.dietPlan:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new DietFragment()).commit();
+                break;
+
+=======
             case R.id.payment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new PaymentFragment()).commit();
                 break;
+>>>>>>> f8486e47abe6cdf42c5aec36e430a8ea0110cbff
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);
