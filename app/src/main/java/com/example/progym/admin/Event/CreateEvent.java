@@ -76,8 +76,6 @@ public class CreateEvent extends AppCompatActivity {
                     chooseImage();
                 }
             });
-
-
     }
     private void insertEvent() {
         event = new Event();
@@ -104,7 +102,6 @@ public class CreateEvent extends AppCompatActivity {
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent,IMAGE_REQUEST);
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

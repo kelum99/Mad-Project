@@ -23,12 +23,12 @@ public class EventManagment extends AppCompatActivity {
     Button addEventBtn;
     ListView eventList;
     DatabaseReference proGym;
-<<<<<<< HEAD
+
 
     FirebaseListAdapter adapter;
-=======
-    FirebaseListAdapter  adapter;
->>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
+
+    //FirebaseListAdapter  adapter;
+
 
 
     @Override
@@ -38,12 +38,12 @@ public class EventManagment extends AppCompatActivity {
 
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Event");
         eventList = findViewById(R.id.eventLV);
-<<<<<<< HEAD
 
-        addEventBtn = findViewById(R.id.adEv);
-=======
+
         addEventBtn = findViewById(R.id.add_event);
->>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
+
+        addEventBtn = findViewById(R.id.add_event);
+
 
         FirebaseListOptions<Event> options = new FirebaseListOptions.Builder<Event>()
                 .setLayout(R.layout.eventlist)

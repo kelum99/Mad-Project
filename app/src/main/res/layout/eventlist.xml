@@ -16,6 +16,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="25dp"
             android:layout_marginTop="37dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:text="TextView" />
 
         <TextView
@@ -27,6 +29,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="68dp"
             android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
             android:text="TextView" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

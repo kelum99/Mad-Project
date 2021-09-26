@@ -18,6 +18,6 @@ public class DietFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.exercise_fragment, container, false);
+        return inflater.inflate(R.layout.diet_fragment, container, false);
     }
 }
