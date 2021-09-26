@@ -7,57 +7,63 @@
     android:layout_height="wrap_content"
     tools:ignore="SpeakableTextPresentCheck">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
 
-        <Button
-            android:id="@+id/btn_viewcards"
-            android:layout_width="200dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="30dp"
-            android:background="@color/mad1"
-            android:text="@string/btn_viewcard"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_pay" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/img_pay"
-            android:layout_width="410dp"
-            android:layout_height="219dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/pay3" />
 
-        <Button
-            android:id="@+id/btn_paynow"
-            android:layout_width="200dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="30dp"
-            android:background="@color/mad1"
-            android:text="@string/btn_paynow"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/savedCards" />
+            <Button
+                android:id="@+id/btn_viewcards"
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/style"
+                android:text="@string/btn_viewcard"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_pay" />
+
+            <ImageView
+                android:id="@+id/img_pay"
+                android:layout_width="410dp"
+                android:layout_height="219dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pay3" />
+
+            <Button
+                android:id="@+id/btn_paynow"
+                android:layout_width="215dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/style"
+                android:text="@string/btn_paynow"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/savedCards" />
 
         <Button
             android:id="@+id/btn_history"
-            android:layout_width="200dp"
+            android:layout_width="215dp"
             android:layout_height="48dp"
             android:layout_marginTop="28dp"
-            android:background="@color/mad1"
+            android:background="@drawable/style"
             android:text="@string/btn_history"
             android:textColor="@color/white"
             android:textSize="17sp"
@@ -67,53 +73,55 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_confirm" />
 
-        <Button
-            android:id="@+id/btn_confirm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="35dp"
-            android:text="@string/btn_confirm"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_paynow" />
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="35dp"
+                android:background="@drawable/style"
+                android:text="@string/btn_confirm"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_paynow" />
 
-        <EditText
-            android:id="@+id/et_amount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="30dp"
-            android:ems="10"
-            android:gravity="center_horizontal"
-            android:hint="@string/et_amount"
-            android:inputType="numberDecimal"
-            android:visibility="gone"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_paynow" />
+            <EditText
+                android:id="@+id/et_amount"
+                android:layout_width="190dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/textfields2"
+                android:ems="10"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/et_amount"
+                android:inputType="numberDecimal"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btn_confirm"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <ListView
-            android:id="@+id/savedCards"
-            android:layout_width="410dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="24dp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.567"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_viewcards" />
+            <ListView
+                android:id="@+id/savedCards"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.567"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_viewcards" />
 
-        <ListView
-            android:id="@+id/transactions"
-            android:layout_width="410dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="32dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_history" />
+            <ListView
+                android:id="@+id/transactions"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_history" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>>
+
+
 </ScrollView>
