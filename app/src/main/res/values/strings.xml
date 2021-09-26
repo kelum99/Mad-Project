@@ -161,8 +161,10 @@
     <string name="events">Events</string>
     <string name="home">Home</string>
     <string name="upload_image">Upload Image</string>
-
     <string name="item_update_delete_main_topic">Item Update and Delete</string>
     <string name="item_update_delete_title_txt">Enter Price</string>
+    <string name="textView30">LKR.</string>
+    <string name="buyNow">Buy now</string>
+    <string name="add_to_cart_user">Add to cart</string>
 
 </resources>

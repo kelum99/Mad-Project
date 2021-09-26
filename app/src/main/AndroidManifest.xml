@@ -96,6 +96,9 @@
             android:name=".AdminHome"
             android:exported="true" />
         <activity
+            android:name=".user.store.StoreUserView"
+            android:exported="true" />
+        <activity
             android:name=".Home"
             android:exported="true" />
         <activity
