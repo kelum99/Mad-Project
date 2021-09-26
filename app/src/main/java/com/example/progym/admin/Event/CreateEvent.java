@@ -59,7 +59,6 @@ public class CreateEvent extends AppCompatActivity {
         createEvent= findViewById(R.id.addEvent);
         uploadBtn = findViewById(R.id.eventimage);
 
-
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Event");
 
         createEvent.setOnClickListener(new View.OnClickListener() {
@@ -69,15 +68,12 @@ public class CreateEvent extends AppCompatActivity {
                 clearFields();
             }
         });
-
             uploadBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     chooseImage();
                 }
             });
-
-
     }
     private void insertEvent() {
         event = new Event();

@@ -10,6 +10,7 @@
         <entry key="..\:/MadProject/app/src/main/res/drawable/buttonstyle.xml" value="0.378125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/card_view_text.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/exercise_btn_img.xml" value="0.3770833333333333" />
+        <entry key="..\:/MadProject/app/src/main/res/drawable/gradiant.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/home_btn_img.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
@@ -21,7 +22,7 @@
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_exercise.xml" value="0.33" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_member.xml" value="0.3129528985507246" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_schedule.xml" value="0.33" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_admin_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_admin_home.xml" value="0.33" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_cart.xml" value="0.33559782608695654" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_create_diet.xml" value="0.31929347826086957" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_create_event.xml" value="0.36666666666666664" />

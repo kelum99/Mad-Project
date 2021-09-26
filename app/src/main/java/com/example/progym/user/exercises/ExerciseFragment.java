@@ -75,7 +75,6 @@ public class ExerciseFragment extends Fragment {
                     }
                 });
             }
-
             @NonNull
             @Override
             public RequestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
