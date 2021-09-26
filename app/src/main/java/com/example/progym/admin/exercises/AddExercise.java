@@ -29,6 +29,7 @@ public class AddExercise extends AppCompatActivity {
 
     private EditText exerciseTitle;
     private EditText exerciseID;
+    private EditText exerciseSubTitle;
     private EditText exerciseDescription;
     // ImageView preview;
     String imgUrl;
@@ -50,11 +51,10 @@ public class AddExercise extends AppCompatActivity {
 
         exerciseTitle = findViewById(R.id.exerciseTitleTxt);
         exerciseID = findViewById(R.id.exerciseID);
+        exerciseSubTitle = findViewById(R.id.exerciseSubTitleTxt);
         exerciseDescription = findViewById(R.id.exerciseDesTxt);
         addExercise = findViewById(R.id.addExercise);
         uploadBtn = findViewById(R.id.uploadBtn1);
-       // preview = findViewById(R.id.exerciseImgUp);
-
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
 
         addExercise.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +81,7 @@ public class AddExercise extends AppCompatActivity {
         exercise.setTitle(exerciseTitle.getText().toString().trim());
         exercise.setKey(exerciseID.getText().toString().trim());
         exercise.setDescription(exerciseDescription.getText().toString().trim());
+        exercise.setSubTitle(exerciseSubTitle.getText().toString().trim());
         exercise.setImageURL(imgUrl);
 
         proGym.child(exerciseID.getText().toString().trim()).setValue(exercise);
@@ -90,6 +91,7 @@ public class AddExercise extends AppCompatActivity {
         exerciseTitle.setText("");
         exerciseID.setText("");
         exerciseDescription.setText("");
+        exerciseSubTitle.setText("");
     };
     private void chooseImage() {
         Intent intent = new Intent();

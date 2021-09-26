@@ -27,19 +27,27 @@
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_cart.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_checkout.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_delete_item.xml" value="0.264" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_event_list.xml" value="0.234375" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_exercise_user_view.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_schedule_user_view.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_store_management.xml" value="0.234375" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_store_user_view.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_update_delete_item.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_update_exercise.xml" value="0.25" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_update_item.xml" value="0.25" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/cart_fragment.xml" value="0.25" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_fragment.xml" value="0.2125" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_fragment.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_list_view.xml" value="0.234375" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_user_view_card.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/fragment_add_item.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/fragment_update_item.xml" value="0.25" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/item_list_view.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/profile_fragment.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/schedule_fragment.xml" value="0.234375" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/schedule_lv.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/store_fragment.xml" value="0.264" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/store_user_view_card.xml" value="0.2" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/top_navigation_header.xml" value="0.25" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/menu/top_app_bar.xml" value="0.25" />
       </map>

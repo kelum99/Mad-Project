@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/home"
+            android:icon="@drawable/home_btn_img"
+            android:title="@string/home" />
+
+        <item
             android:id="@+id/events"
             android:icon="@drawable/ic_baseline_emoji_events_24"
-            android:title="Events" />
+            android:title="@string/events" />
         <item
             android:id="@+id/schedule"
             android:icon="@drawable/ic_baseline_schedule_24"
@@ -16,18 +21,15 @@
         <item
             android:id="@+id/dietPlan"
             android:icon="@drawable/ic_baseline_food_bank_24"
-            android:title="@string/diet_plans"
-            />
+            android:title="@string/diet_plans" />
         <item
             android:id="@+id/payment"
             android:icon="@drawable/ic_baseline_credit_card_24"
-            android:title="@string/payment"
-            />
+            android:title="@string/payment" />
         <item
             android:id="@+id/contact"
             android:icon="@drawable/ic_baseline_chat_24"
-            android:title="@string/contact_us"
-            />
+            android:title="@string/contact_us" />
 
     </group>
 

@@ -34,7 +34,6 @@ public class CreateEvent extends AppCompatActivity {
     private EditText eventDescription;
     private EditText eventDate;
     private EditText eventTime;
-    ImageView preview;
     String imgUrl;
     Button createEvent;
     ImageView uploadBtn;
@@ -82,16 +81,15 @@ public class CreateEvent extends AppCompatActivity {
     }
     private void insertEvent() {
         event = new Event();
-
-        event.setEventID(eventID.getText().toString().trim());
+        event.setEventID(eventID.getText().toString());
         event.setEventType(eventType.getText().toString().trim());
         event.setEventDescription(eventDescription.getText().toString().trim());
         event.setEventDate(eventDate.getText().toString().trim());
         event.setEventTime(eventTime.getText().toString().trim());
         event.setImageEvent(imgUrl);
 
-        proGym.child(eventID.getText().toString().trim()).setValue(event);
-        Toast.makeText(this, "Event Added!", Toast.LENGTH_SHORT).show();
+        proGym.child(eventID.getText().toString()).setValue(event);
+        Toast.makeText(getApplicationContext(), "Event Added!", Toast.LENGTH_SHORT).show();
     }
     private void clearFields() {
         eventID.setText("");
@@ -127,7 +125,7 @@ public class CreateEvent extends AppCompatActivity {
         uploadProg.show();
 
         if(imgUri != null){
-            imageEventRef = FirebaseStorage.getInstance().getReference().child("ExerciseImages").child(System.currentTimeMillis()+"."+getFileExtension(imgUri));
+            imageEventRef = FirebaseStorage.getInstance().getReference().child("EventImages").child(System.currentTimeMillis()+"."+getFileExtension(imgUri));
 
             imageEventRef.putFile(imgUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -137,8 +135,6 @@ public class CreateEvent extends AppCompatActivity {
                         public void onSuccess(Uri uri) {
                             imgUrl = uri.toString();
                             uploadProg.dismiss();
-
-
                            Toast.makeText(getApplicationContext(),"Image Upload Successfully!" , Toast.LENGTH_SHORT).show();
                         }
                    });

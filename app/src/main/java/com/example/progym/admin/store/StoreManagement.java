@@ -27,20 +27,19 @@ import com.google.firebase.database.Query;
 import java.util.ArrayList;
 
 public class StoreManagement extends AppCompatActivity {
-
     Button addItemBtn;
     ListView itemList;
     DatabaseReference proGym;
     ArrayList<String> ItemListItem;
     FirebaseListAdapter adapter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_management);
 
-        Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
+        Query proGym = FirebaseDatabase.getInstance
+                ("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
         itemList = findViewById(R.id.store_management_itemLV);
         ItemListItem = new ArrayList<>();
         addItemBtn = findViewById(R.id.store_management_add_item_btn);
@@ -58,7 +57,6 @@ public class StoreManagement extends AppCompatActivity {
                 Store store = (Store) model;
                 itemName.setText(store.getItem_title());
                 itemPrice.setText(store.getItem_price());
-
             }
         };
         itemList.setAdapter(adapter);

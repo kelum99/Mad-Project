@@ -59,7 +59,8 @@ public class AddItem extends AppCompatActivity {
         uploadBtn = findViewById(R.id.additem_image_btn);
         // preview = findViewById(R.id.exerciseImgUp);
 
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference().child("Store");
 
         addItem.setOnClickListener(new View.OnClickListener() {
             @Override

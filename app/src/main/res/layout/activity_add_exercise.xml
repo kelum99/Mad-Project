@@ -99,6 +99,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="299dp"
+        android:layout_marginEnd="290dp"
         android:text="@string/exercise_id"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -122,42 +123,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="280dp"
         android:text="@string/description"
         android:textColor="#040404"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseID" />
-
-    <ImageView
-        android:id="@+id/exerciseImgUp"
-        android:layout_width="170dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="33dp"
-        android:contentDescription="@string/exercise_image"
-        app:layout_constraintEnd_toStartOf="@+id/uploadBtn1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseDesTxt"
-        tools:ignore="ImageContrastCheck"
-        app:srcCompat="@drawable/ic_baseline_image_24"  />
+        app:layout_constraintTop_toBottomOf="@+id/exerciseSubTitleTxt" />
 
     <Button
         android:id="@+id/uploadBtn1"
-        android:layout_width="107dp"
+        android:layout_width="160dp"
         android:layout_height="36dp"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="210dp"
         android:background="@color/teal_700"
-        android:text="@string/upload"
+        android:text="@string/upload_image"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/exerciseDesTxt"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
@@ -165,7 +154,7 @@
         android:id="@+id/addExercise"
         android:layout_width="221dp"
         android:layout_height="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/style"
         android:text="@string/add"
         android:textColor="#FFFFFF"
@@ -173,6 +162,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exerciseImgUp"
+        app:layout_constraintTop_toBottomOf="@+id/uploadBtn1"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="300dp"
+        android:text="@string/sub_title"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseID" />
+
+    <EditText
+        android:id="@+id/exerciseSubTitleTxt"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="61dp"
+        android:background="@drawable/textfields2"
+        android:ems="10"
+        android:hint="@string/enter_sub_title"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:textColor="#040404"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        tools:ignore="TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

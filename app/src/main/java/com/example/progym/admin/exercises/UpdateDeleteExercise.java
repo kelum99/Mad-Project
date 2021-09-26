@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,9 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class UpdateDeleteExercise extends AppCompatActivity {
-        EditText title, exerciseID, description;
-        Button updateBtn;
-        Button deleteBtn;
+        EditText title, subTitle, description;
         DatabaseReference proGym;
 
     @Override
@@ -36,12 +33,11 @@ public class UpdateDeleteExercise extends AppCompatActivity {
 
 
         title = findViewById(R.id.updateExerciseTitleTxt);
-        exerciseID = findViewById(R.id.UpdateExerciseSitleTxt);
+        subTitle = findViewById(R.id.UpdateExerciseSitleTxt);
         description = findViewById(R.id.UpdateExerciseDesTxt);
 
-
         title.setText(getIntent().getStringExtra("Title"));
-        exerciseID.setText(getIntent().getStringExtra("Key"));
+        subTitle.setText(getIntent().getStringExtra("subTitle"));
         description.setText(getIntent().getStringExtra("Description"));
 
     }
@@ -51,7 +47,7 @@ public class UpdateDeleteExercise extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 snapshot.getRef().child("title").setValue(title.getText().toString());
-                snapshot.getRef().child("key").setValue(exerciseID.getText().toString());
+                snapshot.getRef().child("subTitle").setValue(subTitle.getText().toString());
                 snapshot.getRef().child("description").setValue(description.getText().toString());
                 Toast.makeText(getApplicationContext(), "Update Exercise Successfully!", Toast.LENGTH_SHORT).show();
                 UpdateDeleteExercise.this.finish();
