@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.progym.R;
 import com.example.progym.admin.exercises.Exercise;
+import com.example.progym.user.Event.EventUserView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -70,7 +71,7 @@ public class ExerciseFragment extends Fragment {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getContext(), ExerciseUserView.class);
+                        Intent intent = new Intent(getContext(), EventUserView.class);
                         intent.putExtra("Key", model.getKey());
                         intent.putExtra("Title", model.getTitle());
                         intent.putExtra("Description", model.getDescription());
