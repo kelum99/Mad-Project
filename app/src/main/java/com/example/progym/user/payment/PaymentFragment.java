@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -40,7 +38,7 @@ public class PaymentFragment extends Fragment {
         et_cno = view.findViewById(R.id.et_cno);
         et_expDate = view.findViewById(R.id.et_expDate);
         et_cvv = view.findViewById(R.id.et_cvv);
-        btn_save = view.findViewById(R.id.btn_save);
+        btn_save = view.findViewById(R.id.btn_edit);
         btn_continue = view.findViewById(R.id.btn_continue);
 
 
@@ -83,11 +81,13 @@ public class PaymentFragment extends Fragment {
         payment.setExpDate(et_expDate.getText().toString().trim());
         payment.setCvv(et_cvv.getText().toString().trim());
 
-        ProGym.push().setValue(payment);
+        //ProGym.push().setValue(payment);
+        ProGym.child(et_cno.getText().toString().trim()).setValue(payment);
         Toast.makeText(getActivity(), "You Card Details Are Saved", Toast.LENGTH_LONG).show();
     }
     private void clearFields() {
 
+        et_payMethod.setText("");
         et_cname.setText("");
         et_cno.setText("");
         et_expDate.setText("");

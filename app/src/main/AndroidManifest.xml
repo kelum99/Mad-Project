@@ -14,6 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".admin.store.UpdateDeleteItem"
+            android:exported="true" />
+        <activity
+            android:name=".admin.member.DeleteMember"/>
+        <activity
             android:name=".user.schedule.ScheduleUserView"
             android:exported="true" />
         <activity
@@ -47,13 +52,13 @@
             android:name=".admin.exercises.UpdateDeleteExercise"
             android:exported="true" />
         <activity
-            android:name=".admin.store.UpdateDeleteItem"
-            android:exported="true" />
-        <activity
             android:name=".admin.AddEvent"
             android:exported="true" />
         <activity
             android:name=".user.payment.MyPayment"
+            android:exported="true" />
+        <activity
+            android:name=".user.payment.EditPayment"
             android:exported="true" />
         <activity
             android:name=".user.store.Cart"
