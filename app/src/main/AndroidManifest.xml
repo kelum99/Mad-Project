@@ -13,6 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+<<<<<<< HEAD
+=======
+
+        <activity
+            android:name=".admin.Event.EventManagment"
+            android:exported="true" />
+>>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
         <activity
             android:name=".user.Event.EventUserView"
             android:exported="true" />
@@ -28,6 +35,10 @@
         <activity
             android:name=".user.exercises.ExerciseUserView"
             android:exported="true" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
         <activity
             android:name=".UpdateBooking"
             android:exported="true" />

@@ -9,7 +9,7 @@
 
 
         <TextView
-            android:id="@+id/evType"
+            android:id="@+id/ev_Type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -19,7 +19,7 @@
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/evID"
+            android:id="@+id/ev_ID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
