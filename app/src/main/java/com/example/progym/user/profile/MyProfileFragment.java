@@ -53,9 +53,7 @@ public class MyProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.myprofile_fragment, container, false);
 
         String Username = getActivity().getIntent().getStringExtra("username").toString();
-
         proGymMembers = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Members").child(Username);
-
 
         name = view.findViewById(R.id.name);
         age = view.findViewById(R.id.age);
@@ -70,8 +68,6 @@ public class MyProfileFragment extends Fragment {
         btn_updateProfile = view.findViewById(R.id.btn_updateProfile);
         btn_cal = view.findViewById(R.id.btn_cal);
 
-
-
         Intent intent = getActivity().getIntent();
 
         tv_userName.setText(intent.getStringExtra("username"));
@@ -84,8 +80,6 @@ public class MyProfileFragment extends Fragment {
         memberType.setText(intent.getStringExtra("memberType"));
         username.setText(intent.getStringExtra("username"));
         password.setText(intent.getStringExtra("password"));
-
-
 
         btn_cal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,10 +107,8 @@ public class MyProfileFragment extends Fragment {
                         snapshot.getRef().child("username").setValue(username.getText().toString());
                         snapshot.getRef().child("password").setValue(password.getText().toString());
 
-                        Toast.makeText(getActivity(), "Update Exercise Successfully!", Toast.LENGTH_SHORT).show();
-
-
-
+                        Toast.makeText(getActivity(), "Update Exercise Successfully!", Toast.LENGTH_SHORT)
+                                .show();
 
                     }
 
@@ -128,7 +120,7 @@ public class MyProfileFragment extends Fragment {
             }
         });
 
-        return  view;
+        return view;
     }
 
 
