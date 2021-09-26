@@ -17,6 +17,7 @@ import com.example.progym.admin.Event.CreateEvent;
 import com.example.progym.admin.Diet.AddDiet;
 
 
+import com.example.progym.admin.Event.EventManagment;
 import com.example.progym.admin.exercises.AddExercise;
 
 import com.example.progym.admin.member.AddMember;
@@ -62,7 +63,7 @@ public class AdminHome extends AppCompatActivity {
                startActivity(intent);
                 break;
             case R.id.eventMngBtn:
-                 intent = new Intent(getApplicationContext(), CreateEvent.class);
+                 intent = new Intent(getApplicationContext(), EventManagment.class);
                  startActivity(intent);
                 break;
             default:
