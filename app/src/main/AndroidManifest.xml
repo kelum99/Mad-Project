@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+        <activity
             android:name=".admin.Event.EventManagment"
             android:exported="true" />
         <activity
@@ -30,7 +31,6 @@
             android:name=".user.exercises.ExerciseUserView"
             android:exported="true" />
 
-            android:exported="true" />
         <activity
             android:name=".UpdateBooking"
             android:exported="true" />

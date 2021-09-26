@@ -60,8 +60,10 @@ public class AddExercise extends AppCompatActivity {
         addExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertExercise();
-                clearFields();
+                if(validations()) {
+                    insertExercise();
+                    clearFields();
+                }
             }
         });
 
@@ -137,5 +139,25 @@ public class AddExercise extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private boolean validations(){
+        if(exerciseID.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise ID", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(exerciseTitle.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(exerciseSubTitle.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Sub Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(exerciseDescription.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Description", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 }

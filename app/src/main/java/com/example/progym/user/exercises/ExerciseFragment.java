@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -28,10 +28,9 @@ import com.squareup.picasso.Picasso;
 public class ExerciseFragment extends Fragment {
 
     View view;
-    Spinner exerciseType;
-    String selectedType;
     DatabaseReference proGym;
     RecyclerView exerciseList;
+   // SearchView search;
 
     @Nullable
     @Override
@@ -39,12 +38,8 @@ public class ExerciseFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.exercise_fragment, container, false);
 
-        exerciseType = view.findViewById(R.id.exerciseType);
         exerciseList = view.findViewById(R.id.exerciseRVlist);
-        ArrayAdapter<CharSequence> exerciseAdapter = ArrayAdapter.createFromResource(this.getActivity(),
-                R.array.exercise_type, android.R.layout.simple_spinner_item);
-        exerciseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        exerciseType.setAdapter(exerciseAdapter);
+       // search = view.findViewById(R.id.exerciseSearch);
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
 
         return view;
@@ -75,7 +70,7 @@ public class ExerciseFragment extends Fragment {
                         intent.putExtra("Title", model.getTitle());
                         intent.putExtra("Description", model.getDescription());
                         intent.putExtra("ImgUrl", model.getImageURL());
-                        intent.putExtra("SubTitle",model.getSubTitle());
+                        intent.putExtra("SubTitle", model.getSubTitle());
                         startActivity(intent);
                     }
                 });
@@ -108,10 +103,4 @@ public class ExerciseFragment extends Fragment {
         }
     }
 
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        selectedType = exerciseType.getSelectedItem().toString();
-    }
-
-    public void onNothingSelected(AdapterView<?> adapterView) {
-    }
 }
