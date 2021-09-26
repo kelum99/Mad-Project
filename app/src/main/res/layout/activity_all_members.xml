@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,44 +10,49 @@
         android:id="@+id/img_member"
         android:layout_width="wrap_content"
         android:layout_height="236dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="78dp"
+        android:contentDescription="GymMembers"
         app:srcCompat="@drawable/membergym" />
 
     <Button
         android:id="@+id/btn_addnewmem"
-        android:layout_width="172dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="139dp"
-        android:layout_marginTop="634dp"
-        android:background="@color/mad1"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="334dp"
+        android:background="@drawable/style"
         android:text="@string/btn_addnewmem"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
 
     <ListView
         android:id="@+id/allMembers"
-        android:layout_width="381dp"
-        android:layout_height="274dp"
-        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="336dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="407dp" />
 
     <TextView
         android:id="@+id/tv_allMembers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="142dp"
+        android:layout_marginStart="142dp"
         android:layout_marginTop="25dp"
         android:text="@string/tv_allMembers"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
 

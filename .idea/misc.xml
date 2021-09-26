@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
+
         <entry key="..\:/MAD/app/src/main/res/layout/activity_add_event.xml" value="0.2984375" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_add_exercise.xml" value="0.2984375" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_add_member.xml" value="0.2609375" />
@@ -37,65 +37,70 @@
         <entry key="..\:/MAD/app/src/main/res/layout/profile_fragment.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/store_fragment.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/top_navigation_header.xml" value="0.35144927536231885" />
-=======
+
         <entry key="..\:/MadProject/app/src/main/res/drawable-v24/borderstyle.xml" value="0.3828125" />
->>>>>>> e52057f5b24decec72237d2b068076b551a3f3f3
+
         <entry key="..\:/MadProject/app/src/main/res/drawable-v24/textfields2.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/borderstyle2.xml" value="0.3828125" />
+
         <entry key="..\:/MadProject/app/src/main/res/drawable/bottom_nav_bar_shape.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/buttonstyle.xml" value="0.378125" />
-        <entry key="..\:/MadProject/app/src/main/res/drawable/card_view_text.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/exercise_btn_img.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/home_btn_img.xml" value="0.3770833333333333" />
-        <entry key="..\:/MadProject/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.3828125" />
-        <entry key="..\:/MadProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/selected_color.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/store_btn_img.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/style.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/textfields.xml" value="0.378125" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_exercise.xml" value="0.33" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_member.xml" value="0.3129528985507246" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_schedule.xml" value="0.33" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_admin_home.xml" value="0.36666666666666664" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_cart.xml" value="0.33559782608695654" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_create_diet.xml" value="0.31929347826086957" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_create_event.xml" value="0.36666666666666664" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_exercise_managment.xml" value="0.36096014492753625" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_exercise_user_view.xml" value="0.36666666666666664" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_fitness_calculation.xml" value="0.3129528985507246" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_fitness_results.xml" value="0.3129528985507246" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_schedule_user_view.xml" value="0.36666666666666664" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_store_management.xml" value="0.20572916666666666" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_update_delete_exercise.xml" value="0.28076923076923077" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/activity_update_exercise.xml" value="0.36096014492753625" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/exercise_fragment.xml" value="0.33" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/exercise_list_view.xml" value="0.31929347826086957" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/exercise_user_view_card.xml" value="0.3129528985507246" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/exercise_view_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/exercise_fragment.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/layout/fragment_add_exercise.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/layout/fragment_home.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/layout/home_fragment.xml" value="0.3609375" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/payment_fragment.xml" value="0.36666666666666664" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/schedule_fragment.xml" value="0.36666666666666664" />
-        <entry key="..\:/MadProject/app/src/main/res/layout/schedule_lv.xml" value="0.36666666666666664" />
         <entry key="..\:/MadProject/app/src/main/res/layout/store_fragment.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/layout/top_navigation_header.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/menu/bottom_navigation_bar.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/menu/top_app_bar.xml" value="0.33" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/drawable-v24/borderstyle.xml" value="0.1675925925925926" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_cart.xml" value="0.264" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_checkout.xml" value="0.264" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/cart_fragment.xml" value="0.25" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_fragment.xml" value="0.2125" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/fragment_add_item.xml" value="0.264" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/fragment_update_item.xml" value="0.25" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/profile_fragment.xml" value="0.25" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/store_fragment.xml" value="0.264" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/top_navigation_header.xml" value="0.25" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/menu/top_app_bar.xml" value="0.25" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/drawable/borderstyle2.xml" value="0.2703125" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_add_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_add_exercise.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_add_member.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_all_members.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_cart.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_delete_member.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_edit_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_exercise_managment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_fitness_calculation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_fitness_results.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_member.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_my_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_profile_results.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_store_management.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_update_delete_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_update_exercise.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/activity_update_member.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/add_member_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/card_list_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/delete_dialog.xml" value="0.2578125" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/exercise_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/exercise_list_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/fragment_add_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/home_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/item_list_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/member_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/member_list_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/mypayment_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/myprofile_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/payment_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/profile_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/profileresult_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/store_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/top_navigation_header.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/layout/transaction_list_view.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/menu/bottom_navigation_bar.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Laptop/AndroidStudioProjects/Mad-Project/app/src/main/res/menu/top_app_bar.xml" value="0.1375" />
       </map>
     </option>
   </component>
@@ -104,12 +109,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.264" />
-      </ProjectState>
-    </option>
   </component>
 </project>

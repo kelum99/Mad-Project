@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import com.example.progym.user.EventFragment;
 import com.example.progym.user.exercises.ExerciseFragment;
 
+import com.example.progym.user.payment.PaymentFragment;
 import com.example.progym.user.profile.MyProfileFragment;
 
 
@@ -68,6 +69,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             case R.id.schedule:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new ScheduleFragment()).commit();
+                break;
+            case R.id.payment:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new PaymentFragment()).commit();
                 break;
 
         }

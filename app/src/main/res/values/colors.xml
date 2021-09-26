@@ -10,4 +10,7 @@
     <color name="whiteGray">#FFF7F7F7</color>
     <color name="lightGreen">#4AD3A3</color>
     <color name="mad1">#06d6a0</color>
+    <color name="card">#A2C7DF</color>
+    <color name="card2">#429E9D</color>
+    <color name="member">#C0C0C0</color>
 </resources>
