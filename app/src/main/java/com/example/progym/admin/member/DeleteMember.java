@@ -76,24 +76,21 @@ public class DeleteMember extends AppCompatActivity {
                 });
                 AlertDialog alertdialog = alert.create();
                 alertdialog.show();
-
             }
         });
     }
 
-        public void DeleteMember () {
-            proGym.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(getApplicationContext(), "Member Deleted Successfully!", Toast.LENGTH_SHORT).show();
-                        DeleteMember.this.finish();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Member Not Deleted!", Toast.LENGTH_SHORT).show();
-                    }
+    public void DeleteMember() {
+        proGym.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), "Member Deleted Successfully!", Toast.LENGTH_SHORT).show();
+                    DeleteMember.this.finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Member Not Deleted!", Toast.LENGTH_SHORT).show();
                 }
-            });
-        }
-
-
+            }
+        });
+    }
 }
