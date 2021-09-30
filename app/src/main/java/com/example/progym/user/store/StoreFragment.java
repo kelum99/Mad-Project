@@ -35,7 +35,7 @@ public class StoreFragment extends Fragment {
     View view;
     RecyclerView itemList;
     DatabaseReference proGym;
-
+    String userName,userAddress,userMobile,userMail;
 
 
     @Nullable
@@ -45,7 +45,18 @@ public class StoreFragment extends Fragment {
 
         view = inflater.inflate(R.layout.store_fragment, container, false);
         itemList = view.findViewById(R.id.ItemRVlist);
+
+
+
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
+
+        Intent intent = getActivity().getIntent();
+
+         userName = intent.getStringExtra("name");
+         userAddress = intent.getStringExtra("address");
+         userMobile = intent.getStringExtra("phone");
+         userMail = intent.getStringExtra("email");
+
 
         return view;
     }
@@ -76,6 +87,13 @@ public class StoreFragment extends Fragment {
                         intent.putExtra("Description", model.getItem_description());
                         intent.putExtra("ImgUrl", model.getImageURL());
                         intent.putExtra("Price",model.getItem_price());
+
+                        intent.putExtra("Name",userName);
+                        intent.putExtra("Address",userAddress);
+                        intent.putExtra("Mobile",userMobile);
+                        intent.putExtra("Mail",userMail);
+
+
                         startActivity(intent);
                     }
                 });

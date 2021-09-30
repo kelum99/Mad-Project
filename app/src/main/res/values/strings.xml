@@ -109,9 +109,9 @@
     <string name="sub_total" />
     <string name="go_checkout_btn">Checkout</string>
     <string name="pay_btn">pay</string>
-    <string name="total_amount">"Total Amount : LKR  "</string>
-    <string name="checkout_item">Item</string>
-    <string name="checkout_price">Price</string>
+    <string name="total_amount">"Total Amount :  LKR  "</string>
+    <string name="checkout_item">ITEM</string>
+    <string name="checkout_price">PRICE</string>
     <string name="add_item_title">Title</string>
     <string name="add_item_code">Item Code</string>
     <string name="add_item_description">Description</string>
@@ -160,11 +160,15 @@
     <string name="events">Events</string>
     <string name="home">Home</string>
     <string name="upload_image">Upload Image</string>
-    <string name="item_update_delete_main_topic">Item Update and Delete</string>
+    <string name="item_update_delete_main_topic">Update and Delete an Item</string>
     <string name="item_update_delete_title_txt">Enter Price</string>
     <string name="textView30">LKR.</string>
     <string name="buyNow">Buy now</string>
     <string name="add_to_cart_user">Add to cart</string>
+    <string name="shippingTXT">Shipping Fee</string>
+    <string name="checkouttopic">Checkout</string>
+    <string name="textViewLKR">"LKR.  "</string>
+    <string name="textView31LKR">"LKR.  "</string>
 
 
 </resources>

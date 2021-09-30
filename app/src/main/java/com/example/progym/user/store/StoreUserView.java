@@ -22,6 +22,8 @@ public class StoreUserView extends AppCompatActivity {
     TextView itemTitle, itemDescription, itemPrice;
     ImageView itemImg;
 
+    String user_name,address,mobile,mail;
+
     DatabaseReference proGym;
 
     @Override
@@ -42,16 +44,30 @@ public class StoreUserView extends AppCompatActivity {
         itemPrice.setText(getIntent().getStringExtra("Price"));
         itemDescription.setText(getIntent().getStringExtra("Description"));
 
+        user_name = getIntent().getStringExtra("Name");
+        address = getIntent().getStringExtra("Address");
+        mobile = getIntent().getStringExtra("Mobile");
+        mail = getIntent().getStringExtra("Mail");
+
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(getIntent().getStringExtra("ImgUrl")).into(itemImg);
 
         String price = itemPrice.getText().toString();
+        String topic = itemTitle.getText().toString();
 
         pay_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent checkout = new Intent(getApplicationContext(), Checkout.class );
                 checkout.putExtra("Price",price);
+                checkout.putExtra("Title",topic);
+
+                checkout.putExtra("u_name",user_name);
+                checkout.putExtra("u_address",address);
+                checkout.putExtra("u_mobile",mobile);
+                checkout.putExtra("u_mail",mail);
+
+
                 startActivity(checkout);
             }
         });
