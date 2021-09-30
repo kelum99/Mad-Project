@@ -41,8 +41,10 @@ public class AddSchedule extends AppCompatActivity {
         addSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertSchedule();
-                clearFields();
+                if(validations()) {
+                    insertSchedule();
+                    clearFields();
+                }
             }
         });
 
@@ -64,7 +66,7 @@ public class AddSchedule extends AppCompatActivity {
 
         proGym.child(scheduleID.getText().toString().trim()).setValue(schedule);
         Toast.makeText(this, "Schedule Added!", Toast.LENGTH_SHORT).show();
-    };
+    }
     private void clearFields() {
         title.setText("");
         scheduleID.setText("");
@@ -76,5 +78,25 @@ public class AddSchedule extends AppCompatActivity {
         fri.setText("");
         sat.setText("");
         sun.setText("");
-    };
+    }
+
+    private boolean validations(){
+        if(title.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Schedule Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(scheduleID.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Schedule ID", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(description.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Schedule Description", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(mon.length() == 0 || tue.length() == 0 || wed.length() == 0 || thu.length() == 0 || fri.length() == 0 || sat.length() == 0 || sun.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Fill the Schedule", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 }

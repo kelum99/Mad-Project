@@ -17,8 +17,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="70dp"
             android:layout_marginEnd="8dp"
-            app:cardCornerRadius="10dp"
 
+            android:backgroundTint="@color/member"
+            app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@+id/cv_height"
             app:layout_constraintEnd_toStartOf="@+id/cv_female"
             app:layout_constraintHorizontal_chainStyle="spread"
@@ -47,12 +48,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            app:layout_constraintHorizontal_weight="1"
+            android:backgroundTint="@color/member"
 
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="@+id/cv_male"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/cv_male"
             app:layout_constraintTop_toTopOf="@+id/cv_male">
 
@@ -79,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
 
+            android:backgroundTint="@color/member"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@+id/cv_weight"
             app:layout_constraintHorizontal_chainStyle="spread"
@@ -130,14 +132,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_weight="1"
+            android:backgroundTint="@color/member"
 
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_profile"
             app:layout_constraintEnd_toStartOf="@+id/cv_age"
+            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cv_height">
 
@@ -180,8 +181,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        >
+                        android:layout_weight="1">
 
                         <ImageView
                             android:layout_width="65dp"
@@ -198,15 +198,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
-                        >
+                        android:layout_weight="1">
 
                         <ImageView
                             android:layout_width="39dp"
                             android:layout_height="match_parent"
                             android:padding="3dp"
-                            app:srcCompat="@drawable/increase"
-                            />
+                            app:srcCompat="@drawable/increase" />
 
                     </RelativeLayout>
 
@@ -221,12 +219,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
 
+            android:backgroundTint="@color/member"
             app:cardCornerRadius="10dp"
-            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintBottom_toBottomOf="@+id/cv_weight"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@+id/cv_weight"
             app:layout_constraintTop_toTopOf="@+id/cv_weight">
 
@@ -272,14 +270,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:layout_weight="1"
-                        >
+                        android:layout_weight="1">
 
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:padding="14dp"
-                            app:srcCompat="@drawable/subtract"/>
+                            app:srcCompat="@drawable/subtract" />
 
                     </RelativeLayout>
 
@@ -290,8 +287,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
-                        >
+                        android:layout_weight="1">
 
                         <ImageView
                             android:layout_width="42dp"
@@ -349,6 +345,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/member"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cv_weight">

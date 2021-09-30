@@ -1,5 +1,6 @@
 package com.example.progym;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,6 +18,7 @@ import com.example.progym.admin.Event.CreateEvent;
 import com.example.progym.admin.Diet.AddDiet;
 
 
+import com.example.progym.admin.Event.EventManagment;
 import com.example.progym.admin.exercises.AddExercise;
 
 import com.example.progym.admin.member.AddMember;
@@ -38,7 +40,7 @@ public class AdminHome extends AppCompatActivity {
 
     }
 
-    public void buttonPress(View  v) {
+    public void buttonPress(@NonNull View  v) {
         Intent intent = null;
         switch (v.getId()) {
             case R.id.exerciseMngBtn:
@@ -50,7 +52,11 @@ public class AdminHome extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.storeMngBtn:
-                intent = new Intent(getApplicationContext(), StoreManagement.class);
+               intent = new Intent(getApplicationContext(), StoreManagement.class);
+               startActivity(intent);
+                break;
+            case R.id.eventMngBtn:
+                intent = new Intent(getApplicationContext(), EventManagment.class);
                 startActivity(intent);
                 break;
             case R.id.scheduleMngBtn:
@@ -61,12 +67,6 @@ public class AdminHome extends AppCompatActivity {
                intent = new Intent(getApplicationContext(), AddDiet.class);
                startActivity(intent);
                 break;
-            case R.id.eventMngBtn:
-                 intent = new Intent(getApplicationContext(), CreateEvent.class);
-                 startActivity(intent);
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + v.getId());
         }
     };
 

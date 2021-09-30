@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".admin.Event.UpdateAndDelete">
 
     <EditText
-        android:id="@+id/eventDes"
+        android:id="@+id/updateEventDes"
         android:layout_width="285dp"
         android:layout_height="93dp"
         android:layout_alignParentTop="true"
@@ -16,7 +17,7 @@
         android:background="@drawable/textfields2"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/enter_description"
+        android:hint="Update Description"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:padding="7dp"
@@ -42,17 +43,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventType" />
+        app:layout_constraintTop_toBottomOf="@+id/updateEventType" />
 
     <EditText
-        android:id="@+id/eventType"
+        android:id="@+id/updateEventType"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/textfields2"
-        android:hint="Enter Type"
+        android:hint="Update Type"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -81,7 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventDes" />
+        app:layout_constraintTop_toBottomOf="@+id/updateEventDes" />
 
     <TextView
         android:id="@+id/textView9"
@@ -97,7 +98,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/updateEventDate" />
 
     <TextView
         android:id="@+id/textView8"
@@ -113,68 +114,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventID" />
-
-    <ImageView
-        android:id="@+id/eventimage"
-        android:layout_width="120dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="39dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24" />
+        app:layout_constraintTop_toBottomOf="@+id/updateEventID" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/updateEventDate"
         android:layout_width="203dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="172dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
         android:background="@drawable/textfields2"
-        app:layout_constraintStart_toStartOf="parent"
-        android:hint="Enter Date"
+        android:ems="10"
+        android:hint="Update Date"
+        android:inputType="date"
         android:paddingStart="7dp"
         android:paddingEnd="7dp"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
-        android:id="@+id/editTextTime"
+        android:id="@+id/updateEventTime"
         android:layout_width="202dp"
         android:layout_height="34dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="175dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/textfields2"
-        android:hint="Enter Time"
+        android:ems="10"
+        android:hint="Update Time"
+        android:inputType="time"
         android:paddingStart="7dp"
         android:paddingEnd="7dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <Button
-        android:id="@+id/addEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="131dp"
-        android:text="Create Event"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView27"
@@ -191,18 +169,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/eventID"
+        android:id="@+id/updateEventID"
         android:layout_width="209dp"
         android:layout_height="32dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="174dp"
         android:background="@drawable/textfields2"
         android:ems="10"
-        android:hint="Enter EventID"
+        android:hint="Update EventID"
         android:inputType="textPersonName"
         android:paddingStart="7dp"
         android:paddingEnd="7dp"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <Button
+        android:id="@+id/updateEventBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="56dp"
+        android:onClick="updateEventBtn"
+        android:text="Update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateEventTime" />
+
+    <Button
+        android:id="@+id/dltEventBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="90dp"
+        android:onClick="dltEventBtn"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/updateEventBtn"
+        app:layout_constraintTop_toBottomOf="@+id/updateEventTime" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
