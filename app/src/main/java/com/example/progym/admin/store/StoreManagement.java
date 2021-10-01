@@ -52,7 +52,8 @@ public class StoreManagement extends AppCompatActivity {
 
 
 
-        Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store");
+        //Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+               // .getReference().child("Store");
 
         itemList = findViewById(R.id.store_management_itemLV);
         ItemListItem = new ArrayList<>();

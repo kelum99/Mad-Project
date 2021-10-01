@@ -68,7 +68,7 @@ public class UpdateDeleteItem extends AppCompatActivity {
                 snapshot.getRef().child("item_title").setValue(title.getText().toString());
                 snapshot.getRef().child("item_price").setValue(price.getText().toString());
                 snapshot.getRef().child("item_description").setValue(description.getText().toString());
-                Toast.makeText(getApplicationContext(), "Update Item Successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Item Updated Successfully!", Toast.LENGTH_SHORT).show();
                 UpdateDeleteItem.this.finish();
             }
 
