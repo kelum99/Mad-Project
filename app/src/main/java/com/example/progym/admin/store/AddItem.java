@@ -33,6 +33,8 @@ public class AddItem extends AppCompatActivity {
     private EditText itemDescription;
 
     // ImageView preview;
+
+    boolean itemValidation;
     String imgUrl;
     Button addItem;
     Button uploadBtn;
@@ -61,8 +63,12 @@ public class AddItem extends AppCompatActivity {
         addItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertItem();
-                clearFields();
+                itemValidation = ItemValidations();
+                if(itemValidation){
+                    insertItem();
+                    clearFields();
+                }
+
             }
         });
         uploadBtn.setOnClickListener(new View.OnClickListener() {
@@ -132,5 +138,22 @@ public class AddItem extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private boolean ItemValidations() {
+        if (itemTitle.length() == 0) {
+            itemTitle.setError("Title is required");
+            return false;
+        }
+        if (itemPrice.length() == 0) {
+            itemPrice.setError("Price is required");
+            return false;
+        }
+        if (itemDescription.length() == 0) {
+            itemDescription.setError("Description is required");
+            return false;
+        }
+
+        return true;
     }
 }

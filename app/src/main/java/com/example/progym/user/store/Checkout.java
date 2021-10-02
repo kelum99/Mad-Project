@@ -2,18 +2,25 @@ package com.example.progym.user.store;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.progym.R;
+import com.example.progym.user.payment.MyPayment;
+
+import java.text.DecimalFormat;
 
 public class Checkout extends AppCompatActivity {
 
-    Button checkoutBtn,pay_btn;
+    Button checkoutBtn,payBtn;
     TextView price,title,user_name,address,mobile,mail,pay_amount,shipping_amount;
 
-    float item_price,tot,shipping_fee = 200;
+    double item_price,tot,shipping_fee = 200.0;
+    DecimalFormat decim = new DecimalFormat("#.##");
+    Double shippingFee = Double.parseDouble(decim.format(shipping_fee));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +35,8 @@ public class Checkout extends AppCompatActivity {
         mobile = findViewById(R.id.c_mobile);
         mail = findViewById(R.id.c_mail);
 
+        payBtn = findViewById(R.id.pay_btn);
+
         pay_amount = findViewById(R.id.pay_amount);
         shipping_amount = findViewById(R.id.shipping_fee);
 
@@ -39,12 +48,24 @@ public class Checkout extends AppCompatActivity {
         mobile.setText(getIntent().getStringExtra("u_mobile"));
         mail.setText(getIntent().getStringExtra("u_mail"));
 
-        item_price = Float.parseFloat(getIntent().getStringExtra("Price"));
+        item_price = Double.parseDouble(getIntent().getStringExtra("Price"));
 
-        tot = item_price + shipping_fee;
+
+
+
+        tot = item_price + shippingFee;
         pay_amount.setText(String.valueOf(tot));
-        shipping_amount.setText(String.valueOf(shipping_fee));
+        shipping_amount.setText(String.valueOf(shippingFee));
 
+        payBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), MyPayment.class);
+                in.putExtra("totalPayment", new Double(tot).toString());
+
+                startActivity(in);
+            }
+        });
 
     }
 }

@@ -170,5 +170,7 @@
     <string name="checkouttopic">Checkout</string>
     <string name="textViewLKR">"LKR.  "</string>
     <string name="textView31LKR">"LKR.  "</string>
+    <string name="item_price_hint">Item Price</string>
+    <string name="updtpricehint">Item Price</string>
 
 </resources>
