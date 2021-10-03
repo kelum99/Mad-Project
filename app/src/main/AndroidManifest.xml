@@ -18,7 +18,11 @@
             android:name=".admin.Event.EventManagment"
             android:exported="true" />
         <activity
-            android:name=".admin.Event.UpdateAndDelete"/>
+            android:name=".user.Event.EventUserView"
+            android:exported="true" />
+        <activity
+                  android:name=".admin.Event.UpdateAndDelete" 
+                  android:exported="true" />
         <activity
             android:name=".admin.store.UpdateDeleteItem"
             android:exported="true" />
@@ -90,6 +94,9 @@
             android:exported="true" />
         <activity
             android:name=".AdminHome"
+            android:exported="true" />
+        <activity
+            android:name=".user.store.StoreUserView"
             android:exported="true" />
         <activity
             android:name=".Home"

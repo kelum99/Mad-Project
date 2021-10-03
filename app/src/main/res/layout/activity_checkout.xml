@@ -200,7 +200,7 @@
         app:layout_constraintTop_toBottomOf="@+id/checkout_item" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/checkoutPrice"
         android:layout_width="139dp"
         android:layout_height="25dp"
         android:layout_marginTop="40dp"

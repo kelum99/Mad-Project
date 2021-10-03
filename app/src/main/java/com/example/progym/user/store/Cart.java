@@ -2,6 +2,7 @@ package com.example.progym.user.store;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -25,5 +26,7 @@ public class Cart extends AppCompatActivity {
         itemPrice = findViewById(R.id.item_price);
         itemCheck = findViewById(R.id.cart_checkBoxt);
         btnCheckout = findViewById(R.id.go_checkout_btn);
+
+        Intent intent = getIntent();
     }
 }

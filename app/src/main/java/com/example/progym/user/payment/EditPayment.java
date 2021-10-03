@@ -67,7 +67,7 @@ public class EditPayment extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
-                       DeleteCard();
+                        DeleteCard();
                     }
                 });
                 alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -83,7 +83,8 @@ public class EditPayment extends AppCompatActivity {
         });
 
     }
-    public  void UpdateCard() {
+
+    public void UpdateCard() {
         proGymFinance.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -96,23 +97,21 @@ public class EditPayment extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Update Card Successfully!", Toast.LENGTH_SHORT).show();
                 EditPayment.this.finish();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
     }
-
-    public void DeleteCard(){
+    public void DeleteCard() {
         proGymFinance.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(), "Exercise Deleted Successfully!", Toast.LENGTH_SHORT).show();
+                if (task.isSuccessful()) {
+                    Toast.makeText(getApplicationContext(), "Card Deleted Successfully!", Toast.LENGTH_SHORT).show();
                     EditPayment.this.finish();
-                } else{
-                    Toast.makeText(getApplicationContext(), "Exercise Not Deleted!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Card Not Deleted!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

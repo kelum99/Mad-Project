@@ -38,7 +38,7 @@ import java.util.Date;
 
 public class MyPayment extends AppCompatActivity {
 
-    Button btn_viewcards, btn_paynow, btn_history,btn_confirm;
+    Button btn_viewcards, btn_paynow, btn_history, btn_confirm;
     EditText et_amount;
     ListView cardList, transactionList;
     ArrayList<String> cardListItems;
@@ -70,11 +70,13 @@ public class MyPayment extends AppCompatActivity {
         cardListItems = new ArrayList<String>();
 
         proGymFinance = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Transactions");
-        proGymFinance2 = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Cards");
+        proGymFinance2 = FirebaseDatabase.getInstance
+                ("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference().child("Cards");
 
         FirebaseListOptions<Payment> options = new FirebaseListOptions.Builder<Payment>()
                 .setLayout(R.layout.card_list_view)
-                .setQuery(proGymFinance2,Payment.class)
+                .setQuery(proGymFinance2, Payment.class)
                 .build();
         adapter = new FirebaseListAdapter(options) {
 
@@ -86,27 +88,25 @@ public class MyPayment extends AppCompatActivity {
             }
         };
         cardList.setAdapter(adapter);
-
         cardList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), EditPayment.class);
                 Payment pay = (Payment) parent.getItemAtPosition(position);
 
-                intent.putExtra("PayMethod",pay.getPaymentMethod());
+                intent.putExtra("PayMethod", pay.getPaymentMethod());
                 intent.putExtra("CardNum", pay.getCardNumber());
                 intent.putExtra("CardHolderName", pay.getCardHolderName());
                 intent.putExtra("ExpDate", pay.getExpDate());
                 intent.putExtra("CVV", pay.getCvv());
 
                 startActivity(intent);
-
             }
         });
 
         FirebaseListOptions<Transactions> op = new FirebaseListOptions.Builder<Transactions>()
                 .setLayout(R.layout.transaction_list_view)
-                .setQuery(proGymFinance,Transactions.class)
+                .setQuery(proGymFinance, Transactions.class)
                 .build();
         adapter2 = new FirebaseListAdapter(op) {
 
@@ -148,7 +148,7 @@ public class MyPayment extends AppCompatActivity {
             public void onClick(View view) {
                 verify = validations();
 
-                if(verify){
+                if (verify) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(MyPayment.this);
                     alert.setTitle("Confirm Payment");
                     alert.setMessage("Are you sure you want to proceed?");
@@ -163,7 +163,7 @@ public class MyPayment extends AppCompatActivity {
 
                             AlertDialog.Builder alert = new AlertDialog.Builder(MyPayment.this);
                             alert.setMessage("Your Payment is Successful ! ");
-                            alert.setNeutralButton("OK",new DialogInterface.OnClickListener(){
+                            alert.setNeutralButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     dialogInterface.dismiss();
@@ -185,6 +185,7 @@ public class MyPayment extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -207,14 +208,15 @@ public class MyPayment extends AppCompatActivity {
         proGymFinance.push().setValue(transactions);
 
     }
+
     private void clearFields() {
 
         et_amount.setText("");
     }
 
-    private boolean validations(){
+    private boolean validations() {
 
-        if(et_amount.length() == 0){
+        if (et_amount.length() == 0) {
             et_amount.setError("You Need to Enter the Amount First");
             return false;
         }
