@@ -26,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.0"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutTitle"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/checkoutTitle"
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"

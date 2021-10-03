@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.exercises.UpdateExercise">
+
+    >
 
 
     <TextView
@@ -46,33 +47,10 @@
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/addItem_price"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="61dp"
-        android:background="@drawable/textfields2"
-        android:hint="@string/enter_sub_title"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="7dp"
-        android:paddingEnd="7dp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_item_price_txt"
-        tools:ignore="TextContrastCheck" />
-
-    <EditText
         android:id="@+id/addItem_description"
         android:layout_width="310dp"
         android:layout_height="130dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="2dp"
         android:layout_marginEnd="61dp"
         android:background="@drawable/textfields2"
         android:ems="10"
@@ -83,7 +61,7 @@
         android:padding="7dp"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/additem_description_txt"
         tools:ignore="TextContrastCheck" />
@@ -123,13 +101,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="280dp"
         android:text="@string/description"
         android:textColor="#040404"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addItem_price" />
 
@@ -177,6 +156,16 @@
         app:layout_constraintTop_toBottomOf="@+id/additem_img"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TextContrastCheck" />
 
+    <EditText
+        android:id="@+id/addItem_price"
+        android:layout_width="241dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="128dp"
+        android:background="@drawable/textfields2"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_item_price_txt" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

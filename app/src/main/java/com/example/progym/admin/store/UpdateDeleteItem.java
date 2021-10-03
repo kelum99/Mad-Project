@@ -32,7 +32,8 @@ public class UpdateDeleteItem extends AppCompatActivity {
         setContentView(R.layout.activity_update_delete_item);
 
         String key = getIntent().getStringExtra("ItemTitle");
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Store").child(key);
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference().child("Store").child(key);
         title = findViewById(R.id.item_update_delete_title_txt);
         price = findViewById(R.id.item_update_delete_price_txt);
         description = findViewById(R.id.item_update_delete_description_txt);
@@ -67,7 +68,7 @@ public class UpdateDeleteItem extends AppCompatActivity {
                 snapshot.getRef().child("item_title").setValue(title.getText().toString());
                 snapshot.getRef().child("item_price").setValue(price.getText().toString());
                 snapshot.getRef().child("item_description").setValue(description.getText().toString());
-                Toast.makeText(getApplicationContext(), "Update Item Successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Item Updated Successfully!", Toast.LENGTH_SHORT).show();
                 UpdateDeleteItem.this.finish();
             }
 

@@ -73,6 +73,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new ScheduleFragment()).commit();
                 break;
+
             case R.id.dietPlan:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new DietFragment()).commit();
@@ -82,7 +83,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new PaymentFragment()).commit();
                 break;
-
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);

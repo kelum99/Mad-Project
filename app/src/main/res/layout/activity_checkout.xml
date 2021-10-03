@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".user.store.Checkout">
@@ -14,29 +15,29 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="88dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider4"
-        android:layout_width="410dp"
-        android:layout_height="337dp"
+        android:layout_width="413dp"
+        android:layout_height="268dp"
 
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/divider3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider2"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.974" />
 
     <View
         android:id="@+id/divider3"
@@ -49,46 +50,58 @@
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/c_mobile"
-        android:layout_width="247dp"
-        android:layout_height="33dp"
+        android:layout_width="311dp"
+        android:layout_height="34dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="120dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageButton9"
         app:layout_constraintTop_toTopOf="@+id/divider2" />
 
     <TextView
         android:id="@+id/c_user_name"
-        android:layout_width="247dp"
+        android:layout_width="309dp"
         android:layout_height="33dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageButton5"
         app:layout_constraintTop_toTopOf="@+id/divider2" />
 
     <TextView
         android:id="@+id/c_mail"
-        android:layout_width="247dp"
-        android:layout_height="33dp"
+        android:layout_width="307dp"
+        android:layout_height="34dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="168dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageButton8"
         app:layout_constraintTop_toTopOf="@+id/divider2" />
 
     <TextView
         android:id="@+id/c_address"
-        android:layout_width="247dp"
+        android:layout_width="311dp"
         android:layout_height="33dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="68dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageButton6"
         app:layout_constraintTop_toTopOf="@+id/divider2" />
 
@@ -134,44 +147,53 @@
 
     <Button
         android:id="@+id/pay_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_width="126dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/lightGreen"
         android:text="@string/pay_btn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/divider3" />
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintTop_toTopOf="@+id/divider3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/total_amount"
         android:layout_width="143dp"
         android:layout_height="26dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/total_amount"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/divider3" />
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toTopOf="@+id/divider3"
+        app:layout_constraintVertical_bias="0.622" />
 
     <TextView
         android:id="@+id/pay_amount"
         android:layout_width="101dp"
         android:layout_height="21dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/divider3"
-        app:layout_constraintStart_toEndOf="@+id/total_amount" />
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/total_amount"
+        app:layout_constraintTop_toTopOf="@+id/divider3" />
 
     <TextView
         android:id="@+id/checkout_item"
         android:layout_width="138dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:text="@string/checkout_item"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/divider4"
@@ -181,31 +203,111 @@
         android:id="@+id/checkout_price"
         android:layout_width="100dp"
         android:layout_height="27dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/checkout_price"
+        android:textColor="?android:attr/textColorSecondary"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/divider4"
         app:layout_constraintTop_toTopOf="@+id/divider4" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/checkoutTitle"
         android:layout_width="199dp"
         android:layout_height="25dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@+id/divider4"
         app:layout_constraintTop_toBottomOf="@+id/checkout_item" />
 
     <TextView
         android:id="@+id/checkoutPrice"
-        android:layout_width="139dp"
+        android:layout_width="100dp"
         android:layout_height="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="6dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/checkoutTitle"
         app:layout_constraintTop_toBottomOf="@+id/checkout_price" />
+
+    <TextView
+        android:id="@+id/shippingTXT"
+        android:layout_width="196dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/shippingTXT"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutTitle" />
+
+    <TextView
+        android:id="@+id/shipping_fee"
+        android:layout_width="65dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toEndOf="@+id/shippingTXT"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutPrice" />
+
+    <TextView
+        android:id="@+id/checkouttopic"
+        android:layout_width="174dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/checkouttopic"
+        android:textColor="@color/lightGreen"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewLKR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/textViewLKR"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView31LKR"
+        app:layout_constraintEnd_toStartOf="@+id/checkoutPrice" />
+
+    <TextView
+        android:id="@+id/textView31LKR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/textView31LKR"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/shipping_fee"
+        app:layout_constraintEnd_toStartOf="@+id/shipping_fee" />
 </androidx.constraintlayout.widget.ConstraintLayout>
