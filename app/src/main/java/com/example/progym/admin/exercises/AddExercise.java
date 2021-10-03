@@ -55,7 +55,8 @@ public class AddExercise extends AppCompatActivity {
         exerciseDescription = findViewById(R.id.exerciseDesTxt);
         addExercise = findViewById(R.id.addExercise);
         uploadBtn = findViewById(R.id.uploadBtn1);
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference().child("Exercises");
 
         addExercise.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,16 +67,12 @@ public class AddExercise extends AppCompatActivity {
                 }
             }
         });
-
         uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chooseImage();
             }
         });
-
-
-
     }
     private void insertExercise() {
         exercise = new Exercise();

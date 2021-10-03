@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText eUsername;
     private EditText ePassword;
     boolean isValid = false;
-    String  testUsername = "Kelum";
-    String  testPassword = "12345";
+    String adminUsername = "admin";
+    String adminPassword = "admin123";
     DatabaseReference reference;
 
     @Override
@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Members");
 
         Button loginBtn = findViewById(R.id.loginBtn);
-        Button adminlgn = findViewById(R.id.adminBtn);
         eUsername = findViewById(R.id.eUsername);
         ePassword = findViewById(R.id.ePassword);
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,80 +45,76 @@ public class MainActivity extends AppCompatActivity {
                 String Username = eUsername.getText().toString();
                 String Password = ePassword.getText().toString();
 
-                if(Username.isEmpty() || Password.isEmpty()){
-                    String errorMessage1 = "Please Enter All the Credentials!";
-                    Toast.makeText(MainActivity.this, errorMessage1, Toast.LENGTH_SHORT).show();
-                }
-                else {
+                if (Username.equals(adminUsername) && Password.equals(adminPassword)) {
+                    Intent intent = new Intent(getApplicationContext(), AdminHome.class);
+                    startActivity(intent);
+                } else {
 
-                    reference.orderByChild("username").equalTo(Username).addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if (snapshot.exists()){
+                    if (Username.isEmpty() || Password.isEmpty()) {
+                        String errorMessage1 = "Please Enter All the Credentials!";
+                        Toast.makeText(MainActivity.this, errorMessage1, Toast.LENGTH_SHORT).show();
+                    } else {
 
-                                eUsername.setError(null);
-                                String pass = snapshot.child(Username).child("password").getValue(String.class);
+                        reference.orderByChild("username").equalTo(Username).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if (snapshot.exists()) {
 
-                                if (pass.equals(Password)){
+                                    eUsername.setError(null);
+                                    String pass = snapshot.child(Username).child("password").getValue(String.class);
 
-                                    ePassword.setError(null);
+                                    if (pass.equals(Password)) {
 
-                                    String name = snapshot.child(Username).child("name").getValue(String.class);
-                                    String age = snapshot.child(Username).child("age").getValue(String.class);
-                                    String address = snapshot.child(Username).child("address").getValue(String.class);
-                                    String phone = snapshot.child(Username).child("phone").getValue(String.class);
-                                    String email = snapshot.child(Username).child("email").getValue(String.class);
-                                    String nic = snapshot.child(Username).child("nic").getValue(String.class);
-                                    String memberType = snapshot.child(Username).child("memberType").getValue(String.class);
-                                    String username = snapshot.child(Username).child("username").getValue(String.class);
+                                        ePassword.setError(null);
+
+                                        String name = snapshot.child(Username).child("name").getValue(String.class);
+                                        String age = snapshot.child(Username).child("age").getValue(String.class);
+                                        String address = snapshot.child(Username).child("address").getValue(String.class);
+                                        String phone = snapshot.child(Username).child("phone").getValue(String.class);
+                                        String email = snapshot.child(Username).child("email").getValue(String.class);
+                                        String nic = snapshot.child(Username).child("nic").getValue(String.class);
+                                        String memberType = snapshot.child(Username).child("memberType").getValue(String.class);
+                                        String username = snapshot.child(Username).child("username").getValue(String.class);
 
 
-                                    Intent intent = new Intent(MainActivity.this, Home.class);
+                                        Intent intent = new Intent(MainActivity.this, Home.class);
 
-                                    intent.putExtra("name",name);
-                                    intent.putExtra("age",age);
-                                    intent.putExtra("address",address);
-                                    intent.putExtra("phone",phone);
-                                    intent.putExtra("email",email);
-                                    intent.putExtra("nic",nic);
-                                    intent.putExtra("memberType",memberType);
-                                    intent.putExtra("username",username);
-                                    intent.putExtra("password",pass);
+                                        intent.putExtra("name", name);
+                                        intent.putExtra("age", age);
+                                        intent.putExtra("address", address);
+                                        intent.putExtra("phone", phone);
+                                        intent.putExtra("email", email);
+                                        intent.putExtra("nic", nic);
+                                        intent.putExtra("memberType", memberType);
+                                        intent.putExtra("username", username);
+                                        intent.putExtra("password", pass);
 
-                                    startActivity(intent);
-                                    Toast.makeText(MainActivity.this,"Login Successful ! ",Toast.LENGTH_SHORT).show();
-                                }else {
-                                    ePassword.setError("Invalid Password");
-                                    ePassword.requestFocus();
-                                    Toast.makeText(MainActivity.this,"Invalid Password",Toast.LENGTH_SHORT).show();
+                                        startActivity(intent);
+                                        Toast.makeText(MainActivity.this, "Login Successful ! ", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        ePassword.setError("Invalid Password");
+                                        ePassword.requestFocus();
+                                        Toast.makeText(MainActivity.this, "Invalid Password", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+                                    eUsername.setError("Invalid User");
+                                    eUsername.requestFocus();
+                                    Toast.makeText(MainActivity.this, "No such user exists ", Toast.LENGTH_SHORT).show();
                                 }
-                            }else {
-                                eUsername.setError("Invalid User");
-                                eUsername.requestFocus();
-                                Toast.makeText(MainActivity.this,"No such user exists ",Toast.LENGTH_SHORT).show();
                             }
-                        }
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
 
-                        }
-                    });
+                            }
+                        });
+
+                    }
 
                 }
-
-            }
-        });
-
-        adminlgn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AdminHome.class);
-                startActivity(intent);
             }
         });
 
     }
-
 
 }
