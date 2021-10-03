@@ -1,14 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/teal_200">
+    android:layout_height="match_parent">
+
 
     <TextView
+        android:id="@+id/welcomeMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/hey_welcome"
+        android:textColor="@color/mad1"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/homeExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/circle_btn"
+        android:contentDescription="@string/todo"
+        android:textSize="16sp"
+        app:srcCompat="@drawable/home_btn_img"
+        app:tint="@color/black"
+        tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/gymExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/circle_btn"
+        android:contentDescription="@string/todo"
+        android:textSize="16sp"
+        app:srcCompat="@drawable/ic_baseline_schedule_24"
+        app:tint="@color/black"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="145dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/start_at_home"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="55dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/start_at_gym"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/what_s_new"
+        android:textColor="@color/mad1"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="390dp"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="291dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/whatsnew"
+        tools:ignore="ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/seeAll"
+        android:layout_width="130dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/style"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/see_all"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
 </RelativeLayout>
