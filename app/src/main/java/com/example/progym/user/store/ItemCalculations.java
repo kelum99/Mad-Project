@@ -1,11 +1,17 @@
 package com.example.progym.user.store;
 
-/*
+
 public class ItemCalculations {
 
-    protected float calculateCartItems(float value){
-        float ans =
-        return ans;
+    int itemCount = 0;
+    float itemPrice = 0;
+
+    protected int calculateCartItems(){
+
+        return itemCount + 1;
+    }
+
+    protected float calculateCartPrice(float price){
+        return itemPrice + price;
     }
 }
-*/

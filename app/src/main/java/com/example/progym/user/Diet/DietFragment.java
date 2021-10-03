@@ -1,4 +1,4 @@
-package com.example.progym.user;
+package com.example.progym.user.Diet;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.progym.R;
 
-public class EventFragment extends Fragment {
+public class DietFragment extends Fragment {
 
 
     @Nullable

@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dietID" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/checkoutPrice"
         android:layout_width="126dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
@@ -105,7 +105,7 @@
         app:layout_constraintHorizontal_bias="0.0"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutPrice"
         tools:ignore="TextContrastCheck" />
 
     <EditText

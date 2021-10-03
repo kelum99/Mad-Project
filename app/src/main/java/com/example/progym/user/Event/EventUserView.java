@@ -1,9 +1,8 @@
-package com.example.progym.user.exercises;
+package com.example.progym.user.Event;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,11 +11,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
+public class EventUserView extends AppCompatActivity {
 
-public class ExerciseUserView extends AppCompatActivity {
-
-    TextView title, description, subTitle;
+    TextView title, description, date, time;
     ImageView img;
 
     DatabaseReference proGym;
@@ -24,22 +21,25 @@ public class ExerciseUserView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exercise_user_view);
+        setContentView(R.layout.activity_event_user_view);
 
         String key = getIntent().getStringExtra("Key");
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
-                .getReference().child("Exercises").child(key);
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Event").child(key);
 
-        title = findViewById(R.id.userViewExTitle);
-        subTitle = findViewById(R.id.userViewExSTitle);
-        description = findViewById(R.id.UserViewExDes);
-        img = findViewById(R.id.userViewExImg);
+        title = findViewById(R.id.userViewEvTitle);
+        description = findViewById(R.id.UserViewEvDes);
+        date = findViewById(R.id.userViewEvTitle2);
+        time = findViewById(R.id.userViewEvTitle3);
+        img = findViewById(R.id.imageView8);
 
         title.setText(getIntent().getStringExtra("Title"));
-        subTitle.setText(getIntent().getStringExtra("SubTitle"));
         description.setText(getIntent().getStringExtra("Description"));
+        date.setText(getIntent().getStringExtra("Date"));
+        time.setText(getIntent().getStringExtra("Time"));
+
 
         Picasso.get().setLoggingEnabled(true);
         Picasso.get().load(getIntent().getStringExtra("ImgUrl")).into(img);
     }
+
 }

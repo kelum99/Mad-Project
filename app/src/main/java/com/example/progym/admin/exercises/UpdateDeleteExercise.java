@@ -30,12 +30,9 @@ public class UpdateDeleteExercise extends AppCompatActivity {
         String key = getIntent().getStringExtra("Key");
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises").child(key);
 
-
-
         title = findViewById(R.id.updateExerciseTitleTxt);
         subTitle = findViewById(R.id.UpdateExerciseSitleTxt);
         description = findViewById(R.id.UpdateExerciseDesTxt);
-
         title.setText(getIntent().getStringExtra("Title"));
         subTitle.setText(getIntent().getStringExtra("subTitle"));
         description.setText(getIntent().getStringExtra("Description"));
@@ -52,7 +49,6 @@ public class UpdateDeleteExercise extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Update Exercise Successfully!", Toast.LENGTH_SHORT).show();
                 UpdateDeleteExercise.this.finish();
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 

@@ -15,7 +15,7 @@
             android:background="#1dd3b0">
 
             <ImageView
-                android:id="@+id/exerciseIV"
+                android:id="@+id/eventIV"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="10dp"
@@ -33,26 +33,17 @@
                 android:layout_marginEnd="1dp">
 
                 <TextView
-                    android:id="@+id/exerciseTitleTV"
-                    android:layout_width="215dp"
+                    android:id="@+id/eventTitleTV"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginEnd="155dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/textview"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/exerciseSTitleTV"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="155dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/textview"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+
 
             </LinearLayout>
 

@@ -8,6 +8,7 @@ public class Store {
     private String item_description;
     private String imageURL;
 
+
     public Store() { }
 
     public String getItem_title() {
@@ -39,6 +40,7 @@ public class Store {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
+
 
 
 }

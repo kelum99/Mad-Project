@@ -8,10 +8,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.progym.user.EventFragment;
+import com.example.progym.user.Diet.DietFragment;
+import com.example.progym.user.Event.EventFragment;
 import com.example.progym.user.exercises.ExerciseFragment;
 
 import com.example.progym.user.payment.PaymentFragment;
@@ -55,6 +57,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         navigationView.setCheckedItem(R.id.home);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -70,10 +73,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new ScheduleFragment()).commit();
                 break;
+            case R.id.dietPlan:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new DietFragment()).commit();
+                break;
+
             case R.id.payment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new PaymentFragment()).commit();
                 break;
+
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -90,8 +99,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+    private final BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @SuppressLint("NonConstantResourceId")
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;

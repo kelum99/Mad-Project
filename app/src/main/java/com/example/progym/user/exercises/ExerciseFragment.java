@@ -2,12 +2,15 @@ package com.example.progym.user.exercises;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -19,19 +22,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.progym.R;
 import com.example.progym.admin.exercises.Exercise;
+import com.example.progym.user.Event.EventUserView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class ExerciseFragment extends Fragment {
 
     View view;
-    Spinner exerciseType;
-    String selectedType;
     DatabaseReference proGym;
     RecyclerView exerciseList;
+    EditText search;
 
     @Nullable
     @Override
@@ -39,23 +46,42 @@ public class ExerciseFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.exercise_fragment, container, false);
 
-        exerciseType = view.findViewById(R.id.exerciseType);
         exerciseList = view.findViewById(R.id.exerciseRVlist);
-        ArrayAdapter<CharSequence> exerciseAdapter = ArrayAdapter.createFromResource(this.getActivity(),
-                R.array.exercise_type, android.R.layout.simple_spinner_item);
-        exerciseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        exerciseType.setAdapter(exerciseAdapter);
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
+        search = view.findViewById(R.id.exerciseSearch);
+
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference().child("Exercises");
+        myAdapter("");
+
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s != null){
+                    myAdapter(s.toString());
+                }else{
+                    myAdapter("");
+                }
+            }
+        });
 
         return view;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
+  public void myAdapter(String text){
+        Query query = proGym.orderByChild("title").startAt(text).endAt(text+"\uf8ff");
         FirebaseRecyclerOptions<Exercise> options =
                 new FirebaseRecyclerOptions.Builder<Exercise>()
-                        .setQuery(proGym, Exercise.class)
+                        .setQuery(query, Exercise.class)
                         .build();
 
         FirebaseRecyclerAdapter<Exercise, RequestViewHolder> adapter = new FirebaseRecyclerAdapter<Exercise, RequestViewHolder>(options) {
@@ -75,7 +101,7 @@ public class ExerciseFragment extends Fragment {
                         intent.putExtra("Title", model.getTitle());
                         intent.putExtra("Description", model.getDescription());
                         intent.putExtra("ImgUrl", model.getImageURL());
-                        intent.putExtra("SubTitle",model.getSubTitle());
+                        intent.putExtra("SubTitle", model.getSubTitle());
                         startActivity(intent);
                     }
                 });
@@ -84,7 +110,8 @@ public class ExerciseFragment extends Fragment {
             @NonNull
             @Override
             public RequestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.exercise_user_view_card, parent, false);
+                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.exercise_user_view_card,
+                        parent, false);
                 RequestViewHolder holder = new RequestViewHolder(v);
                 return holder;
             }
@@ -108,10 +135,9 @@ public class ExerciseFragment extends Fragment {
         }
     }
 
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        selectedType = exerciseType.getSelectedItem().toString();
-    }
-
-    public void onNothingSelected(AdapterView<?> adapterView) {
+    @Override
+    public void onStart() {
+        super.onStart();
+        myAdapter("");
     }
 }

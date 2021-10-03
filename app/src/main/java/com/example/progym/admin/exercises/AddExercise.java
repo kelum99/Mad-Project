@@ -55,25 +55,24 @@ public class AddExercise extends AppCompatActivity {
         exerciseDescription = findViewById(R.id.exerciseDesTxt);
         addExercise = findViewById(R.id.addExercise);
         uploadBtn = findViewById(R.id.uploadBtn1);
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference().child("Exercises");
 
         addExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertExercise();
-                clearFields();
+                if(validations()) {
+                    insertExercise();
+                    clearFields();
+                }
             }
         });
-
         uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chooseImage();
             }
         });
-
-
-
     }
     private void insertExercise() {
         exercise = new Exercise();
@@ -137,5 +136,25 @@ public class AddExercise extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private boolean validations(){
+        if(exerciseID.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise ID", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(exerciseTitle.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(exerciseSubTitle.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Sub Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(exerciseDescription.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Description", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 }
