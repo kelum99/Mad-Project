@@ -31,32 +31,10 @@
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/item_update_delete_price_txt"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="61dp"
-        android:background="@drawable/textfields2"
-        android:hint="@string/item_update_delete_title_txt"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:paddingStart="7dp"
-        android:paddingEnd="7dp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_price"
-        tools:ignore="TextContrastCheck" />
-
-    <EditText
         android:id="@+id/item_update_delete_description_txt"
-        android:layout_width="310dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="320dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="61dp"
         android:background="@drawable/textfields2"
@@ -68,7 +46,7 @@
         android:padding="7dp"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_update_delete_description"
         tools:ignore="TextContrastCheck" />
@@ -104,28 +82,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_update_delete_title_txt" />
 
+
     <TextView
         android:id="@+id/item_update_delete_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="280dp"
         android:text="@string/description"
         android:textColor="#040404"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_update_delete_price_txt" />
-
 
     <Button
         android:id="@+id/item_update_delete_btn_update"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="34dp"
         android:background="@drawable/style"
         android:onClick="btnUpdate"
         android:text="@string/update"
@@ -139,7 +118,7 @@
         android:id="@+id/item_update_delete_btn_delete"
         android:layout_width="180dp"
         android:layout_height="40dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/style"
         android:onClick="btnDelete"
@@ -171,4 +150,19 @@
         android:layout_marginEnd="33dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/item_update_delete_price_txt"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="61dp"
+        android:background="@drawable/textfields2"
+        android:ems="10"
+        android:hint="@string/updtpricehint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_update_delete_price" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -49,7 +49,9 @@ public class AllMembers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_members);
 
-        Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Members");
+        Query proGym = FirebaseDatabase.getInstance
+                ("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").
+                getReference().child("Members");
         memberList = findViewById(R.id.allMembers);
         memberListItems = new ArrayList<>();
         addNewMember = findViewById(R.id.btn_addnewmem);
@@ -67,11 +69,9 @@ public class AllMembers extends AppCompatActivity {
                 Member member = (Member) model;
                 uname.setText(member.getUsername());
                 pwd.setText(member.getPassword());
-
             }
         };
         memberList.setAdapter(adapter);
-
 
         addNewMember.setOnClickListener(new View.OnClickListener() {
             @Override

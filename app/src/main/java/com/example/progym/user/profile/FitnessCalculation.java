@@ -19,7 +19,7 @@ import com.example.progym.R;
 public class FitnessCalculation extends AppCompatActivity {
 
     TextView height_txt, age_text, weight_text;
-    RadioButton rdbtn_little,rdbtn_light,rdbtn_mod,rdbtn_active,rdbtn_extra;
+    RadioButton rdbtn_little, rdbtn_light, rdbtn_mod, rdbtn_active, rdbtn_extra;
     float height, weight;
     int age;
     int set_weight = 50, set_age = 18;
@@ -32,9 +32,7 @@ public class FitnessCalculation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fitness_calculation);
 
-
-
-        height_txt = (TextView)findViewById(R.id.height_txt);
+        height_txt = (TextView) findViewById(R.id.height_txt);
 
         CardView cd_female = findViewById(R.id.cv_female);
         CardView cd_male = findViewById(R.id.cv_male);
@@ -53,30 +51,24 @@ public class FitnessCalculation extends AppCompatActivity {
         rdbtn_active = findViewById(R.id.rdbtn_active);
         rdbtn_extra = findViewById(R.id.rdbtn_extra);
 
-
-
-
         cd_male.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (malecheck) {
 
                     if (male_click) {
-
-                        male_text.setTextColor(Color.parseColor("#06d6a0"));
+                        male_text.setTextColor(Color.parseColor("#0000E7"));
                         male_click = false;
                         femalecheck = false;
                         isMale = true;
-                        isFemale=false;
-
+                        isFemale = false;
 
                     } else {
-
                         male_text.setTextColor(Color.parseColor("#000000"));
                         male_click = true;
                         femalecheck = true;
                         isMale = false;
-                        isFemale=false;
+                        isFemale = false;
                     }
                 }
             }
@@ -88,20 +80,18 @@ public class FitnessCalculation extends AppCompatActivity {
                 if (femalecheck) {
 
                     if (female_click) {
-
-                        female_text.setTextColor(Color.parseColor("#06d6a0"));
+                        female_text.setTextColor(Color.parseColor("#0000E7"));
                         female_click = false;
                         malecheck = false;
                         isFemale = true;
-                        isMale=false;
+                        isMale = false;
 
                     } else {
-
                         female_text.setTextColor(Color.parseColor("#000000"));
                         female_click = true;
                         malecheck = true;
-                        isFemale=false;
-                        isMale=false;
+                        isFemale = false;
+                        isMale = false;
                     }
                 }
             }
@@ -121,7 +111,7 @@ public class FitnessCalculation extends AppCompatActivity {
 
     }
 
-    private void ChangeSeekbar( ) {
+    private void ChangeSeekbar() {
 
         SeekBar Seekbar = findViewById(R.id.Seekbar);
         Seekbar.setMax(30);
@@ -130,7 +120,7 @@ public class FitnessCalculation extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 String ht = progress + getResources().getString(R.string.height_txt);
                 height_txt.setText(ht);
-                height = (float)(progress)/10;
+                height = (float) (progress) / 10;
 
             }
 
@@ -193,39 +183,32 @@ public class FitnessCalculation extends AppCompatActivity {
 
     }
 
-    private void Calculations(){
-        float BMI = weight/(height * height);
+    private void Calculations() {
+        float BMI = weight / (height * height);
         float BMR;
         float calBurned;
         float points;
 
-        if(isMale){
-            BMR = (float) (88.362 + (13.397 * weight)+(4.799 * (height*100)) - (5.677 * age));
-        }
-        else if(isFemale){
-            BMR = (float) (447.593 + (9.247 * weight)+(3.098 * (height*100)) - (4.330 * age));
-        }
-        else{
-            Toast.makeText(FitnessCalculation.this,"Please Select Gender", Toast.LENGTH_SHORT).show();
+        if (isMale) {
+            BMR = (float) (88.362 + (13.397 * weight) + (4.799 * (height * 100)) - (5.677 * age));
+        } else if (isFemale) {
+            BMR = (float) (447.593 + (9.247 * weight) + (3.098 * (height * 100)) - (4.330 * age));
+        } else {
+            Toast.makeText(FitnessCalculation.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
             BMR = 0;
         }
 
-        if(rdbtn_little.isChecked()){
+        if (rdbtn_little.isChecked()) {
             points = (float) 1.2;
-        }
-        else if(rdbtn_light.isChecked()){
+        } else if (rdbtn_light.isChecked()) {
             points = (float) 1.37;
-        }
-        else if(rdbtn_mod.isChecked()){
+        } else if (rdbtn_mod.isChecked()) {
             points = (float) 1.55;
-        }
-        else if(rdbtn_active.isChecked()){
+        } else if (rdbtn_active.isChecked()) {
             points = (float) 1.725;
-        }
-        else if(rdbtn_extra.isChecked()){
+        } else if (rdbtn_extra.isChecked()) {
             points = (float) 1.9;
-        }
-        else{
+        } else {
             Toast.makeText(FitnessCalculation.this, "Please Select Workout Time", Toast.LENGTH_SHORT).show();
             points = 0;
         }
@@ -233,11 +216,9 @@ public class FitnessCalculation extends AppCompatActivity {
         calBurned = BMR * points;
 
         Intent intent = new Intent(getApplicationContext(), FitnessResults.class);
-        intent.putExtra("BMI",BMI);
-        intent.putExtra("BMR",new Float(BMR).toString());
-        intent.putExtra("Cal",new Float(calBurned).toString());
+        intent.putExtra("BMI", BMI);
+        intent.putExtra("BMR", new Float(BMR).toString());
+        intent.putExtra("Cal", new Float(calBurned).toString());
         startActivity(intent);
-
-
     }
 }

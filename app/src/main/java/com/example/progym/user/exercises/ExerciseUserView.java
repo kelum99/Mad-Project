@@ -27,7 +27,8 @@ public class ExerciseUserView extends AppCompatActivity {
         setContentView(R.layout.activity_exercise_user_view);
 
         String key = getIntent().getStringExtra("Key");
-        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises").child(key);
+        proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference().child("Exercises").child(key);
 
         title = findViewById(R.id.userViewExTitle);
         subTitle = findViewById(R.id.userViewExSTitle);

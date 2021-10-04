@@ -6,102 +6,26 @@
     android:layout_height="match_parent"
     >
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="match_parent"
-        android:layout_height="216dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ItemRVlist"
+        android:layout_width="406dp"
+        android:layout_height="665dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="2dp"
-        app:srcCompat="@drawable/prepare" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="394dp"
-        android:layout_height="142dp"
-        android:layout_below="@+id/imageView5"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="279dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="81dp"
-        android:background="?android:attr/listDivider" />
-
-    <TextView
-        android:id="@+id/item_topic"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/item_description"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="111dp"
-        android:layout_marginBottom="5dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/item_description"
-        android:layout_width="159dp"
-        android:layout_height="48dp"
-        android:layout_above="@+id/item_price"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="111dp"
-        android:layout_marginBottom="0dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/item_price"
-        android:layout_width="83dp"
-        android:layout_height="29dp"
-        android:layout_alignBottom="@+id/divider"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="187dp"
-        android:layout_marginBottom="25dp"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/add_to_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/divider"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="10dp"
-        android:layout_toStartOf="@+id/buy_now"
-        android:text="@string/add_to_cart"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <Button
-        android:id="@+id/buy_now"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/divider"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/buy_now"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <ImageView
-        android:id="@+id/store_image"
-        android:layout_width="114dp"
-        android:layout_height="104dp"
-        android:layout_alignStart="@+id/divider"
-        android:layout_alignBottom="@+id/divider"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="21dp"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:layout_centerInParent="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="0dp" />
 
     <ImageButton
         android:id="@+id/cart_img"
         android:layout_width="67dp"
         android:layout_height="63dp"
-        android:layout_below="@+id/imageView5"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="6dp"
         android:backgroundTint="@color/design_default_color_background"
         app:srcCompat="@drawable/shoppingcart"
         tools:ignore="SpeakableTextPresentCheck" />

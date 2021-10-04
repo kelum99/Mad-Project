@@ -19,8 +19,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class PaymentFragment extends Fragment {
 
-    EditText et_cno, et_cvv,et_expDate,et_cname,et_payMethod;
-    Button btn_save,btn_continue;
+    EditText et_cno, et_cvv, et_expDate, et_cname, et_payMethod;
+    Button btn_save, btn_continue;
     boolean verify;
     Payment payment;
     DatabaseReference ProGym;
@@ -48,7 +48,7 @@ public class PaymentFragment extends Fragment {
         btn_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),MyPayment.class);
+                Intent intent = new Intent(getActivity(), MyPayment.class);
                 startActivity(intent);
             }
         });
@@ -58,19 +58,17 @@ public class PaymentFragment extends Fragment {
             public void onClick(View view) {
                 verify = validations();
 
-                if(verify){
-                            saveCard();
-                            clearFields();
+                if (verify) {
+                    saveCard();
+                    clearFields();
 
-                            Intent intent = new Intent(getActivity(), MyPayment.class);
-                            startActivity(intent);
-                        }
+                    Intent intent = new Intent(getActivity(), MyPayment.class);
+                    startActivity(intent);
+                }
             }
         });
-
         return view;
     }
-
 
     private void saveCard() {
         payment = new Payment();
@@ -81,10 +79,10 @@ public class PaymentFragment extends Fragment {
         payment.setExpDate(et_expDate.getText().toString().trim());
         payment.setCvv(et_cvv.getText().toString().trim());
 
-        //ProGym.push().setValue(payment);
         ProGym.child(et_cno.getText().toString().trim()).setValue(payment);
         Toast.makeText(getActivity(), "You Card Details Are Saved", Toast.LENGTH_LONG).show();
     }
+
     private void clearFields() {
 
         et_payMethod.setText("");
@@ -94,22 +92,27 @@ public class PaymentFragment extends Fragment {
         et_cvv.setText("");
     }
 
-    private boolean validations(){
-        if(et_cno.length() != 16){
+    private boolean validations() {
+
+        if (et_cno.length() != 16) {
             et_cno.setError("Please Enter 16 digit Card Number");
-            return  false;
+            return false;
         }
-        if(et_cvv.length() != 3){
-            et_cvv.setError("Please Enter 3 digit Card Number");
-            return  false;
+        if (et_cvv.length() != 3) {
+            et_cvv.setError("Please Enter 3 digit CVV Number");
+            return false;
         }
-        if(et_expDate.length() == 0){
+        if (et_expDate.length() == 0) {
             et_expDate.setError("Expiry Date is required");
-            return  false;
+            return false;
         }
-        if(et_cname.length() == 0){
+        if (et_cname.length() == 0) {
             et_cname.setError("Card Holder's Name is required");
-            return  false;
+            return false;
+        }
+        if (et_payMethod.length() == 0) {
+            et_expDate.setError("Payment Method is required");
+            return false;
         }
         return true;
     }

@@ -13,16 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
         <activity
             android:name=".dietuserform"
             android:exported="true" />
+
         <activity
             android:name=".admin.Event.EventManagment"
             android:exported="true" />
         <activity
             android:name=".user.Event.EventUserView"
             android:exported="true" />
-        <activity android:name=".admin.Event.UpdateAndDelete" />
+        <activity
+                  android:name=".admin.Event.UpdateAndDelete" 
+                  android:exported="true" />
         <activity
             android:name=".admin.store.UpdateDeleteItem"
             android:exported="true" />
@@ -33,6 +37,7 @@
         <activity
             android:name=".user.exercises.ExerciseUserView"
             android:exported="true" />
+
         <activity
             android:name=".UpdateBooking"
             android:exported="true" />
@@ -89,6 +94,9 @@
             android:exported="true" />
         <activity
             android:name=".AdminHome"
+            android:exported="true" />
+        <activity
+            android:name=".user.store.StoreUserView"
             android:exported="true" />
         <activity
             android:name=".Home"
