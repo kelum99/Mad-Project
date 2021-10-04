@@ -21,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class UpdateDeleteItem extends AppCompatActivity {
 
+    boolean Validation;
+
     EditText title, price, description;
     Button updateBtn;
     Button deleteBtn;
@@ -47,7 +49,10 @@ public class UpdateDeleteItem extends AppCompatActivity {
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                itemUpdate();
+                Validation = ItemValidations();
+                if(Validation) {
+                    itemUpdate();
+                }
             }
         });
         deleteBtn.setOnClickListener(new View.OnClickListener() {
@@ -91,5 +96,23 @@ public class UpdateDeleteItem extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    //validations
+    private boolean ItemValidations() {
+        if (title.length() == 0) {
+            title.setError("Title is required");
+            return false;
+        }
+        if (price.length() == 0) {
+            price.setError("Price is required");
+            return false;
+        }
+        if (description.length() == 0) {
+            description.setError("Description is required");
+            return false;
+        }
+
+        return true;
     }
 }
