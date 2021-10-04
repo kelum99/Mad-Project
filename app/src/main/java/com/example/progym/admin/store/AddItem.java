@@ -33,6 +33,8 @@ public class AddItem extends AppCompatActivity {
     private EditText itemDescription;
 
     // ImageView preview;
+
+    boolean itemValidation;
     String imgUrl;
     Button addItem;
     Button uploadBtn;
@@ -50,26 +52,25 @@ public class AddItem extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
-
-
         itemTitle = findViewById(R.id.addItem_topic);
         itemPrice = findViewById(R.id.addItem_price);
         itemDescription = findViewById(R.id.addItem_description);
         addItem = findViewById(R.id.add_item_btn);
         uploadBtn = findViewById(R.id.additem_image_btn);
-        // preview = findViewById(R.id.exerciseImgUp);
 
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app")
                 .getReference().child("Store");
-
         addItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertItem();
-                clearFields();
+                itemValidation = ItemValidations();
+                if(itemValidation){
+                    insertItem();
+                    clearFields();
+                }
+
             }
         });
-
         uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,18 +78,16 @@ public class AddItem extends AppCompatActivity {
             }
         });
     }
-
     private void insertItem() {
         store = new Store();
-
         store.setItem_title(itemTitle.getText().toString().trim());
         store.setItem_price(itemPrice.getText().toString().trim());
         store.setItem_description(itemDescription.getText().toString());
         store.setImageURL(imgUrl);
-
         proGym.child(itemTitle.getText().toString().trim()).setValue(store);
         Toast.makeText(this, "Item Added!", Toast.LENGTH_SHORT).show();
     }
+
     private void clearFields() {
         itemTitle.setText("");
         itemPrice.setText("");
@@ -139,5 +138,22 @@ public class AddItem extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private boolean ItemValidations() {
+        if (itemTitle.length() == 0) {
+            itemTitle.setError("Title is required");
+            return false;
+        }
+        if (itemPrice.length() == 0) {
+            itemPrice.setError("Price is required");
+            return false;
+        }
+        if (itemDescription.length() == 0) {
+            itemDescription.setError("Description is required");
+            return false;
+        }
+
+        return true;
     }
 }

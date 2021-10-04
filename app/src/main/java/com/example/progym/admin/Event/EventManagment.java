@@ -25,7 +25,12 @@ public class EventManagment extends AppCompatActivity {
     ListView eventList;
     DatabaseReference proGym;
 
-    FirebaseListAdapter  adapter;
+
+
+    FirebaseListAdapter adapter;
+
+
+
 
 
     @Override
@@ -36,7 +41,10 @@ public class EventManagment extends AppCompatActivity {
         Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Event");
         eventList = findViewById(R.id.eventLV);
 
+
+
         addEventBtn = findViewById(R.id.add_event);
+
 
 
         FirebaseListOptions<Event> options = new FirebaseListOptions.Builder<Event>()

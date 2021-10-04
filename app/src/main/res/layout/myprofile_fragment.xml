@@ -30,10 +30,11 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="30dp"
-            android:layout_marginEnd="102dp"
+            android:layout_marginEnd="90dp"
+            android:fontFamily="@font/poppins_medium"
             android:gravity="center_horizontal|center_vertical"
             android:text="TextView"
-            android:textSize="24sp"
+            android:textSize="26sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -181,6 +182,17 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_changePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="68dp"
+            android:background="@color/material_on_background_disabled"
+            app:srcCompat="@drawable/cam" />
 
     </RelativeLayout>
 

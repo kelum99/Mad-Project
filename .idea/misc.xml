@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8486e47abe6cdf42c5aec36e430a8ea0110cbff
+=======
+>>>>>>> 445a74dff9a7ef2d7c4c38c3bdb7f4037366767c
         <entry key="..\:/MAD/app/src/main/res/layout/activity_add_event.xml" value="0.2984375" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_add_exercise.xml" value="0.2984375" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_add_member.xml" value="0.2609375" />
@@ -43,22 +51,70 @@
         <entry key="..\:/MAD/app/src/main/res/layout/profile_fragment.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/store_fragment.xml" value="0.32083333333333336" />
         <entry key="..\:/MAD/app/src/main/res/layout/top_navigation_header.xml" value="0.35144927536231885" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry key="..\:/MadProject/app/src/main/res/drawable-v24/textfields2.xml" value="0.3828125" />
+=======
+
+=======
+>>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
         <entry key="..\:/MadProject/app/src/main/res/drawable-v24/borderstyle.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable-v24/textfields2.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/borderstyle2.xml" value="0.3828125" />
+<<<<<<< HEAD
+
+>>>>>>> f8486e47abe6cdf42c5aec36e430a8ea0110cbff
+=======
+>>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
+=======
+        <entry key="..\:/MadProject/app/src/main/res/drawable-v24/borderstyle.xml" value="0.3828125" />
+        <entry key="..\:/MadProject/app/src/main/res/drawable-v24/textfields2.xml" value="0.3828125" />
+        <entry key="..\:/MadProject/app/src/main/res/drawable/borderstyle2.xml" value="0.3828125" />
+>>>>>>> 445a74dff9a7ef2d7c4c38c3bdb7f4037366767c
         <entry key="..\:/MadProject/app/src/main/res/drawable/bottom_nav_bar_shape.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/buttonstyle.xml" value="0.378125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/circle_btn.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/exercise_btn_img.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/gradiant.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/home_btn_img.xml" value="0.3770833333333333" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry key="..\:/MadProject/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.3828125" />
+=======
+>>>>>>> f8486e47abe6cdf42c5aec36e430a8ea0110cbff
+=======
         <entry key="..\:/MadProject/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/search1.xml" value="0.3828125" />
+>>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
+=======
+        <entry key="..\:/MadProject/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.3828125" />
+        <entry key="..\:/MadProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/MadProject/app/src/main/res/drawable/search1.xml" value="0.3828125" />
+>>>>>>> 445a74dff9a7ef2d7c4c38c3bdb7f4037366767c
         <entry key="..\:/MadProject/app/src/main/res/drawable/selected_color.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/store_btn_img.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/style.xml" value="0.3770833333333333" />
         <entry key="..\:/MadProject/app/src/main/res/drawable/textfields.xml" value="0.378125" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_exercise.xml" value="0.33" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_schedule.xml" value="0.33" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_admin_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_exercise_managment.xml" value="0.36096014492753625" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_update_exercise.xml" value="0.36096014492753625" />
+=======
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/MadProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
+>>>>>>> f8486e47abe6cdf42c5aec36e430a8ea0110cbff
+        <entry key="..\:/MadProject/app/src/main/res/layout/exercise_fragment.xml" value="0.3609375" />
+=======
+=======
+>>>>>>> 445a74dff9a7ef2d7c4c38c3bdb7f4037366767c
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_exercise.xml" value="0.33" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_member.xml" value="0.3129528985507246" />
         <entry key="..\:/MadProject/app/src/main/res/layout/activity_add_schedule.xml" value="0.33" />
@@ -84,6 +140,10 @@
         <entry key="..\:/MadProject/app/src/main/res/layout/exercise_list_view.xml" value="0.31929347826086957" />
         <entry key="..\:/MadProject/app/src/main/res/layout/exercise_user_view_card.xml" value="0.3129528985507246" />
         <entry key="..\:/MadProject/app/src/main/res/layout/exercise_view_fragment.xml" value="0.36666666666666664" />
+<<<<<<< HEAD
+>>>>>>> 6e0f096c3b87402689f7eb7336b8da22119d1e13
+=======
+>>>>>>> 445a74dff9a7ef2d7c4c38c3bdb7f4037366767c
         <entry key="..\:/MadProject/app/src/main/res/layout/fragment_add_exercise.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/layout/fragment_home.xml" value="0.3609375" />
         <entry key="..\:/MadProject/app/src/main/res/layout/home_fragment.xml" value="0.3609375" />
@@ -100,6 +160,7 @@
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_event_list.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_exercise_user_view.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_my_payment.xml" value="0.2368659420289855" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_schedule_user_view.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_store_management.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_store_user_view.xml" value="0.234375" />
@@ -107,6 +168,7 @@
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_update_exercise.xml" value="0.25" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/activity_update_item.xml" value="0.25" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/cart_fragment.xml" value="0.25" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/event_user_view_card.xml" value="0.2210144927536232" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_fragment.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_list_view.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/exercise_user_view_card.xml" value="0.234375" />
@@ -117,7 +179,7 @@
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/schedule_fragment.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/schedule_lv.xml" value="0.234375" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/store_fragment.xml" value="0.264" />
-        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/store_user_view_card.xml" value="0.2" />
+        <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/store_user_view_card.xml" value="0.264" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/layout/top_navigation_header.xml" value="0.25" />
         <entry key="..\:/SLIIT/New folder/Second year/Second sem/Y2S2_projects/Mad-Project/app/src/main/res/menu/top_app_bar.xml" value="0.25" />
       </map>

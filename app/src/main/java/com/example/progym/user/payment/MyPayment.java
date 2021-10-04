@@ -129,6 +129,11 @@ public class MyPayment extends AppCompatActivity {
             }
         });
 
+        //get total payment from checkout
+
+        Intent checkoutIntent = getIntent();
+        et_amount.setText(checkoutIntent.getStringExtra("totalPayment"));
+
         btn_viewcards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

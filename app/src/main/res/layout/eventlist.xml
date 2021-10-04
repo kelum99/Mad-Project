@@ -16,7 +16,9 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="25dp"
             android:layout_marginTop="37dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ev_ID"
@@ -27,6 +29,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="68dp"
             android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
             android:text="TextView" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
