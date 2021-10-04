@@ -88,6 +88,38 @@ public class AddDiet extends AppCompatActivity {
         snack.setText("");
     }
 
+    private boolean validations(){
+        if(dietID.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise ID", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(dietTitle.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(dietDescription.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Sub Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(breakfast.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(lunch.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Sub Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(dinner.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Sub Title", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(snack.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Exercise Description", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
 
 
     }

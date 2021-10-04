@@ -56,7 +56,7 @@ public class CreateEvent extends AppCompatActivity {
         eventDescription = findViewById(R.id.eventDes);
         eventDate = findViewById(R.id.editTextDate);
         eventTime = findViewById(R.id.editTextTime);
-        createEvent= findViewById(R.id.addEvent);
+        createEvent = findViewById(R.id.addEvent);
         uploadBtn = findViewById(R.id.eventimage);
 
 
@@ -65,18 +65,21 @@ public class CreateEvent extends AppCompatActivity {
         createEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertEvent();
-                clearFields();
+                if (validations()) {
+                    insertEvent();
+                    clearFields();
+                }
             }
         });
 
-            uploadBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    chooseImage();
-                }
-            });
+        uploadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chooseImage();
+            }
+        });
     }
+
     private void insertEvent() {
         event = new Event();
         event.setEventID(eventID.getText().toString());
@@ -89,6 +92,7 @@ public class CreateEvent extends AppCompatActivity {
         proGym.child(eventID.getText().toString()).setValue(event);
         Toast.makeText(getApplicationContext(), "Event Added!", Toast.LENGTH_SHORT).show();
     }
+
     private void clearFields() {
         eventID.setText("");
         eventType.setText("");
@@ -96,33 +100,36 @@ public class CreateEvent extends AppCompatActivity {
         eventDate.setText("");
         eventTime.setText("");
     }
+
     private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent,IMAGE_REQUEST);
+        startActivityForResult(intent, IMAGE_REQUEST);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == IMAGE_REQUEST && resultCode == RESULT_OK){
+        if (requestCode == IMAGE_REQUEST && resultCode == RESULT_OK) {
             imgUri = data.getData();
-           uploadImg();
+            uploadImg();
         }
     }
 
-    private String getFileExtension (Uri uri){
+    private String getFileExtension(Uri uri) {
         ContentResolver contentResolver = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
     }
+
     private void uploadImg() {
-     ProgressDialog uploadProg = new ProgressDialog(this);
+        ProgressDialog uploadProg = new ProgressDialog(this);
         uploadProg.setMessage("Uploading");
         uploadProg.show();
 
-        if(imgUri != null){
-            imageEventRef = FirebaseStorage.getInstance().getReference().child("EventImages").child(System.currentTimeMillis()+"."+getFileExtension(imgUri));
+        if (imgUri != null) {
+            imageEventRef = FirebaseStorage.getInstance().getReference().child("EventImages").child(System.currentTimeMillis() + "." + getFileExtension(imgUri));
 
             imageEventRef.putFile(imgUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
@@ -132,11 +139,36 @@ public class CreateEvent extends AppCompatActivity {
                         public void onSuccess(Uri uri) {
                             imgUrl = uri.toString();
                             uploadProg.dismiss();
-                           Toast.makeText(getApplicationContext(),"Image Upload Successfully!" , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Image Upload Successfully!", Toast.LENGTH_SHORT).show();
                         }
-                   });
+                    });
                 }
-          });
+            });
         }
-   }
+    }
+
+    private boolean validations(){
+        if(eventID.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Event ID", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(eventType.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Event Type", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(eventDescription.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Event Description", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(eventDate.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Event Date", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        if(eventTime.length() == 0){
+            Toast.makeText(getApplicationContext(), "Please Enter Event Time", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
+    }
 }
