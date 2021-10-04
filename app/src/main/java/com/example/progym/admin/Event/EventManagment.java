@@ -20,13 +20,11 @@ import com.google.firebase.database.Query;
 
 public class EventManagment extends AppCompatActivity {
 
-
     Button addEventBtn;
     ListView eventList;
     DatabaseReference proGym;
 
-    FirebaseListAdapter  adapter;
-
+    FirebaseListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +33,7 @@ public class EventManagment extends AppCompatActivity {
 
         Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Event");
         eventList = findViewById(R.id.eventLV);
-
         addEventBtn = findViewById(R.id.add_event);
-
 
         FirebaseListOptions<Event> options = new FirebaseListOptions.Builder<Event>()
                 .setLayout(R.layout.eventlist)
@@ -56,7 +52,6 @@ public class EventManagment extends AppCompatActivity {
             }
         };
         eventList.setAdapter(adapter);
-
 
         addEventBtn.setOnClickListener(new View.OnClickListener() {
             @Override

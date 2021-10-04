@@ -28,7 +28,6 @@ public class ExerciseManagment extends AppCompatActivity {
     Button addExerciseBtn;
     ListView exerciseList;
     DatabaseReference proGym;
-    ArrayList<String> exerciseListItems;
     FirebaseListAdapter adapter;
 
     @Override
@@ -38,7 +37,6 @@ public class ExerciseManagment extends AppCompatActivity {
 
         Query proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Exercises");
         exerciseList = findViewById(R.id.exerciseLV);
-        exerciseListItems = new ArrayList<>();
         addExerciseBtn = findViewById(R.id.add_exercise);
 
         FirebaseListOptions<Exercise> options = new FirebaseListOptions.Builder<Exercise>()

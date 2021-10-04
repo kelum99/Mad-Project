@@ -22,7 +22,6 @@ public class UpdateAndDelete extends AppCompatActivity {
     EditText updateEventType, updateEventID, updateEventDes, editTextDate, editTextTime;
     DatabaseReference proGym;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,37 +30,28 @@ public class UpdateAndDelete extends AppCompatActivity {
         String key = getIntent().getStringExtra("Key");
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Event").child(key);
         updateEventType = findViewById(R.id.updateEventType);
-        updateEventID = findViewById(R.id.updateEventID);
         updateEventDes = findViewById(R.id.updateEventDes);
         editTextDate = findViewById(R.id.updateEventDate);
         editTextTime = findViewById(R.id.updateEventTime);
 
         updateEventType.setText(getIntent().getStringExtra("Type"));
-        updateEventID.setText(getIntent().getStringExtra("Key"));
         updateEventDes.setText(getIntent().getStringExtra("Description"));
         editTextDate.setText(getIntent().getStringExtra("Date"));
-        editTextTime.setText(getIntent().getStringExtra("Time"));
-    }
-
+        editTextTime.setText(getIntent().getStringExtra("Time")); }
     public  void updateEventBtn(View view) {
         proGym.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 snapshot.getRef().child("eventType").setValue(updateEventType.getText().toString());
-                snapshot.getRef().child("eventID").setValue(updateEventID.getText().toString());
                 snapshot.getRef().child("eventDescription").setValue( updateEventDes.getText().toString());
                 snapshot.getRef().child("eventDate").setValue(editTextDate.getText().toString());
                 snapshot.getRef().child("eventTime").setValue( editTextTime.getText().toString());
                 Toast.makeText(getApplicationContext(), "Update Event Successfully!", Toast.LENGTH_SHORT).show();
-                UpdateAndDelete.this.finish();
-            }
-
+                UpdateAndDelete.this.finish(); }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+            }});
     }
 
     public void dltEventBtn(View view){
@@ -74,7 +64,6 @@ public class UpdateAndDelete extends AppCompatActivity {
                 } else{
                     Toast.makeText(getApplicationContext(), "Event Not Deleted!", Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
+            }});
     }
 }

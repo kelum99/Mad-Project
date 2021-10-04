@@ -32,30 +32,23 @@ public class EventFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         view = inflater.inflate(R.layout.event_fragment, container, false);
         eventRVlist = view.findViewById(R.id.eventRVlist);
-
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Event");
-        return view;
-    }
-
-    @Override
+        return view; }
+        @Override
     public void onStart() {
         super.onStart();
         FirebaseRecyclerOptions<Event> options =
                 new FirebaseRecyclerOptions.Builder<Event>()
                         .setQuery(proGym, Event.class)
                         .build();
-
         FirebaseRecyclerAdapter<Event, RequestViewHolder> adapter = new FirebaseRecyclerAdapter<Event, RequestViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull RequestViewHolder holder, int position, @NonNull Event model) {
-
                 Picasso.get().setLoggingEnabled(true);
                 holder.title.setText(model.getEventType());
                 Picasso.get().load(model.getImageEvent()).into(holder.img);
-
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -66,34 +59,24 @@ public class EventFragment extends Fragment {
                         intent.putExtra("ImgUrl", model.getImageEvent());
                         intent.putExtra("Date", model.getEventDate());
                         intent.putExtra("Time", model.getEventTime());
-                        startActivity(intent);
-                    }
-                });
-            }
+                        startActivity(intent); }}); }
             @NonNull
             @Override
             public RequestViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.event_user_view_card, parent, false);
                 RequestViewHolder holder = new RequestViewHolder(v);
-                return holder;
-            }
-        };
+                return holder; }};
         LinearLayoutManager llm = new LinearLayoutManager(view.getContext());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         eventRVlist.setLayoutManager(llm);
         eventRVlist.setAdapter(adapter);
-        adapter.startListening();
-    }
-
-    public static class RequestViewHolder extends RecyclerView.ViewHolder {
+        adapter.startListening(); }
+        public static class RequestViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView img;
 
         public RequestViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.eventTitleTV);
-            img = itemView.findViewById(R.id.eventIV);
-        }
-    }
-
+            img = itemView.findViewById(R.id.eventIV); }}
 }

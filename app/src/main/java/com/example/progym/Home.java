@@ -79,10 +79,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                         new DietFragment()).commit();
                 break;
 
+
             case R.id.payment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new PaymentFragment()).commit();
                 break;
+
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);
