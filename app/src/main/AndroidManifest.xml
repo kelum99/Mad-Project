@@ -14,12 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".user.Diet.DietUserView"
+            android:exported="true" />
+        <activity
             android:name=".admin.schedules.ScheduleManagment"
             android:exported="true" />
         <activity
             android:name=".dietuserform"
             android:exported="true" />
-
         <activity
             android:name=".admin.Event.EventManagment"
             android:exported="true" />
@@ -98,6 +100,12 @@
             android:exported="true" />
         <activity
             android:name=".user.store.StoreUserView"
+            android:exported="true" />
+        <activity
+            android:name=".admin.Diet.DietManagement"
+            android:exported="true" />
+        <activity
+            android:name=".admin.Diet.UpdateDeleteDiet"
             android:exported="true" />
         <activity
             android:name=".Home"

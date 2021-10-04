@@ -57,7 +57,6 @@ public class UpdateDeleteDiet extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 snapshot.getRef().child("Title").setValue(UpTitle.getText().toString());
-                snapshot.getRef().child("key").setValue(UpDietID.getText().toString());
                 snapshot.getRef().child("DietDescription").setValue(UpDietDes.getText().toString());
                 snapshot.getRef().child("Breakfast").setValue(UpBreakfast.getText().toString());
                 snapshot.getRef().child("Lunch").setValue(UpLunch.getText().toString());

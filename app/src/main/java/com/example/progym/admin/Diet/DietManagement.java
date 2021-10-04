@@ -12,9 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.progym.R;
-import com.example.progym.admin.Diet.AddDiet;
-import com.example.progym.admin.Event.Event;
-import com.example.progym.admin.Diet.UpdateDeleteDiet;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.firebase.ui.database.FirebaseListOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -27,11 +24,7 @@ public class DietManagement extends AppCompatActivity {
     Button addDiet;
     ListView dietList;
     DatabaseReference proGym;
-
-
     FirebaseListAdapter adapter;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +33,6 @@ public class DietManagement extends AppCompatActivity {
 
         proGym = FirebaseDatabase.getInstance("https://progym-867fb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("Diet");
         dietList = findViewById(R.id.dietLV);
-
-
         addDiet = findViewById(R.id.addDiet);
 
         FirebaseListOptions<Diet> options = new FirebaseListOptions.Builder<Diet>()
@@ -71,23 +62,6 @@ public class DietManagement extends AppCompatActivity {
             }
         });
 
-        dietList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Intent updateDelete = new Intent(getApplicationContext(), UpdateDeleteDiet.class);
-                Diet d = (Diet) parent.getItemAtPosition(position);
-                updateDelete.putExtra("Type", d.getTitle());
-                updateDelete.putExtra("Key", d.getDietID());
-                updateDelete.putExtra("Description", d.getDescription());
-                updateDelete.putExtra("Date", d.getBreakfast());
-                updateDelete.putExtra("Time", d.getLunch());
-                updateDelete.putExtra("Date", d.getDinner());
-                updateDelete.putExtra("Time", d.getSnack());
-
-                startActivity(updateDelete);
-            }
-        });
     }
 
     @Override

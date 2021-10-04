@@ -105,7 +105,7 @@
         android:layout_width="189dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="192dp"
         android:text="Event Type"
         android:textColor="#000000"
@@ -114,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateEventID" />
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
     <EditText
         android:id="@+id/updateEventDate"
@@ -133,7 +133,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/updateEventTime"
@@ -152,39 +153,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="70dp"
-        android:text="Event ID"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/updateEventID"
-        android:layout_width="209dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="174dp"
-        android:background="@drawable/textfields2"
-        android:ems="10"
-        android:hint="Update EventID"
-        android:inputType="textPersonName"
-        android:paddingStart="7dp"
-        android:paddingEnd="7dp"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/updateEventBtn"
@@ -198,7 +168,8 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateEventTime" />
+        app:layout_constraintTop_toBottomOf="@+id/updateEventTime"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/dltEventBtn"
@@ -215,6 +186,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/updateEventBtn"
-        app:layout_constraintTop_toBottomOf="@+id/updateEventTime" />
+        app:layout_constraintTop_toBottomOf="@+id/updateEventTime"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Update or Delete Event"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
